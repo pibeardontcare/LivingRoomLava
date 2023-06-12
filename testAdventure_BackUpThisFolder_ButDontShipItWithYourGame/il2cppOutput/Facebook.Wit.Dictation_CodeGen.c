@@ -12,163 +12,109 @@
 
 
 
-// 0x00000001 Facebook.WitAi.Dictation.DictationService Facebook.WitAi.Utilities.DictationServiceReference::get_DictationService()
-extern void DictationServiceReference_get_DictationService_m250347CB96B8CAEFC9B2B2F0841110E7A497CD48 (void);
-// 0x00000002 System.Void Facebook.WitAi.Utilities.DictationServiceReference/<>c::.cctor()
-extern void U3CU3Ec__cctor_m433DAEB1EC8DADB178B4649D15F42F72B22D7928 (void);
-// 0x00000003 System.Void Facebook.WitAi.Utilities.DictationServiceReference/<>c::.ctor()
-extern void U3CU3Ec__ctor_mDE3921A1203AE0E5FE874A9DFCB4C6A797DC6C2D (void);
-// 0x00000004 System.Boolean Facebook.WitAi.Utilities.DictationServiceReference/<>c::<get_DictationService>b__2_0(Facebook.WitAi.Dictation.DictationService)
-extern void U3CU3Ec_U3Cget_DictationServiceU3Eb__2_0_m6E9DF296B9F5E340A828F4E9B855FD0418DED7E0 (void);
-// 0x00000005 Facebook.WitAi.Interfaces.IAudioInputEvents Facebook.WitAi.ServiceReferences.DictationServiceAudioEventReference::get_AudioEvents()
-extern void DictationServiceAudioEventReference_get_AudioEvents_m0B66E14C163A152273EF84CF5A0F3295F12A461E (void);
-// 0x00000006 System.Void Facebook.WitAi.ServiceReferences.DictationServiceAudioEventReference::.ctor()
-extern void DictationServiceAudioEventReference__ctor_m5A3B0F13B84AF9FC79E592C9979D5312F66270AC (void);
-// 0x00000007 System.Boolean Facebook.WitAi.Dictation.DictationService::get_Active()
-// 0x00000008 System.Boolean Facebook.WitAi.Dictation.DictationService::get_IsRequestActive()
-// 0x00000009 Facebook.WitAi.Interfaces.ITranscriptionProvider Facebook.WitAi.Dictation.DictationService::get_TranscriptionProvider()
-// 0x0000000A System.Void Facebook.WitAi.Dictation.DictationService::set_TranscriptionProvider(Facebook.WitAi.Interfaces.ITranscriptionProvider)
-// 0x0000000B System.Boolean Facebook.WitAi.Dictation.DictationService::get_MicActive()
-// 0x0000000C Facebook.WitAi.Dictation.Events.DictationEvents Facebook.WitAi.Dictation.DictationService::get_DictationEvents()
-extern void DictationService_get_DictationEvents_mD1FC7C33883084B91CAC373C4BFDF80BD45B493B (void);
-// 0x0000000D System.Void Facebook.WitAi.Dictation.DictationService::set_DictationEvents(Facebook.WitAi.Dictation.Events.DictationEvents)
-extern void DictationService_set_DictationEvents_mA5C509FC7303384C74DCF172DC8398914504370F (void);
-// 0x0000000E Facebook.WitAi.Interfaces.IAudioInputEvents Facebook.WitAi.Dictation.DictationService::get_AudioEvents()
-extern void DictationService_get_AudioEvents_m442C45120C7A9827B456F897AD64D45BCC123F53 (void);
-// 0x0000000F Facebook.WitAi.Interfaces.ITranscriptionEvent Facebook.WitAi.Dictation.DictationService::get_TranscriptionEvents()
-extern void DictationService_get_TranscriptionEvents_m95EAC1C7526D079EFCA0C2A2B8684FA883346ACA (void);
-// 0x00000010 System.Boolean Facebook.WitAi.Dictation.DictationService::get_ShouldSendMicData()
-// 0x00000011 System.Void Facebook.WitAi.Dictation.DictationService::Activate()
-// 0x00000012 System.Void Facebook.WitAi.Dictation.DictationService::Activate(Facebook.WitAi.Configuration.WitRequestOptions)
-// 0x00000013 System.Void Facebook.WitAi.Dictation.DictationService::ActivateImmediately()
-// 0x00000014 System.Void Facebook.WitAi.Dictation.DictationService::ActivateImmediately(Facebook.WitAi.Configuration.WitRequestOptions)
-// 0x00000015 System.Void Facebook.WitAi.Dictation.DictationService::Deactivate()
-// 0x00000016 System.Void Facebook.WitAi.Dictation.DictationService::Cancel()
-// 0x00000017 System.Void Facebook.WitAi.Dictation.DictationService::Awake()
-extern void DictationService_Awake_m5AFF1C1056DF134CFDAF999DE67A501C877303F7 (void);
-// 0x00000018 System.Void Facebook.WitAi.Dictation.DictationService::OnEnable()
-extern void DictationService_OnEnable_mC8C6B7CFB37890F99B0D978C63CB9DCE6EA1A105 (void);
-// 0x00000019 System.Void Facebook.WitAi.Dictation.DictationService::OnDisable()
-extern void DictationService_OnDisable_m8F1F6279FA72CB4EE1D7799FBDC63418D0BAAD36 (void);
-// 0x0000001A System.Void Facebook.WitAi.Dictation.DictationService::.ctor()
-extern void DictationService__ctor_m9EEC338BBB2A6D1124E409BA81EA28489DF3A1EF (void);
-// 0x0000001B System.Boolean Facebook.WitAi.Dictation.IDictationService::get_Active()
-// 0x0000001C System.Boolean Facebook.WitAi.Dictation.IDictationService::get_IsRequestActive()
-// 0x0000001D System.Boolean Facebook.WitAi.Dictation.IDictationService::get_MicActive()
-// 0x0000001E Facebook.WitAi.Interfaces.ITranscriptionProvider Facebook.WitAi.Dictation.IDictationService::get_TranscriptionProvider()
-// 0x0000001F System.Void Facebook.WitAi.Dictation.IDictationService::set_TranscriptionProvider(Facebook.WitAi.Interfaces.ITranscriptionProvider)
-// 0x00000020 Facebook.WitAi.Dictation.Events.DictationEvents Facebook.WitAi.Dictation.IDictationService::get_DictationEvents()
-// 0x00000021 System.Void Facebook.WitAi.Dictation.IDictationService::set_DictationEvents(Facebook.WitAi.Dictation.Events.DictationEvents)
-// 0x00000022 System.Void Facebook.WitAi.Dictation.IDictationService::Activate()
-// 0x00000023 System.Void Facebook.WitAi.Dictation.IDictationService::Activate(Facebook.WitAi.Configuration.WitRequestOptions)
-// 0x00000024 System.Void Facebook.WitAi.Dictation.IDictationService::ActivateImmediately()
-// 0x00000025 System.Void Facebook.WitAi.Dictation.IDictationService::ActivateImmediately(Facebook.WitAi.Configuration.WitRequestOptions)
-// 0x00000026 System.Void Facebook.WitAi.Dictation.IDictationService::Deactivate()
-// 0x00000027 System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::Awake()
-extern void MultiRequestTranscription_Awake_mD69CE4DE120FBA170C42B7F8E546FFC01E7EEE08 (void);
-// 0x00000028 System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnEnable()
-extern void MultiRequestTranscription_OnEnable_mA26900011BF2B50414F1188AFF73335601E8BD1B (void);
-// 0x00000029 System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnDisable()
-extern void MultiRequestTranscription_OnDisable_mE8A80C864509F1D2502B48865211E19DA5E4C34B (void);
-// 0x0000002A System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnCancelled()
-extern void MultiRequestTranscription_OnCancelled_m987112B43B9AC0C02DC06395DB9DBC9D7F9729FC (void);
-// 0x0000002B System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnFullTranscription(System.String)
-extern void MultiRequestTranscription_OnFullTranscription_m0FD75B9C6B87C1541B6FF85B3497A901636CDF6A (void);
-// 0x0000002C System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnPartialTranscription(System.String)
-extern void MultiRequestTranscription_OnPartialTranscription_mC31C7FB2A24145166B33D4DBD5255B3E7FEB102F (void);
-// 0x0000002D System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::Clear()
-extern void MultiRequestTranscription_Clear_m6E6A0BDB06FA0ACE1E1BF008E71C44975E9FA1D0 (void);
-// 0x0000002E System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::OnTranscriptionUpdated()
-extern void MultiRequestTranscription_OnTranscriptionUpdated_m87E3E57608A3C9DD964BAF6FCDDD6CE2272CB93E (void);
-// 0x0000002F System.Void Facebook.WitAi.Dictation.MultiRequestTranscription::.ctor()
-extern void MultiRequestTranscription__ctor_mF08ACB753E793C5D2C1E107BC0FD50A43AC616C6 (void);
-// 0x00000030 Facebook.WitAi.Configuration.WitRuntimeConfiguration Facebook.WitAi.Dictation.WitDictation::get_RuntimeConfiguration()
-extern void WitDictation_get_RuntimeConfiguration_mD5995AD14996E750894F7E055875E3F3E5A7CFD9 (void);
-// 0x00000031 System.Void Facebook.WitAi.Dictation.WitDictation::set_RuntimeConfiguration(Facebook.WitAi.Configuration.WitRuntimeConfiguration)
-extern void WitDictation_set_RuntimeConfiguration_mC6B7E5C0D6BBD1C13FB994B56C080935A06B9BFA (void);
-// 0x00000032 System.Boolean Facebook.WitAi.Dictation.WitDictation::get_Active()
-extern void WitDictation_get_Active_m8E43F2393F9488870D9C8D8009458D3E0B430F61 (void);
-// 0x00000033 System.Boolean Facebook.WitAi.Dictation.WitDictation::get_IsRequestActive()
-extern void WitDictation_get_IsRequestActive_mCAD20A04A10DD064085FE0B013CEB66FFFBA101B (void);
-// 0x00000034 Facebook.WitAi.Interfaces.ITranscriptionProvider Facebook.WitAi.Dictation.WitDictation::get_TranscriptionProvider()
-extern void WitDictation_get_TranscriptionProvider_m4A22307DD109D82AEECA2A1717F4E914F3CCEDBE (void);
-// 0x00000035 System.Void Facebook.WitAi.Dictation.WitDictation::set_TranscriptionProvider(Facebook.WitAi.Interfaces.ITranscriptionProvider)
-extern void WitDictation_set_TranscriptionProvider_mA40E357DC975979C5392B364C55B085CB7D7E50C (void);
-// 0x00000036 System.Boolean Facebook.WitAi.Dictation.WitDictation::get_MicActive()
-extern void WitDictation_get_MicActive_m55C7DCF9A06F277A84E8EB8DA6B4360FD6D8256C (void);
-// 0x00000037 System.Boolean Facebook.WitAi.Dictation.WitDictation::get_ShouldSendMicData()
-extern void WitDictation_get_ShouldSendMicData_mC35F70FB3B1F60842D3DE35FA27800B8CD992DC7 (void);
-// 0x00000038 Facebook.WitAi.Events.VoiceEvents Facebook.WitAi.Dictation.WitDictation::get_VoiceEvents()
-extern void WitDictation_get_VoiceEvents_m14C3B5F0ECD64CCCE2AA7A32CEFEC1B31ECB1253 (void);
-// 0x00000039 Facebook.WitAi.WitRequest Facebook.WitAi.Dictation.WitDictation::CreateWitRequest(Facebook.WitAi.Data.Configuration.WitConfiguration,Facebook.WitAi.Configuration.WitRequestOptions,Facebook.WitAi.Interfaces.IDynamicEntitiesProvider[])
-extern void WitDictation_CreateWitRequest_m4B1C8583AA0879C80F2D7B9BE731EF33E950294D (void);
-// 0x0000003A System.Void Facebook.WitAi.Dictation.WitDictation::Activate()
-extern void WitDictation_Activate_m6B6B1C2BA3C932F502734F20F36429EE26AFF704 (void);
-// 0x0000003B System.Void Facebook.WitAi.Dictation.WitDictation::Activate(Facebook.WitAi.Configuration.WitRequestOptions)
-extern void WitDictation_Activate_mEF29112411713B93E3DD5DECB1E7AC2EDB152ABD (void);
-// 0x0000003C System.Void Facebook.WitAi.Dictation.WitDictation::ActivateImmediately()
-extern void WitDictation_ActivateImmediately_m58C53D50BAAEC7F852AD65548137C6182E99C86B (void);
-// 0x0000003D System.Void Facebook.WitAi.Dictation.WitDictation::ActivateImmediately(Facebook.WitAi.Configuration.WitRequestOptions)
-extern void WitDictation_ActivateImmediately_mAD8193D9208D7B04EF15CAFE5D15AB00AD6FD05E (void);
-// 0x0000003E System.Void Facebook.WitAi.Dictation.WitDictation::Deactivate()
-extern void WitDictation_Deactivate_mFBF69968ED65F9EF41F723D06CED6EED0D33C894 (void);
-// 0x0000003F System.Void Facebook.WitAi.Dictation.WitDictation::Cancel()
-extern void WitDictation_Cancel_m5CFBB99563EFDDBFC3958EB43939B2A1941CF4F4 (void);
-// 0x00000040 System.Void Facebook.WitAi.Dictation.WitDictation::Awake()
-extern void WitDictation_Awake_mE70630483841105A6BD28CECA65663EEE3705DEE (void);
-// 0x00000041 System.Void Facebook.WitAi.Dictation.WitDictation::OnEnable()
-extern void WitDictation_OnEnable_m05D2C597A2D1B7D4E709DE1532D7519194594DA6 (void);
-// 0x00000042 System.Void Facebook.WitAi.Dictation.WitDictation::OnDisable()
-extern void WitDictation_OnDisable_m53322255807AE93D2671540EBAE6A80DDEF506BC (void);
-// 0x00000043 System.Void Facebook.WitAi.Dictation.WitDictation::OnFullTranscription(System.String)
-extern void WitDictation_OnFullTranscription_m17616904D49597C6960FB3DCF1442CAAE866FC43 (void);
-// 0x00000044 System.Void Facebook.WitAi.Dictation.WitDictation::OnPartialTranscription(System.String)
-extern void WitDictation_OnPartialTranscription_mE1CDE1B9E597072920D0B38DBB0A8D42D449B3DF (void);
-// 0x00000045 System.Void Facebook.WitAi.Dictation.WitDictation::OnStartedListening()
-extern void WitDictation_OnStartedListening_m6AB4DB481D242A56C1AC3F15983A5C207E5BA409 (void);
-// 0x00000046 System.Void Facebook.WitAi.Dictation.WitDictation::OnStoppedListening()
-extern void WitDictation_OnStoppedListening_m33202AE653DBD778F19D2BA8F6527B346916A57F (void);
-// 0x00000047 System.Void Facebook.WitAi.Dictation.WitDictation::OnMicLevelChanged(System.Single)
-extern void WitDictation_OnMicLevelChanged_m7505BF778007693834D5A68CA5F97E90F668A838 (void);
-// 0x00000048 System.Void Facebook.WitAi.Dictation.WitDictation::OnError(System.String,System.String)
-extern void WitDictation_OnError_mF31C7E11B5B6A647D1C5A955DBC1824F432A0D6A (void);
-// 0x00000049 System.Void Facebook.WitAi.Dictation.WitDictation::OnResponse(Facebook.WitAi.Lib.WitResponseNode)
-extern void WitDictation_OnResponse_mD1A3CE6ACBB1A540B81ACA16049196B0C8F25E2D (void);
-// 0x0000004A System.Void Facebook.WitAi.Dictation.WitDictation::.ctor()
-extern void WitDictation__ctor_m4035288ADC192AFF1C6B3641E1922C32A4A577FD (void);
-// 0x0000004B Facebook.WitAi.Events.WitTranscriptionEvent Facebook.WitAi.Dictation.Events.DictationEvents::get_OnPartialTranscription()
-extern void DictationEvents_get_OnPartialTranscription_m7CBC589AA8559B428DD4220BA802339D2E21B547 (void);
-// 0x0000004C Facebook.WitAi.Events.WitTranscriptionEvent Facebook.WitAi.Dictation.Events.DictationEvents::get_OnFullTranscription()
-extern void DictationEvents_get_OnFullTranscription_m0F1E3663CB64F8808464646076C455D4ADCAC3C1 (void);
-// 0x0000004D Facebook.WitAi.Events.WitMicLevelChangedEvent Facebook.WitAi.Dictation.Events.DictationEvents::get_OnMicAudioLevelChanged()
-extern void DictationEvents_get_OnMicAudioLevelChanged_mFEC93879A950103A97CB56F41F484B072C858BB6 (void);
-// 0x0000004E UnityEngine.Events.UnityEvent Facebook.WitAi.Dictation.Events.DictationEvents::get_OnMicStartedListening()
-extern void DictationEvents_get_OnMicStartedListening_m63C1D7C7E42A084EA1F32F7113CD2E753C2506A1 (void);
-// 0x0000004F UnityEngine.Events.UnityEvent Facebook.WitAi.Dictation.Events.DictationEvents::get_OnMicStoppedListening()
-extern void DictationEvents_get_OnMicStoppedListening_m12228CEED028619A3E06DB69E285C8203084FBEE (void);
-// 0x00000050 System.Void Facebook.WitAi.Dictation.Events.DictationEvents::.ctor()
-extern void DictationEvents__ctor_mCD0EED2BE014C12E34DF0CAC702A757A75EA2471 (void);
-// 0x00000051 System.Void Facebook.WitAi.Dictation.Events.DictationSessionEvent::.ctor()
-extern void DictationSessionEvent__ctor_m0AEA7DB7BD3F261EBD20A093DE0875D16D6FB184 (void);
-// 0x00000052 System.Void Facebook.WitAi.Dictation.Data.DictationSession::.ctor()
-extern void DictationSession__ctor_mB06042F3771B2AFAE7CF3B20342FC8B6D631D0C0 (void);
-static Il2CppMethodPointer s_methodPointers[82] = 
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCC7FF92F6AFC594583987BDF774D6D9E065AD48F (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m7C154B3BEE4216230B2FAAE0137AD098E66D925C (void);
+extern void DictationServiceReference_get_DictationService_mBBF4697608C8D3865F010FCD7686BAB83FB6F970 (void);
+extern void U3CU3Ec__cctor_mA45599AF3CE5DB9A1438BD91360547BBF9A7840B (void);
+extern void U3CU3Ec__ctor_m3D91B3CA05DB77683CCE14F40668B58848343292 (void);
+extern void U3CU3Ec_U3Cget_DictationServiceU3Eb__2_0_m5EAEC25BEB18D37A15FBC8E0E333D038ACB58057 (void);
+extern void DictationServiceAudioEventReference_get_AudioEvents_m7DBFBF3EE5C2A3568058BE5FFA0B8108B337A21F (void);
+extern void DictationServiceAudioEventReference__ctor_m928385DB395A2224A8EA04E259A683C51777755D (void);
+extern void DictationService_get_DictationEvents_m8AC884290BAE5CCC90FAF6BC365069268BBF9954 (void);
+extern void DictationService_set_DictationEvents_mD1DAAEA17A092E58DE1DD666C58CB673762BC40E (void);
+extern void DictationService_get_TelemetryEvents_m83E39D6C497590021F84C2238EA125F000C7C340 (void);
+extern void DictationService_set_TelemetryEvents_m6C4291AA0CE8064546C87EE17B233704DCB4F25A (void);
+extern void DictationService_get_AudioEvents_m3C42CABF347FD00F6389BF5713414F63AB4E41CA (void);
+extern void DictationService_get_TranscriptionEvents_m0AA144BB870C93CF7B3CFBE1B0E2233A7CAF490D (void);
+extern void DictationService_Activate_mB34FCD9668F03DDF2EB88F1D3F379D8F4952262A (void);
+extern void DictationService_Activate_mC617A3F90A04DC92347BFA6B41D653F3367B146F (void);
+extern void DictationService_Activate_m85C4D58C58E797B2D69E37BD73562D8DC67C7D52 (void);
+extern void DictationService_ActivateImmediately_mB8109B59C95B3B3CB27A2C592737754890A5D30A (void);
+extern void DictationService_ActivateImmediately_m9E9121F7F3B0B093857DEA84A81CC5892F6BAA34 (void);
+extern void DictationService_ActivateImmediately_m70403B6D414F80AE2B382515A880AAB618C25783 (void);
+extern void DictationService_Awake_m9D73AD12F09FB78124E8A44A318387BD1395C8DE (void);
+extern void DictationService_OnEnable_m9F359DBD0CCD1D5F2670FC7A2089ECD12263D514 (void);
+extern void DictationService_OnDisable_m844C346816A56ADC5BD00D0CCB1F1521C5D1AB8B (void);
+extern void DictationService__ctor_m9AFD7A256F383D33C9825760C202FC53263EFD3F (void);
+extern void MultiRequestTranscription_Awake_m6F7E8454470B18A790B209BFC57F2AFA454D39C0 (void);
+extern void MultiRequestTranscription_OnEnable_mF602729FDB134E3223950C7611F62EB328226F29 (void);
+extern void MultiRequestTranscription_OnDisable_mDD7E1DD93954962B4A6FE4B0625F0E05972D1498 (void);
+extern void MultiRequestTranscription_OnCancelled_m3A9BE081F6B613099699E3F1C9BF492B693A6446 (void);
+extern void MultiRequestTranscription_OnFullTranscription_mC89778BE8EA34158E3298FE30BC5754EDA67C147 (void);
+extern void MultiRequestTranscription_OnPartialTranscription_m90F3C83D530D86D412B4DF5B6F08FD80CBEFDD88 (void);
+extern void MultiRequestTranscription_Clear_m8CD44A26B552FB8D5B5D9BAA5473B9872837FFB7 (void);
+extern void MultiRequestTranscription_OnTranscriptionUpdated_mA1D9172ED9D56787F329A62CDD4EE67989B0C8B1 (void);
+extern void MultiRequestTranscription__ctor_m9C3007EB5ADAEF134AE951402F11323921E95C2B (void);
+extern void WitDictation_get_RuntimeConfiguration_m6BCE26A1878B1DFB3219C48D88F03FC9192EE969 (void);
+extern void WitDictation_set_RuntimeConfiguration_m5A2175C6DC4A2C23207F8825498E45D41B946619 (void);
+extern void WitDictation_get_Configuration_m81195F83F0724BACE49B1440DA420D5C3B3BB518 (void);
+extern void WitDictation_get_Active_m198CD33AF690E5620E5A01E9DB1126389C0B34F7 (void);
+extern void WitDictation_get_IsRequestActive_mF35C76CC3C8FD2A79E74C23C005D4302BA5F2A6B (void);
+extern void WitDictation_get_TranscriptionProvider_mDC07DEA5374AF78A15607E1733EF0CFE2A2A4AA5 (void);
+extern void WitDictation_set_TranscriptionProvider_m6B39103D4D20D8AE423910645CC1B4B416545038 (void);
+extern void WitDictation_get_MicActive_m1167ADD43F2CB541E21F0C0D8E14CA966555433D (void);
+extern void WitDictation_get_ShouldSendMicData_m3041AF3961F04A9814C841AC1B1E9F5CC045869C (void);
+extern void WitDictation_get_VoiceEvents_m66661FAAA1C63820EE312715796544C6E5DAA3AD (void);
+extern void WitDictation_get_DictationEvents_mC537CBAF7380AEF2F373E7E6E76E630A8DAD55B8 (void);
+extern void WitDictation_set_DictationEvents_m39F911CC10D0406A50DFAA4E443B97A1BE6854C9 (void);
+extern void WitDictation_CreateWitRequest_m0680D7C34E798C661B3C201F1A482565E8D2808C (void);
+extern void WitDictation_Activate_mD3A41AA108E1B53A52502FA8185BDA107D206316 (void);
+extern void WitDictation_ActivateImmediately_m2A6D633DA9DC991B12A080CC77BE929EC6CDF2D1 (void);
+extern void WitDictation_Deactivate_mBE7AF4E15741C97D20D2536155942478E420D1E5 (void);
+extern void WitDictation_Cancel_m21A6871EB9D84DDD328FB92F208AAF74E59DC74F (void);
+extern void WitDictation_Awake_m36915B9A96B6F6EF630E1E516AC25AB8445B1012 (void);
+extern void WitDictation_OnEnable_m16057356D681B4D8B7395741A1117CDB839B74A6 (void);
+extern void WitDictation_OnDisable_m2956D048C9B2EAF9B37B17344FFC50A18847138B (void);
+extern void WitDictation_TranscribeFile_mF51F54B9C81CB0F2449ABE80E512A634CE158BDC (void);
+extern void WitDictation__ctor_m6542096D76D48501EC363C5505C9574A453FF639 (void);
+extern void DictationEvents_get_OnDictationSessionStarted_m2BA6F8DB329F7BAA80B5599161CE4C8EA4B98DE8 (void);
+extern void DictationEvents_get_OnDictationSessionStopped_m1AEECF38CBE067F0831E5445342EE54465BD4430 (void);
+extern void DictationEvents_get_onDictationSessionStarted_m4CC7006DC9D8332DF879D07CE9ACF3A972EE4387 (void);
+extern void DictationEvents_get_onDictationSessionStopped_mBD01602B81E3B8DACBA84A9A874F99E0337A90B8 (void);
+extern void DictationEvents_get_onStart_m538F53805B4FE06F4EFC78E2F4DEBF2243666CE3 (void);
+extern void DictationEvents_get_onStopped_m335221C9E8679B2F1200B506BE4496A11E3E43EC (void);
+extern void DictationEvents_get_onMicAudioLevel_m5CF1F5FF4AFBDDB6C657BA97737298AF27A2BDA6 (void);
+extern void DictationEvents_get_onError_m8A9ADBE8A9AA97FAEC7C7D5BC93343CE25B4F383 (void);
+extern void DictationEvents_get_onResponse_m517145B8D588E0113DFECAB0763DCFE452463904 (void);
+extern void DictationEvents__ctor_m14BB8C94EE1C58ED5D2C5E63C6F1F5742C22E337 (void);
+extern void DictationSessionEvent__ctor_m5AC84A37F1FFA43CC9CF86A7F3D413679A8802D3 (void);
+extern void DictationSession__ctor_m9B95E1111F60E6D443065FA7A37B09790A887AE4 (void);
+static Il2CppMethodPointer s_methodPointers[90] = 
 {
-	DictationServiceReference_get_DictationService_m250347CB96B8CAEFC9B2B2F0841110E7A497CD48,
-	U3CU3Ec__cctor_m433DAEB1EC8DADB178B4649D15F42F72B22D7928,
-	U3CU3Ec__ctor_mDE3921A1203AE0E5FE874A9DFCB4C6A797DC6C2D,
-	U3CU3Ec_U3Cget_DictationServiceU3Eb__2_0_m6E9DF296B9F5E340A828F4E9B855FD0418DED7E0,
-	DictationServiceAudioEventReference_get_AudioEvents_m0B66E14C163A152273EF84CF5A0F3295F12A461E,
-	DictationServiceAudioEventReference__ctor_m5A3B0F13B84AF9FC79E592C9979D5312F66270AC,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCC7FF92F6AFC594583987BDF774D6D9E065AD48F,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m7C154B3BEE4216230B2FAAE0137AD098E66D925C,
+	DictationServiceReference_get_DictationService_mBBF4697608C8D3865F010FCD7686BAB83FB6F970,
+	U3CU3Ec__cctor_mA45599AF3CE5DB9A1438BD91360547BBF9A7840B,
+	U3CU3Ec__ctor_m3D91B3CA05DB77683CCE14F40668B58848343292,
+	U3CU3Ec_U3Cget_DictationServiceU3Eb__2_0_m5EAEC25BEB18D37A15FBC8E0E333D038ACB58057,
+	DictationServiceAudioEventReference_get_AudioEvents_m7DBFBF3EE5C2A3568058BE5FFA0B8108B337A21F,
+	DictationServiceAudioEventReference__ctor_m928385DB395A2224A8EA04E259A683C51777755D,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
-	DictationService_get_DictationEvents_mD1FC7C33883084B91CAC373C4BFDF80BD45B493B,
-	DictationService_set_DictationEvents_mA5C509FC7303384C74DCF172DC8398914504370F,
-	DictationService_get_AudioEvents_m442C45120C7A9827B456F897AD64D45BCC123F53,
-	DictationService_get_TranscriptionEvents_m95EAC1C7526D079EFCA0C2A2B8684FA883346ACA,
+	DictationService_get_DictationEvents_m8AC884290BAE5CCC90FAF6BC365069268BBF9954,
+	DictationService_set_DictationEvents_mD1DAAEA17A092E58DE1DD666C58CB673762BC40E,
+	DictationService_get_TelemetryEvents_m83E39D6C497590021F84C2238EA125F000C7C340,
+	DictationService_set_TelemetryEvents_m6C4291AA0CE8064546C87EE17B233704DCB4F25A,
+	DictationService_get_AudioEvents_m3C42CABF347FD00F6389BF5713414F63AB4E41CA,
+	DictationService_get_TranscriptionEvents_m0AA144BB870C93CF7B3CFBE1B0E2233A7CAF490D,
+	NULL,
+	DictationService_Activate_mB34FCD9668F03DDF2EB88F1D3F379D8F4952262A,
+	DictationService_Activate_mC617A3F90A04DC92347BFA6B41D653F3367B146F,
+	DictationService_Activate_m85C4D58C58E797B2D69E37BD73562D8DC67C7D52,
+	NULL,
+	DictationService_ActivateImmediately_mB8109B59C95B3B3CB27A2C592737754890A5D30A,
+	DictationService_ActivateImmediately_m9E9121F7F3B0B093857DEA84A81CC5892F6BAA34,
+	DictationService_ActivateImmediately_m70403B6D414F80AE2B382515A880AAB618C25783,
+	NULL,
+	NULL,
+	NULL,
+	DictationService_Awake_m9D73AD12F09FB78124E8A44A318387BD1395C8DE,
+	DictationService_OnEnable_m9F359DBD0CCD1D5F2670FC7A2089ECD12263D514,
+	DictationService_OnDisable_m844C346816A56ADC5BD00D0CCB1F1521C5D1AB8B,
+	DictationService__ctor_m9AFD7A256F383D33C9825760C202FC53263EFD3F,
 	NULL,
 	NULL,
 	NULL,
@@ -176,89 +122,97 @@ static Il2CppMethodPointer s_methodPointers[82] =
 	NULL,
 	NULL,
 	NULL,
-	DictationService_Awake_m5AFF1C1056DF134CFDAF999DE67A501C877303F7,
-	DictationService_OnEnable_mC8C6B7CFB37890F99B0D978C63CB9DCE6EA1A105,
-	DictationService_OnDisable_m8F1F6279FA72CB4EE1D7799FBDC63418D0BAAD36,
-	DictationService__ctor_m9EEC338BBB2A6D1124E409BA81EA28489DF3A1EF,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
 	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	MultiRequestTranscription_Awake_mD69CE4DE120FBA170C42B7F8E546FFC01E7EEE08,
-	MultiRequestTranscription_OnEnable_mA26900011BF2B50414F1188AFF73335601E8BD1B,
-	MultiRequestTranscription_OnDisable_mE8A80C864509F1D2502B48865211E19DA5E4C34B,
-	MultiRequestTranscription_OnCancelled_m987112B43B9AC0C02DC06395DB9DBC9D7F9729FC,
-	MultiRequestTranscription_OnFullTranscription_m0FD75B9C6B87C1541B6FF85B3497A901636CDF6A,
-	MultiRequestTranscription_OnPartialTranscription_mC31C7FB2A24145166B33D4DBD5255B3E7FEB102F,
-	MultiRequestTranscription_Clear_m6E6A0BDB06FA0ACE1E1BF008E71C44975E9FA1D0,
-	MultiRequestTranscription_OnTranscriptionUpdated_m87E3E57608A3C9DD964BAF6FCDDD6CE2272CB93E,
-	MultiRequestTranscription__ctor_mF08ACB753E793C5D2C1E107BC0FD50A43AC616C6,
-	WitDictation_get_RuntimeConfiguration_mD5995AD14996E750894F7E055875E3F3E5A7CFD9,
-	WitDictation_set_RuntimeConfiguration_mC6B7E5C0D6BBD1C13FB994B56C080935A06B9BFA,
-	WitDictation_get_Active_m8E43F2393F9488870D9C8D8009458D3E0B430F61,
-	WitDictation_get_IsRequestActive_mCAD20A04A10DD064085FE0B013CEB66FFFBA101B,
-	WitDictation_get_TranscriptionProvider_m4A22307DD109D82AEECA2A1717F4E914F3CCEDBE,
-	WitDictation_set_TranscriptionProvider_mA40E357DC975979C5392B364C55B085CB7D7E50C,
-	WitDictation_get_MicActive_m55C7DCF9A06F277A84E8EB8DA6B4360FD6D8256C,
-	WitDictation_get_ShouldSendMicData_mC35F70FB3B1F60842D3DE35FA27800B8CD992DC7,
-	WitDictation_get_VoiceEvents_m14C3B5F0ECD64CCCE2AA7A32CEFEC1B31ECB1253,
-	WitDictation_CreateWitRequest_m4B1C8583AA0879C80F2D7B9BE731EF33E950294D,
-	WitDictation_Activate_m6B6B1C2BA3C932F502734F20F36429EE26AFF704,
-	WitDictation_Activate_mEF29112411713B93E3DD5DECB1E7AC2EDB152ABD,
-	WitDictation_ActivateImmediately_m58C53D50BAAEC7F852AD65548137C6182E99C86B,
-	WitDictation_ActivateImmediately_mAD8193D9208D7B04EF15CAFE5D15AB00AD6FD05E,
-	WitDictation_Deactivate_mFBF69968ED65F9EF41F723D06CED6EED0D33C894,
-	WitDictation_Cancel_m5CFBB99563EFDDBFC3958EB43939B2A1941CF4F4,
-	WitDictation_Awake_mE70630483841105A6BD28CECA65663EEE3705DEE,
-	WitDictation_OnEnable_m05D2C597A2D1B7D4E709DE1532D7519194594DA6,
-	WitDictation_OnDisable_m53322255807AE93D2671540EBAE6A80DDEF506BC,
-	WitDictation_OnFullTranscription_m17616904D49597C6960FB3DCF1442CAAE866FC43,
-	WitDictation_OnPartialTranscription_mE1CDE1B9E597072920D0B38DBB0A8D42D449B3DF,
-	WitDictation_OnStartedListening_m6AB4DB481D242A56C1AC3F15983A5C207E5BA409,
-	WitDictation_OnStoppedListening_m33202AE653DBD778F19D2BA8F6527B346916A57F,
-	WitDictation_OnMicLevelChanged_m7505BF778007693834D5A68CA5F97E90F668A838,
-	WitDictation_OnError_mF31C7E11B5B6A647D1C5A955DBC1824F432A0D6A,
-	WitDictation_OnResponse_mD1A3CE6ACBB1A540B81ACA16049196B0C8F25E2D,
-	WitDictation__ctor_m4035288ADC192AFF1C6B3641E1922C32A4A577FD,
-	DictationEvents_get_OnPartialTranscription_m7CBC589AA8559B428DD4220BA802339D2E21B547,
-	DictationEvents_get_OnFullTranscription_m0F1E3663CB64F8808464646076C455D4ADCAC3C1,
-	DictationEvents_get_OnMicAudioLevelChanged_mFEC93879A950103A97CB56F41F484B072C858BB6,
-	DictationEvents_get_OnMicStartedListening_m63C1D7C7E42A084EA1F32F7113CD2E753C2506A1,
-	DictationEvents_get_OnMicStoppedListening_m12228CEED028619A3E06DB69E285C8203084FBEE,
-	DictationEvents__ctor_mCD0EED2BE014C12E34DF0CAC702A757A75EA2471,
-	DictationSessionEvent__ctor_m0AEA7DB7BD3F261EBD20A093DE0875D16D6FB184,
-	DictationSession__ctor_mB06042F3771B2AFAE7CF3B20342FC8B6D631D0C0,
+	MultiRequestTranscription_Awake_m6F7E8454470B18A790B209BFC57F2AFA454D39C0,
+	MultiRequestTranscription_OnEnable_mF602729FDB134E3223950C7611F62EB328226F29,
+	MultiRequestTranscription_OnDisable_mDD7E1DD93954962B4A6FE4B0625F0E05972D1498,
+	MultiRequestTranscription_OnCancelled_m3A9BE081F6B613099699E3F1C9BF492B693A6446,
+	MultiRequestTranscription_OnFullTranscription_mC89778BE8EA34158E3298FE30BC5754EDA67C147,
+	MultiRequestTranscription_OnPartialTranscription_m90F3C83D530D86D412B4DF5B6F08FD80CBEFDD88,
+	MultiRequestTranscription_Clear_m8CD44A26B552FB8D5B5D9BAA5473B9872837FFB7,
+	MultiRequestTranscription_OnTranscriptionUpdated_mA1D9172ED9D56787F329A62CDD4EE67989B0C8B1,
+	MultiRequestTranscription__ctor_m9C3007EB5ADAEF134AE951402F11323921E95C2B,
+	WitDictation_get_RuntimeConfiguration_m6BCE26A1878B1DFB3219C48D88F03FC9192EE969,
+	WitDictation_set_RuntimeConfiguration_m5A2175C6DC4A2C23207F8825498E45D41B946619,
+	WitDictation_get_Configuration_m81195F83F0724BACE49B1440DA420D5C3B3BB518,
+	WitDictation_get_Active_m198CD33AF690E5620E5A01E9DB1126389C0B34F7,
+	WitDictation_get_IsRequestActive_mF35C76CC3C8FD2A79E74C23C005D4302BA5F2A6B,
+	WitDictation_get_TranscriptionProvider_mDC07DEA5374AF78A15607E1733EF0CFE2A2A4AA5,
+	WitDictation_set_TranscriptionProvider_m6B39103D4D20D8AE423910645CC1B4B416545038,
+	WitDictation_get_MicActive_m1167ADD43F2CB541E21F0C0D8E14CA966555433D,
+	WitDictation_get_ShouldSendMicData_m3041AF3961F04A9814C841AC1B1E9F5CC045869C,
+	WitDictation_get_VoiceEvents_m66661FAAA1C63820EE312715796544C6E5DAA3AD,
+	WitDictation_get_DictationEvents_mC537CBAF7380AEF2F373E7E6E76E630A8DAD55B8,
+	WitDictation_set_DictationEvents_m39F911CC10D0406A50DFAA4E443B97A1BE6854C9,
+	WitDictation_CreateWitRequest_m0680D7C34E798C661B3C201F1A482565E8D2808C,
+	WitDictation_Activate_mD3A41AA108E1B53A52502FA8185BDA107D206316,
+	WitDictation_ActivateImmediately_m2A6D633DA9DC991B12A080CC77BE929EC6CDF2D1,
+	WitDictation_Deactivate_mBE7AF4E15741C97D20D2536155942478E420D1E5,
+	WitDictation_Cancel_m21A6871EB9D84DDD328FB92F208AAF74E59DC74F,
+	WitDictation_Awake_m36915B9A96B6F6EF630E1E516AC25AB8445B1012,
+	WitDictation_OnEnable_m16057356D681B4D8B7395741A1117CDB839B74A6,
+	WitDictation_OnDisable_m2956D048C9B2EAF9B37B17344FFC50A18847138B,
+	WitDictation_TranscribeFile_mF51F54B9C81CB0F2449ABE80E512A634CE158BDC,
+	WitDictation__ctor_m6542096D76D48501EC363C5505C9574A453FF639,
+	DictationEvents_get_OnDictationSessionStarted_m2BA6F8DB329F7BAA80B5599161CE4C8EA4B98DE8,
+	DictationEvents_get_OnDictationSessionStopped_m1AEECF38CBE067F0831E5445342EE54465BD4430,
+	DictationEvents_get_onDictationSessionStarted_m4CC7006DC9D8332DF879D07CE9ACF3A972EE4387,
+	DictationEvents_get_onDictationSessionStopped_mBD01602B81E3B8DACBA84A9A874F99E0337A90B8,
+	DictationEvents_get_onStart_m538F53805B4FE06F4EFC78E2F4DEBF2243666CE3,
+	DictationEvents_get_onStopped_m335221C9E8679B2F1200B506BE4496A11E3E43EC,
+	DictationEvents_get_onMicAudioLevel_m5CF1F5FF4AFBDDB6C657BA97737298AF27A2BDA6,
+	DictationEvents_get_onError_m8A9ADBE8A9AA97FAEC7C7D5BC93343CE25B4F383,
+	DictationEvents_get_onResponse_m517145B8D588E0113DFECAB0763DCFE452463904,
+	DictationEvents__ctor_m14BB8C94EE1C58ED5D2C5E63C6F1F5742C22E337,
+	DictationSessionEvent__ctor_m5AC84A37F1FFA43CC9CF86A7F3D413679A8802D3,
+	DictationSession__ctor_m9B95E1111F60E6D443065FA7A37B09790A887AE4,
 };
-extern void DictationServiceReference_get_DictationService_m250347CB96B8CAEFC9B2B2F0841110E7A497CD48_AdjustorThunk (void);
+extern void DictationServiceReference_get_DictationService_mBBF4697608C8D3865F010FCD7686BAB83FB6F970_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000001, DictationServiceReference_get_DictationService_m250347CB96B8CAEFC9B2B2F0841110E7A497CD48_AdjustorThunk },
+	{ 0x06000003, DictationServiceReference_get_DictationService_mBBF4697608C8D3865F010FCD7686BAB83FB6F970_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[82] = 
+static const int32_t s_InvokerIndices[90] = 
 {
-	6239,
-	9756,
-	6357,
-	3722,
-	6239,
-	6357,
+	12245,
+	8227,
+	8102,
+	12231,
+	8227,
+	4757,
+	8102,
+	8227,
 	0,
 	0,
 	0,
 	0,
 	0,
-	6239,
-	5103,
-	6239,
-	6239,
+	8102,
+	6523,
+	8102,
+	6523,
+	8102,
+	8102,
+	0,
+	8227,
+	6523,
+	5826,
+	0,
+	8227,
+	6523,
+	5826,
+	0,
+	0,
+	0,
+	8227,
+	8227,
+	8227,
+	8227,
 	0,
 	0,
 	0,
@@ -266,72 +220,61 @@ static const int32_t s_InvokerIndices[82] =
 	0,
 	0,
 	0,
-	6357,
-	6357,
-	6357,
-	6357,
 	0,
 	0,
 	0,
 	0,
 	0,
 	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	6357,
-	6357,
-	6357,
-	6357,
-	5103,
-	5103,
-	6357,
-	6357,
-	6357,
-	6239,
-	5103,
-	6152,
-	6152,
-	6239,
-	5103,
-	6152,
-	6152,
-	6239,
-	1467,
-	6357,
-	5103,
-	6357,
-	5103,
-	6357,
-	6357,
-	6357,
-	6357,
-	6357,
-	5103,
-	5103,
-	6357,
-	6357,
-	5146,
-	2963,
-	5103,
-	6357,
-	6239,
-	6239,
-	6239,
-	6239,
-	6239,
-	6357,
-	6357,
-	6357,
+	8227,
+	8227,
+	8227,
+	8227,
+	6523,
+	6523,
+	8227,
+	8227,
+	8227,
+	8102,
+	6523,
+	8102,
+	7989,
+	7989,
+	8102,
+	6523,
+	7989,
+	7989,
+	8102,
+	8102,
+	6523,
+	1226,
+	2841,
+	2841,
+	8227,
+	8227,
+	8227,
+	8227,
+	8227,
+	6523,
+	8227,
+	8102,
+	8102,
+	8102,
+	8102,
+	8102,
+	8102,
+	8102,
+	8102,
+	8102,
+	8227,
+	8227,
+	8227,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Facebook_Wit_Dictation_CodeGenModule;
 const Il2CppCodeGenModule g_Facebook_Wit_Dictation_CodeGenModule = 
 {
 	"Facebook.Wit.Dictation.dll",
-	82,
+	90,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,
@@ -343,7 +286,7 @@ const Il2CppCodeGenModule g_Facebook_Wit_Dictation_CodeGenModule =
 	0,
 	NULL,
 	NULL,
-	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

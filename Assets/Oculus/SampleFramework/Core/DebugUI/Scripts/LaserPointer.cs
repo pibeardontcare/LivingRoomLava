@@ -29,15 +29,14 @@ public class LaserPointer : OVRCursor
 {
     public enum LaserBeamBehavior
     {
-        On,        // laser beam always on
-        Off,        // laser beam always off
-        OnWhenHitTarget,  // laser beam only activates when hit valid target
+        On, // laser beam always on
+        Off, // laser beam always off
+        OnWhenHitTarget, // laser beam only activates when hit valid target
     }
 
     public GameObject cursorVisual;
     public float maxLength = 10.0f;
 
-    [SerializeField]
     private LaserBeamBehavior _laserBeamBehavior;
     bool m_restoreOnInputAcquired = false;
 
@@ -55,11 +54,9 @@ public class LaserPointer : OVRCursor
                 lineRenderer.enabled = true;
             }
         }
-        get
-        {
-            return _laserBeamBehavior;
-        }
+        get { return _laserBeamBehavior; }
     }
+
     private Vector3 _startPoint;
     private Vector3 _forward;
     private Vector3 _endPoint;
@@ -150,6 +147,7 @@ public class LaserPointer : OVRCursor
     {
         if (cursorVisual) cursorVisual.SetActive(false);
     }
+
     public void OnInputFocusLost()
     {
         if (gameObject && gameObject.activeInHierarchy)

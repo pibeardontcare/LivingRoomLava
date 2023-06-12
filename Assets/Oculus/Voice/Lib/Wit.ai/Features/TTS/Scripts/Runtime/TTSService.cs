@@ -11,13 +11,13 @@ using System.Collections;
 using System.Text;
 using System.Security.Cryptography;
 using System.Collections.Generic;
+using Meta.WitAi.Requests;
 using UnityEngine;
-using Facebook.WitAi.TTS.Data;
-using Facebook.WitAi.TTS.Events;
-using Facebook.WitAi.TTS.Interfaces;
-using Facebook.WitAi.Utilities;
+using Meta.WitAi.TTS.Data;
+using Meta.WitAi.TTS.Events;
+using Meta.WitAi.TTS.Interfaces;
 
-namespace Facebook.WitAi.TTS
+namespace Meta.WitAi.TTS
 {
     public abstract class TTSService : MonoBehaviour
     {
@@ -122,6 +122,8 @@ namespace Facebook.WitAi.TTS
                 WebHandler.WebStreamEvents.OnStreamCancel.AddListener(OnWebStreamCancel);
                 WebHandler.WebStreamEvents.OnStreamReady.AddListener(OnWebStreamReady);
                 WebHandler.WebStreamEvents.OnStreamError.AddListener(OnWebStreamError);
+                WebHandler.WebStreamEvents.OnStreamClipUpdate.AddListener(OnStreamClipUpdated);
+                WebHandler.WebStreamEvents.OnStreamComplete.AddListener(OnWebStreamComplete);
                 WebHandler.WebDownloadEvents.OnDownloadBegin.AddListener(OnWebDownloadBegin);
                 WebHandler.WebDownloadEvents.OnDownloadCancel.AddListener(OnWebDownloadCancel);
                 WebHandler.WebDownloadEvents.OnDownloadSuccess.AddListener(OnWebDownloadSuccess);
@@ -156,6 +158,8 @@ namespace Facebook.WitAi.TTS
                 WebHandler.WebStreamEvents.OnStreamCancel.RemoveListener(OnWebStreamCancel);
                 WebHandler.WebStreamEvents.OnStreamReady.RemoveListener(OnWebStreamReady);
                 WebHandler.WebStreamEvents.OnStreamError.RemoveListener(OnWebStreamError);
+                WebHandler.WebStreamEvents.OnStreamClipUpdate.RemoveListener(OnStreamClipUpdated);
+                WebHandler.WebStreamEvents.OnStreamComplete.RemoveListener(OnWebStreamComplete);
                 WebHandler.WebDownloadEvents.OnDownloadBegin.RemoveListener(OnWebDownloadBegin);
                 WebHandler.WebDownloadEvents.OnDownloadCancel.RemoveListener(OnWebDownloadCancel);
                 WebHandler.WebDownloadEvents.OnDownloadSuccess.RemoveListener(OnWebDownloadSuccess);
@@ -200,6 +204,8 @@ namespace Facebook.WitAi.TTS
                     }
                 }
                 builder.AppendLine($"Cache: {cacheLocation}");
+                builder.AppendLine($"Type: {clipData.audioType}");
+                builder.AppendLine($"Length: {(clipData.clip == null ? "NULL" : clipData.clip.length.ToString("0.000") + "secs")}");
             }
             return builder.ToString();
         }
@@ -288,6 +294,7 @@ namespace Facebook.WitAi.TTS
             clipData = new TTSClipData()
             {
                 clipID = clipID,
+                audioType = GetAudioType(),
                 textToSpeak = textToSpeak,
                 voiceSettings = voiceSettings,
                 diskCacheSettings = diskCacheSettings,
@@ -299,6 +306,11 @@ namespace Facebook.WitAi.TTS
             // Return generated clip
             return clipData;
         }
+        // Get audio type
+        protected virtual AudioType GetAudioType()
+        {
+            return AudioType.WAV;
+        }
         // Set clip state
         protected virtual void SetClipLoadState(TTSClipData clipData, TTSClipLoadState loadState)
         {
@@ -308,9 +320,6 @@ namespace Facebook.WitAi.TTS
         #endregion
 
         #region LOAD
-        // Cancel warning
-        public const string CANCEL_WARNING = "Canceled";
-
         // TTS Request options
         public TTSClipData Load(string textToSpeak, Action<TTSClipData, string> onStreamReady = null) => Load(textToSpeak, null, null, null, onStreamReady);
         public TTSClipData Load(string textToSpeak, string presetVoiceId, Action<TTSClipData, string> onStreamReady = null) => Load(textToSpeak, null, GetPresetVoiceSettings(presetVoiceId), null, onStreamReady);
@@ -368,8 +377,21 @@ namespace Facebook.WitAi.TTS
             {
                 if (!RuntimeCacheHandler.AddClip(clipData))
                 {
-                    // Call
-                    CoroutineUtility.StartCoroutine(CallAfterAMoment(() => onStreamReady(clipData, "Could not add to runtime cache")));
+                    // Add callback
+                    if (onStreamReady != null)
+                    {
+                        // Call once ready
+                        if (clipData.loadState == TTSClipLoadState.Preparing)
+                        {
+                            clipData.onPlaybackReady += (e) => onStreamReady(clipData, e);
+                        }
+                        // Call after return
+                        else
+                        {
+                            CoroutineUtility.StartCoroutine(CallAfterAMoment(() => onStreamReady(clipData,
+                                clipData.loadState == TTSClipLoadState.Loaded ? string.Empty : "Error")));
+                        }
+                    }
 
                     // Return clip
                     return clipData;
@@ -382,7 +404,7 @@ namespace Facebook.WitAi.TTS
             }
 
             // Add on ready delegate
-            clipData.onPlaybackReady += (error) => onStreamReady(clipData, error);
+            clipData.onPlaybackReady += (error) => onStreamReady?.Invoke(clipData, error);
 
             // Wait a moment and load
             CoroutineUtility.StartCoroutine(CallAfterAMoment(() =>
@@ -413,7 +435,7 @@ namespace Facebook.WitAi.TTS
                     DownloadToDiskCache(clipData, (clipData2, downloadPath, error) =>
                     {
                         // Download was canceled before starting
-                        if (string.Equals(error, CANCEL_WARNING))
+                        if (string.Equals(error, WitConstants.CANCEL_ERROR))
                         {
                             OnWebStreamBegin(clipData);
                             OnWebStreamCancel(clipData);
@@ -507,13 +529,13 @@ namespace Facebook.WitAi.TTS
 
             // Now loaded
             SetClipLoadState(clipData, TTSClipLoadState.Loaded);
+            VLog.D(GetClipLog($"{(fromDisk ? "Disk" : "Web")} Stream Ready", clipData));
 
             // Invoke playback is ready
             clipData.onPlaybackReady?.Invoke(string.Empty);
             clipData.onPlaybackReady = null;
 
             // Callback delegate
-            VLog.D(GetClipLog($"{(fromDisk ? "Disk" : "Web")} Stream Ready", clipData));
             Events?.Stream?.OnStreamReady?.Invoke(clipData);
         }
         // Handle cancel of disk cache streaming
@@ -525,7 +547,7 @@ namespace Facebook.WitAi.TTS
             SetClipLoadState(clipData, TTSClipLoadState.Error);
 
             // Invoke
-            clipData.onPlaybackReady?.Invoke(CANCEL_WARNING);
+            clipData.onPlaybackReady?.Invoke(WitConstants.CANCEL_ERROR);
             clipData.onPlaybackReady = null;
 
             // Callback delegate
@@ -540,6 +562,13 @@ namespace Facebook.WitAi.TTS
         private void OnWebStreamError(TTSClipData clipData, string error) => OnStreamError(clipData, error, false);
         private void OnStreamError(TTSClipData clipData, string error, bool fromDisk)
         {
+            // Cancelled
+            if (error.Equals(WitConstants.CANCEL_ERROR))
+            {
+                OnStreamCancel(clipData, fromDisk);
+                return;
+            }
+
             // Error
             SetClipLoadState(clipData, TTSClipLoadState.Error);
 
@@ -553,6 +582,18 @@ namespace Facebook.WitAi.TTS
 
             // Unload clip
             Unload(clipData);
+        }
+        // Web stream complete
+        private void OnStreamClipUpdated(TTSClipData clipData)
+        {
+            VLog.D(GetClipLog($"Stream Clip Updated", clipData));
+            Events?.Stream?.OnStreamClipUpdate?.Invoke(clipData);
+        }
+        // Web stream complete
+        private void OnWebStreamComplete(TTSClipData clipData)
+        {
+            VLog.D(GetClipLog($"Web Stream Complete", clipData));
+            Events?.Stream?.OnStreamComplete?.Invoke(clipData);
         }
         #endregion
 
@@ -570,11 +611,10 @@ namespace Facebook.WitAi.TTS
             }
 
             // Copy array
-            TTSClipData[] copy = new TTSClipData[clips.Length];
-            clips.CopyTo(copy, 0);
+            HashSet<TTSClipData> remaining = new HashSet<TTSClipData>(clips);
 
             // Unload all clips
-            foreach (var clip in copy)
+            foreach (var clip in remaining)
             {
                 Unload(clip);
             }
@@ -610,9 +650,10 @@ namespace Facebook.WitAi.TTS
                 DiskCacheHandler?.CancelDiskCacheStream(clipData);
             }
             // Destroy clip
-            else if (clipData.clip != null)
+            if (clipData.clip != null)
             {
-                MonoBehaviour.DestroyImmediate(clipData.clip);
+                clipData.clip.DestroySafely();
+                clipData.clip = null;
             }
 
             // Clip is now unloaded
@@ -728,7 +769,7 @@ namespace Facebook.WitAi.TTS
                 }
 
                 // Add download completion callback
-                clipData.onDownloadComplete += (error) => onDownloadComplete(clipData, downloadPath, error);
+                clipData.onDownloadComplete += (error) => onDownloadComplete?.Invoke(clipData, downloadPath, error);
 
                 // Download to cache
                 WebHandler.RequestDownloadFromWeb(clipData, downloadPath);
@@ -755,7 +796,7 @@ namespace Facebook.WitAi.TTS
         private void OnWebDownloadCancel(TTSClipData clipData, string downloadPath)
         {
             // Invoke clip callback & clear
-            clipData.onDownloadComplete?.Invoke(CANCEL_WARNING);
+            clipData.onDownloadComplete?.Invoke(WitConstants.CANCEL_ERROR);
             clipData.onDownloadComplete = null;
 
             // Log
@@ -765,12 +806,19 @@ namespace Facebook.WitAi.TTS
         // On web download complete
         private void OnWebDownloadError(TTSClipData clipData, string downloadPath, string error)
         {
+            // Cancelled
+            if (error.Equals(WitConstants.CANCEL_ERROR))
+            {
+                OnWebDownloadCancel(clipData, downloadPath);
+                return;
+            }
+
             // Invoke clip callback & clear
             clipData.onDownloadComplete?.Invoke(error);
             clipData.onDownloadComplete = null;
 
             // Log
-            VLog.E(GetClipLog($"Download Clip - Failed\nPath: {downloadPath}", clipData));
+            VLog.E(GetClipLog($"Download Clip - Failed\nPath: {downloadPath}\nError: {error}", clipData));
             Events?.Download?.OnDownloadError?.Invoke(clipData, downloadPath, error);
         }
         #endregion

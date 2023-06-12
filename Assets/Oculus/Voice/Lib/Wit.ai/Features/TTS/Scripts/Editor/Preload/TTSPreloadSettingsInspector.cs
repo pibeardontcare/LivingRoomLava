@@ -8,14 +8,14 @@
 
 using System;
 using System.Collections.Generic;
-using Facebook.WitAi.Data.Configuration;
-using Facebook.WitAi.TTS.Data;
-using Facebook.WitAi.TTS.Editor.Preload;
-using Facebook.WitAi.Utilities;
+using Meta.WitAi.Data.Configuration;
+using Meta.WitAi.TTS.Data;
+using Meta.WitAi.TTS.Editor.Preload;
+using Meta.WitAi.Utilities;
 using UnityEditor;
 using UnityEngine;
 
-namespace Facebook.WitAi.TTS.Editor
+namespace Meta.WitAi.TTS.Editor
 {
     [CustomEditor(typeof(TTSPreloadSettings), true)]
     public class TTSPreloadSettingsInspector : UnityEditor.Editor
@@ -30,7 +30,8 @@ namespace Facebook.WitAi.TTS.Editor
         // Layout items
         public const float ACTION_BTN_INDENT = 15f;
         public virtual Texture2D HeaderIcon => WitTexts.HeaderIcon;
-        public virtual string HeaderUrl => WitTexts.GetAppURL(WitConfigurationUtility.GetAppID(null), WitTexts.WitAppEndpointType.Settings);
+        public virtual string HeaderUrl => WitTexts.GetAppURL(string.Empty, WitTexts.WitAppEndpointType.Settings);
+        public virtual string DocsUrl => WitTexts.Texts.WitDocsUrl;
 
         // Layout
         public override void OnInspectorGUI()
@@ -42,7 +43,7 @@ namespace Facebook.WitAi.TTS.Editor
             }
 
             // Draw header
-            WitEditorUI.LayoutHeaderButton(HeaderIcon, HeaderUrl);
+            WitEditorUI.LayoutHeaderButton(HeaderIcon, HeaderUrl, DocsUrl);
             GUILayout.Space(WitStyles.HeaderPaddingBottom);
 
             // Layout actions
@@ -103,6 +104,15 @@ namespace Facebook.WitAi.TTS.Editor
             {
                 EditorUtility.ClearProgressBar();
                 if (TTSPreloadUtility.ImportData(Settings))
+                {
+                    RefreshData();
+                }
+            }
+            GUILayout.Space(ACTION_BTN_INDENT);
+            if (WitEditorUI.LayoutTextButton("Import AutoLoader Data"))
+            {
+                EditorUtility.ClearProgressBar();
+                if (TTSPreloadUtility.ImportPhrases(Settings))
                 {
                     RefreshData();
                 }
