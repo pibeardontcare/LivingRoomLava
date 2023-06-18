@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/2 WillsAdventure.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/Test Environment.unity
-    guid: 078d1c3eacb70444ab6e9d40c97ed1c5
   - enabled: 1
+    path: Assets/Scenes/Test Environment.unity
+    guid: 2759e782b20db49c4ba5184a1b9cea70
+  - enabled: 0
     path: Assets/Scenes/WillsAdventure-throwPillows.unity
     guid: 0a3a8faad71204f1bbe7e854eedc01ed
   m_configObjects:

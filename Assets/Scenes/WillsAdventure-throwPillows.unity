@@ -2629,7 +2629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6c943bf855104e1bb06347164068cf1, type: 3}
       propertyPath: m_Name
-      value: Couch_Cushion1
+      value: Couch_Cushion-throw
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2644,6 +2644,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6c943bf855104e1bb06347164068cf1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1691510783}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6c943bf855104e1bb06347164068cf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1691510787}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6c943bf855104e1bb06347164068cf1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1691510786}
@@ -2676,7 +2679,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2695,7 +2698,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 0
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 1691510786}
+  _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
@@ -2713,9 +2716,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691510782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3236b8f205019504589358e7e0412a38, type: 3}
+  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 1691510784}
+  _rigidbody: {fileID: 1691510783}
+  _physicsGrabbable: {fileID: 1691510787}
+  _resetGrabOnGrabsUpdated: 1
+  _scoringModifier:
+    _positionRotationWeight: 0.8
+  _supportedGrabTypes: 3
+  _pinchGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 1
+    _middleRequirement: 1
+    _ringRequirement: 0
+    _pinkyRequirement: 0
+    _unselectMode: 0
+  _palmGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 2
+    _middleRequirement: 2
+    _ringRequirement: 2
+    _pinkyRequirement: 1
+    _unselectMode: 0
+  _movementProvider: {fileID: 0}
+  _handAligment: 1
+  _handGrabPoses: []
+--- !u!114 &1691510787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691510782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _grabbable: {fileID: 1691510784}
+  _rigidbody: {fileID: 1691510783}
+  _scaleMassWithSize: 1
 --- !u!114 &1749140927 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6160983792931018476, guid: 34372f75d1ead4664bda5b3ac80e0442, type: 3}
