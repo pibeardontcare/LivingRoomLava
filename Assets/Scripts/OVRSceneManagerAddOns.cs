@@ -30,7 +30,7 @@ namespace MetaAdvancedFeatures.SceneUnderstanding
             //                     for all prefabs to be populated properly before continuing
             yield return new WaitForEndOfFrame();
 
-            MeshRenderer[] allObjects = FindObjectsOfType<MeshRenderer>();
+         MeshRenderer[] allObjects = FindObjectsOfType<MeshRenderer>();
 
             foreach (var obj in allObjects)
             {
@@ -40,9 +40,10 @@ namespace MetaAdvancedFeatures.SceneUnderstanding
                 }
             }
 
-            // fix to tables - for some reason they are upside down with Meta's default code
+
+            // fix to desks - for some reason they are upside down with Meta's default code
             OVRSemanticClassification[] allClassifications = FindObjectsOfType<OVRSemanticClassification>()
-                .Where(c => c.Contains(OVRSceneManager.Classification.Table))
+                .Where(c => c.Contains(OVRSceneManager.Classification.Desk))
                 .ToArray();
 
             foreach(var classification in allClassifications)
