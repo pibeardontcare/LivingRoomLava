@@ -1,6 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7710885404027060328
+--- !u!114 &-1704945903028603836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Android Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -243116881989185299}
+  m_InitManagerOnStart: 1
+--- !u!114 &-243116881989185299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,21 +30,7 @@ MonoBehaviour:
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
   m_Loaders:
-  - {fileID: 11400000, guid: d82fb48f5fdd7431c8f0437e73a52b2a, type: 2}
---- !u!114 &-1209258105423896037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
-  m_Name: Android Settings
-  m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: -7710885404027060328}
-  m_InitManagerOnStart: 1
+  - {fileID: 11400000, guid: df1ad424e72ed4990b57a92557da3b6f, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys: 0700000001000000
   Values:
-  - {fileID: -1209258105423896037}
-  - {fileID: 2721830038576192977}
---- !u!114 &391904549581848555
+  - {fileID: -1704945903028603836}
+  - {fileID: 3755971723103579234}
+--- !u!114 &1954256483604360133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,8 +62,9 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders: []
---- !u!114 &2721830038576192977
+  m_Loaders:
+  - {fileID: 11400000, guid: df1ad424e72ed4990b57a92557da3b6f, type: 2}
+--- !u!114 &3755971723103579234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,5 +76,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
   m_Name: Standalone Settings
   m_EditorClassIdentifier: 
-  m_LoaderManagerInstance: {fileID: 391904549581848555}
+  m_LoaderManagerInstance: {fileID: 1954256483604360133}
   m_InitManagerOnStart: 1
