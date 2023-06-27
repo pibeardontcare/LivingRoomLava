@@ -2,10 +2,11 @@ using UnityEngine;
 using Oculus.Platform;
 using Oculus.Platform.Models;
 
-public class lavaFloorSpawner : MonoBehaviour
+public class LavaFloorSpawner : MonoBehaviour
 {
     public GameObject floorPrefab; // Reference to the floor prefab
     private OVRBoundary.BoundaryType boundaryType = OVRBoundary.BoundaryType.PlayArea;
+    private const float maxBoundarySize = 10f; // Maximum size of the playspace in feet
 
     private void Start()
     {
@@ -31,11 +32,20 @@ public class lavaFloorSpawner : MonoBehaviour
                 // Calculate the size of the boundary
                 Vector3 boundarySize = maxPoint - minPoint;
 
+                // Calculate the scale factor to fit the playspace within the maximum size
+                float scale = maxBoundarySize / Mathf.Max(boundarySize.x, boundarySize.z);
+
+                // Scale the boundary size by the scale factor
+                boundarySize *= scale;
+
+                // Clamp the boundary size to the maximum size
+                boundarySize = new Vector3(Mathf.Min(boundarySize.x, maxBoundarySize), 1f, Mathf.Min(boundarySize.z, maxBoundarySize));
+
                 // Instantiate the floor prefab at the center position
                 GameObject floor = Instantiate(floorPrefab, centerPosition, Quaternion.identity);
 
                 // Scale the floor prefab to match the size of the play area
-                floor.transform.localScale = new Vector3(boundarySize.x, 1f, boundarySize.z);
+                floor.transform.localScale = boundarySize;
             }
         }
     }
