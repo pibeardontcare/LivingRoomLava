@@ -6623,6 +6623,7 @@ MonoBehaviour:
   - {fileID: 2112322748}
   - {fileID: 1240951437}
   lineRenderer: {fileID: 1822025909}
+  infoText: {fileID: 1514422811}
 --- !u!4 &764256884
 Transform:
   m_ObjectHideFlags: 0
