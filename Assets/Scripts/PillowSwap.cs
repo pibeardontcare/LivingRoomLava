@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PillowSwap : MonoBehaviour
 {
-    public GameObject lavaPillowPrefab; // Reference to LavaPillow prefab
+    public GameObject pathPrefab; // Reference to path prefab
 
     private bool hasSwapped = false; // Flag to track swapping
 
@@ -13,20 +13,16 @@ public class PillowSwap : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor") && !hasSwapped)
         {
             // Get the position of the throw pillow
-            Vector3 newPosition = transform.position;
+            Vector3 pillowPosition = transform.position;
 
             // Set the Y position to 0
-            newPosition.y = 0f;
+            pillowPosition.y = 0f;
 
             // Perform the swap
-            GetComponent<Renderer>().enabled = false; // Hide throw pillow
-
-            // Instantiate the LavaPillow prefab
-            GameObject newLavaPillow = Instantiate(lavaPillowPrefab, newPosition, Quaternion.identity);
-            newLavaPillow.GetComponent<Renderer>().enabled = true; // Show LavaPillow
+            GameObject newPath = Instantiate(pathPrefab, pillowPosition, Quaternion.identity);
+            newPath.SetActive(true); // Activate LavaPillow
 
             hasSwapped = true;
-            Destroy(gameObject); // Destroy the throw pillow object after swapping
         }
     }
 }
