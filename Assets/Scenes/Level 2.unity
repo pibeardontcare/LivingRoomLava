@@ -6525,7 +6525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1 &724754254
 GameObject:
@@ -7652,7 +7652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1001 &1181755480
 PrefabInstance:
@@ -8169,7 +8169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!114 &1243454204
 MonoBehaviour:
@@ -8367,7 +8367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1 &1385472835
 GameObject:
@@ -8748,7 +8748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1001 &1419518893
 PrefabInstance:
@@ -9549,7 +9549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1 &1574685904 stripped
 GameObject:
@@ -10152,7 +10152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1001 &1911596902
 PrefabInstance:
@@ -10568,7 +10568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b37047fb12458eac142ff82248406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaPillowPrefab: {fileID: 0}
+  lavaPillowPrefab: {fileID: 8020476339266787939, guid: 86141fabae0734e9ca3851a4872e986a, type: 3}
   instantiatedSafeArea: []
 --- !u!1 &2128209733
 GameObject:
