@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSafe : MonoBehaviour
-
 {
     public Transform playerTransform;
     public GameObject[] cubes;
+    public Text debugText; // Reference to the UI Text object
 
     private void Update()
     {
@@ -29,15 +30,13 @@ public class PlayerSafe : MonoBehaviour
         {
             // Player is within the boundary of at least one cube
             // Allow them to proceed or perform desired actions
-            Debug.Log("Player is inside a cube boundary.");
+            debugText.text = "Player is inside a cube boundary.";
         }
         else
         {
             // Player is outside the boundary of all cubes
             // Restrict their movement or take appropriate action
-            Debug.Log("Player is outside all cube boundaries.");
+            debugText.text = "Player is outside all cube boundaries.";
         }
     }
 }
-
-
