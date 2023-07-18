@@ -5,38 +5,54 @@ using UnityEngine.UI;
 
 public class PlayerSafe : MonoBehaviour
 {
-    public Transform playerTransform;
-    public GameObject[] cubes;
-    public Text debugText; // Reference to the UI Text object
+    private PillowSwap pillowSwapScript; // Reference to the PillowSwap script
+    private bool _isOnPath; // Declare the _isOnPath variable
+    public GameObject targetGameObject; // Reference to the target game object for color changes
+    private Renderer targetRenderer; // Reference to the Renderer component of the target game object
+
+    private void Start()
+    
+    {
+        // Find the instance of the PillowSwap script in the scene
+        pillowSwapScript = FindObjectOfType<PillowSwap>();
+
+        // Get the Renderer component attached to the target game object
+        targetRenderer = targetGameObject.GetComponent<Renderer>();
+    }
 
     private void Update()
     {
-        bool playerInsideCube = false;
+        // Access the prefabPositions list from the PillowSwap script
+        List<Vector3> prefabPositions = pillowSwapScript.GetPrefabPositions();
 
-        foreach (GameObject cube in cubes)
+        // Check if the player is on the path.
+        Vector3 playerPosition = Camera.main.transform.position;
+        bool isOnPath = true;
+        foreach (Vector3 prefabPosition in prefabPositions)
         {
-            Vector3 cubeCenter = cube.transform.position;
-            float distance = Vector3.Distance(playerTransform.position, cubeCenter);
-
-            if (distance <= 0.5f)
+            if (!SafeXZ.IsInXZRange(playerPosition, prefabPosition, 0.5f))
             {
-                // Player is within the boundary of this cube
-                playerInsideCube = true;
+                isOnPath = false;
                 break;
             }
         }
 
-        if (playerInsideCube)
+        _isOnPath = isOnPath;
+
+        // Change the color of the target game object based on _isOnPath
+        if (!_isOnPath)
         {
-            // Player is within the boundary of at least one cube
-            // Allow them to proceed or perform desired actions
-            debugText.text = "Player is inside a cube boundary.";
+            targetRenderer.material.color = Color.red;
         }
         else
         {
-            // Player is outside the boundary of all cubes
-            // Restrict their movement or take appropriate action
-            debugText.text = "Player is outside all cube boundaries.";
+            // Set the color back to the original color if needed
+            targetRenderer.material.color = Color.white;
         }
+    }
+
+    private bool IsOnPath()
+    {
+        return _isOnPath;
     }
 }

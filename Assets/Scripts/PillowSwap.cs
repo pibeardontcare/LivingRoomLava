@@ -1,8 +1,18 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 public class PillowSwap : MonoBehaviour
 {
     public GameObject safeAreaPrefab; // Reference to SafeArea prefab
+    private List<Vector3> prefabPositions = new List<Vector3>();
+
+
+    // Getter method to access prefabPositions
+    public List<Vector3> GetPrefabPositions()
+    {
+        return prefabPositions;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,30 +25,22 @@ public class PillowSwap : MonoBehaviour
             // Set the y position to 0.1
             objectPosition.y = 0.1f;
 
-            // Check for overlapping objects
-            bool isOverlapping = CheckOverlap(objectPosition);
 
-            if (!isOverlapping)
-            {
+           
                 // Instantiate the safe area object with zero rotation and modified position
+            
                 GameObject newSafeArea = Instantiate(safeAreaPrefab, objectPosition, Quaternion.identity);
+                Vector3 prefabPosition = newSafeArea.transform.position;
+                prefabPositions.Add(prefabPosition);
+
+                
 
                 // Destroy the original object
                 Destroy(gameObject);
-            }
-            else
-            {
-                Debug.Log("Object overlap detected. Cannot spawn new object.");
+          
+               
             }
         }
     }
 
-    private bool CheckOverlap(Vector3 position)
-    {
-        // Get all colliders within the safe area's position and size
-        Collider[] colliders = Physics.OverlapBox(position, safeAreaPrefab.transform.localScale / 2f);
-
-        // Check if any colliders were found (excluding self)
-        return colliders.Length > 0;
-    }
-}
+   
