@@ -1,14 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
 public class PillowSwap : MonoBehaviour
 {
     public GameObject safeAreaPrefab; // Reference to SafeArea prefab
     private List<Vector3> prefabPositions = new List<Vector3>();
 
+    public ConsoleToText consoleToText; // Reference to the ConsoleToText script
 
-    // Getter method to access prefabPositions
     public List<Vector3> GetPrefabPositions()
     {
         return prefabPositions;
@@ -16,31 +15,19 @@ public class PillowSwap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the trigger is tagged as "Floor"
         if (other.CompareTag("Floor"))
         {
-            // Get the position of the original object
             Vector3 objectPosition = transform.position;
-
-            // Set the y position to 0.1
             objectPosition.y = 0.1f;
 
+            GameObject newSafeArea = Instantiate(safeAreaPrefab, objectPosition, Quaternion.identity);
+            Vector3 prefabPosition = newSafeArea.transform.position;
+            prefabPositions.Add(prefabPosition);
 
-           
-                // Instantiate the safe area object with zero rotation and modified position
-            
-                GameObject newSafeArea = Instantiate(safeAreaPrefab, objectPosition, Quaternion.identity);
-                Vector3 prefabPosition = newSafeArea.transform.position;
-                prefabPositions.Add(prefabPosition);
+            // Pass the prefabPositions list instead of a single Vector3
+            consoleToText.PrintPrefabPositions(prefabPositions);
 
-                
-
-                // Destroy the original object
-                Destroy(gameObject);
-          
-               
-            }
+            Destroy(gameObject);
         }
     }
-
-   
+}
