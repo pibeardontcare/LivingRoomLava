@@ -9,15 +9,16 @@ public class PlayerSafe : MonoBehaviour
     private bool _isOnPath; // Declare the _isOnPath variable
     public GameObject targetGameObject; // Reference to the target game object for color changes
     private Renderer targetRenderer; // Reference to the Renderer component of the target game object
+    public Text textObject; 
 
     private void Start()
-    
     {
         // Find the instance of the PillowSwap script in the scene
         pillowSwapScript = FindObjectOfType<PillowSwap>();
 
         // Get the Renderer component attached to the target game object
         targetRenderer = targetGameObject.GetComponent<Renderer>();
+        textObject = gameObject.GetComponent<Text>(); 
     }
 
     private void Update()
@@ -43,11 +44,13 @@ public class PlayerSafe : MonoBehaviour
         if (!_isOnPath)
         {
             targetRenderer.material.color = Color.red;
+            textObject.text = "Player not on path";
         }
         else
         {
             // Set the color back to the original color if needed
             targetRenderer.material.color = Color.white;
+            textObject.text = "Player on path";
         }
     }
 
