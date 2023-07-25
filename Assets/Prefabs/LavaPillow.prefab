@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645939673210193218}
   - component: {fileID: 5846518136974981188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2978858325322513029}
   - component: {fileID: 9178333502324841194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 5549594465375137834}
   - component: {fileID: 7008754601560308351}
   - component: {fileID: 2022619641639467861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LavaPillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785144884947120952}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LavaPillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 7403790968492438932}
   - component: {fileID: 409597108790144217}
   - component: {fileID: 8638441794021622089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LavaPillowLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
