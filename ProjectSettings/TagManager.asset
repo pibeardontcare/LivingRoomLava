@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RoomLight
   - Floor
+  - SafeLines
   layers:
   - Default
   - TransparentFX

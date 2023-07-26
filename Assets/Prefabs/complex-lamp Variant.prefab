@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 421300c893cbb4810a8e133ac43c53e4, type: 3}
+      propertyPath: m_TagString
+      value: SafeLines
+      objectReference: {fileID: 0}
     - target: {fileID: 2727985827223769977, guid: 421300c893cbb4810a8e133ac43c53e4, type: 3}
       propertyPath: m_Layer
       value: 3

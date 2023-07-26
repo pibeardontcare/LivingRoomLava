@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PrefabOutline : MonoBehaviour
 {
-   
     public LineRenderer lineRenderer;
     public LayerMask prefabLayer;
+    public Collider interactionCollider; // Collider to interact with
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class PrefabOutline : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (IsPrefabObject(other.gameObject))
+        if (other == interactionCollider && IsPrefabObject(other.gameObject))
         {
             DrawLineAroundPrefabsTouchingCollider();
         }
@@ -23,7 +23,7 @@ public class PrefabOutline : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (IsPrefabObject(other.gameObject))
+        if (other == interactionCollider && IsPrefabObject(other.gameObject))
         {
             DrawLineAroundPrefabsTouchingCollider();
         }
@@ -37,14 +37,14 @@ public class PrefabOutline : MonoBehaviour
 
     private void DrawLineAroundPrefabsTouchingCollider()
     {
-        // Get all prefabs in the scene based on their layer
-        GameObject[] prefabs = GameObject.FindGameObjectsWithTag("PrefabTag"); // Replace "PrefabTag" with the tag you assign to your prefabs
+        // Get all prefabs in the scene based on their tag
+        GameObject[] prefabs = GameObject.FindGameObjectsWithTag("SafeLines"); // Tag to select prefabs to draw around
 
         // Calculate the positions for the line renderer
         List<Vector3> linePositions = new List<Vector3>();
         foreach (GameObject prefab in prefabs)
         {
-            if (prefab.GetComponent<Collider>().bounds.Intersects(GetComponent<Collider>().bounds))
+            if (prefab.GetComponent<Collider>().bounds.Intersects(interactionCollider.bounds))
             {
                 Vector3 position = prefab.transform.position;
                 Vector3 scale = new Vector3(prefab.transform.localScale.x * 0.5f, 0, prefab.transform.localScale.z * 0.5f);
