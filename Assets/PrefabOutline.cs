@@ -21,13 +21,13 @@ public class PrefabOutline : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other == interactionCollider && IsPrefabObject(other.gameObject))
-        {
-            DrawLineAroundPrefabsTouchingCollider();
-        }
-    }
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other == interactionCollider && IsPrefabObject(other.gameObject))
+    //     {
+    //         DrawLineAroundPrefabsTouchingCollider();
+    //     }
+    // }
 
     private bool IsPrefabObject(GameObject obj)
     {
