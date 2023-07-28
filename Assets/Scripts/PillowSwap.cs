@@ -10,6 +10,8 @@ public class PillowSwap : MonoBehaviour
     public float newPrefabScale = 1.1f;
     public GameObject prefabToSpawn; // Assign the prefab you want to spawn in the Inspector
 
+    private List<Vector3> prefabPositions = new List<Vector3>(); // List to store positions of spawned prefabs
+
     private void OnTriggerEnter(Collider other)
     {
         if (other == interactionCollider && IsPrefabObject(other.gameObject))
@@ -28,6 +30,9 @@ public class PillowSwap : MonoBehaviour
     {
         // Store the position of the prefab before destroying it
         Vector3 spawnPosition = prefabToDestroy.transform.position;
+
+        // Add the position to the list of prefab positions
+        prefabPositions.Add(spawnPosition);
 
         // Destroy the old prefab
         Destroy(prefabToDestroy);
@@ -49,5 +54,11 @@ public class PillowSwap : MonoBehaviour
 
         // Scale the new prefab
         newPrefab.transform.localScale *= newPrefabScale;
+    }
+
+    public List<Vector3> GetPrefabPositions()
+    {
+        // Return the list of prefab positions
+        return prefabPositions;
     }
 }
