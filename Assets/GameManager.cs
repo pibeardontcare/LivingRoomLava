@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject vrHeadsetReference;
     public Collider floorCollider;
     public GameObject signFace;
+    public GameObject startArea;
 
     private void Awake()
     {

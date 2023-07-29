@@ -7,15 +7,15 @@ public class SafeOutline : MonoBehaviour
 
     public Material insideMaterial; // Material to use when the VR headset is inside the prefab bounds
     public Material outsideMaterial; // Material to use when the VR headset is outside the prefab bounds
+    public Material neutralMaterial; 
     public GameObject prefabToSpawn; // Assign the prefab to be spawned in the Inspector
     private bool hasCollided = false;
     private bool hasSpawnedPrefab = false; // Flag to track if the prefab has been spawned
     private Collider floorCollider; 
     private GameObject vrHeadsetReference; // Reference to the VR headset GameObject
-
-    private Renderer SignObjectRenderer; // Reference to the Renderer component of the object to change color
-
-    
+    private GameObject safeArea; // Reference to the start Safe Area
+    private Renderer SignFaceRenderer; // Reference to the Renderer component of the object to change color
+    private GameObject signFace; // Reference to the safe sign
 
     private void Start()
     {
@@ -23,23 +23,23 @@ public class SafeOutline : MonoBehaviour
         vrHeadsetReference = GameManager.instance.vrHeadsetReference;
         floorCollider = GameManager.instance.floorCollider;
 
-         // Get the Renderer component attached to the target object
-      
-        SignObjectRenderer = GameManager.instance.signFace.GetComponent<Renderer>();
-    
+        // Get the Renderer component attached to the target object
+        SignFaceRenderer = GameManager.instance.signFace.GetComponent<Renderer>();
+        signFace = GameManager.instance.signFace;
     }
 
- private void OnTriggerEnter(Collider other)
-{
-   if (other == floorCollider)
+    private void OnTriggerEnter(Collider other)
     {
-        hasCollided = true;
+        if (other == floorCollider)
+        {
+            hasCollided = true;
+               
+        }
+        else
+        {
+            Debug.Log("There are other colliders you know");
+        }
     }
-    else
-    {
-        Debug.Log("No collisions are happening");
-    }
-}
 
     private void Update()
     {
@@ -49,30 +49,46 @@ public class SafeOutline : MonoBehaviour
             Vector3[] corners = CalculateVertices();
             
             // Spawn a new prefab at the same position
-            
             SpawnNewPrefabAtCollisionPoint();
             hasSpawnedPrefab = true;
-
-            
+           
 
             // Check VR headset (camera) position against the corner vertices
-            if (IsVRHeadsetInsidePrefabBounds(corners))
+            bool isInsidePrefabBounds = IsVRHeadsetInsidePrefabBounds(corners);
+            bool isInsideSafeArea = IsVRHeadsetInsideSafeArea();
+
+            // Check VR headset (camera) position against the corner vertices
+            if (isInsidePrefabBounds || isInsideSafeArea)
+            {
+               if (isInsidePrefabBounds)
             {
                 // VR headset (camera) is inside the prefab bounds
                 Debug.Log("VR headset is inside the prefab bounds.");
-
-                
                 // Set the material to the insideMaterial
-                SignObjectRenderer.material = insideMaterial;
+                SignFaceRenderer.material = outsideMaterial;
             }
+            else
+            {
+                // VR headset is inside the safe area but not inside the prefab bounds
+                Debug.Log("VR headset is inside the safe area but not inside the prefab bounds.");
+                // Set the material to the neutral color material
+                // Replace 'neutralMaterial' with the actual Material you want to use for the neutral state
+                SignFaceRenderer.material = neutralMaterial;
+            }
+            }
+
+            
             else
             {
                 // VR headset (camera) is outside the prefab bounds
                 Debug.Log("VR headset is outside the prefab bounds.");
                 // Set the material to the outsideMaterial
-                SignObjectRenderer.material = outsideMaterial;
+                SignFaceRenderer.material = insideMaterial;
+                
             }
         }
+
+        Debug.Log("Current Material: " + SignFaceRenderer.material.name);
     }
 
     private Vector3[] CalculateVertices()
@@ -101,8 +117,14 @@ public class SafeOutline : MonoBehaviour
         return corners; // Return the corner vertices array
     }
 
-       private void SpawnNewPrefabAtCollisionPoint()
+    private void SpawnNewPrefabAtCollisionPoint()
     {
+
+         // Get the current position of the collision point
+        Vector3 currentPosition = transform.position;
+
+         // Adjust the y-component of the position to be 0.15 lower
+        currentPosition.y -= 0.15f;
         // Instantiate a new prefab at the same position
         Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
     }
@@ -130,5 +152,26 @@ public class SafeOutline : MonoBehaviour
         }
 
         return true; // VR headset (camera) is inside the bounds of all corners
+    }
+
+    private bool IsVRHeadsetInsideSafeArea()
+    {
+        // Get the VR headset (camera) position from the public variable
+        Vector3 headsetPosition = vrHeadsetReference.transform.position;
+
+        // Get the position and scale of the safe area cube
+        Vector3 cubePosition = safeArea.transform.position;
+        Vector3 cubeScale = safeArea.transform.localScale;
+        float halfCubeX = cubeScale.x * 0.5f;
+        float halfCubeZ = cubeScale.z * 0.5f;
+
+        // Check if the VR headset (camera) position is within the safe area cube bounds
+        if (headsetPosition.x >= cubePosition.x - halfCubeX && headsetPosition.x <= cubePosition.x + halfCubeX &&
+            headsetPosition.z >= cubePosition.z - halfCubeZ && headsetPosition.z <= cubePosition.z + halfCubeZ)
+        {
+            return true; // VR headset (camera) is inside the bounds of the safe area cube
+        }
+
+        return false; // VR headset (camera) is outside the bounds of the safe area cube
     }
 }
