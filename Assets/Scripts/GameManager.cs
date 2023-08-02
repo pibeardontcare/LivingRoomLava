@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject signFace;
     public GameObject startArea;
 
+     // Define the total number of levels
+    private int totalNumberOfLevels = 3;
+
     private void Awake()
     {
         if (instance == null)
@@ -64,19 +67,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-     // Call this method when "New Game" button is pressed.
-    public void StartNewGame()
-    {
-        gameManager.InitializeLevelCompletionStatus();
-        // Any other necessary initialization for a new game.
-    }
+  public void StartNewGame()
+{
+    this.InitializeLevelCompletionStatus(); // Use 'this' to call the instance method
+    // Any other necessary initialization for a new game.
+}
 
-    // Call this method when "Continue Saved Game" button is pressed.
-    public void ContinueSavedGame()
-    {
-        gameManager.LoadPlayerProgress();
-        // Load the player's position, inventory, or any other relevant data if needed.
-    }
+
+// Call this method when "Continue Saved Game" button is pressed.
+public void ContinueSavedGame()
+{
+    this.LoadPlayerProgress(); // Use 'this' to call the instance method
+    // Load the player's position, inventory, or any other relevant data if needed.
+}
 }
 
 
