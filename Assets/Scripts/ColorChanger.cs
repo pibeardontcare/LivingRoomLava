@@ -1,53 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorChanger : MonoBehaviour
 {
-    public Material materialInsideStartObject; // Material to use when the user is inside the boundaries of the start object
-    public Material materialInsideBoundaries; // Material to use when the user is inside the boundaries defined by the BoundaryChecker script
-    public Material materialOutsideAllBoundaries; // Material to use when the user is outside all boundaries
+    public Material materialInsideStartObject;
+    public Material materialInsideBoundaries;
+    public Material materialOutsideAllBoundaries;
+    public GameObject startObject;
+    public float countdownDuration = 3.0f; // Countdown duration in seconds
+    public Text countdownText; // Reference to the UI text for countdown
+    public Text gameOverText; // Reference to the UI text for game over message
+    public bool IsGameOver { get; private set; } = false; // Add a public property to indicate if the game is over
 
-    private Renderer objectRenderer; // Reference to the Renderer component attached to the object
-    private BoundaryChecker boundaryChecker; // Reference to the BoundaryChecker script
-    public GameObject startObject; // Reference to the start object
-    
+    private Renderer objectRenderer;
+    private BoundaryChecker boundaryChecker;
+    private bool isCountingDown = false;
+    private float countdownTimer;
 
     private void Start()
     {
-        // Get the Renderer component attached to the object
         objectRenderer = GetComponent<Renderer>();
-
-        // Find the BoundaryChecker script in the scene
         boundaryChecker = GameObject.FindObjectOfType<BoundaryChecker>();
-
-        // ...
+        countdownTimer = countdownDuration;
     }
 
     private void Update()
     {
-        // Check if the user is inside the boundaries defined by the BoundaryChecker script
         bool isInsideBoundaries = boundaryChecker.CheckInsideBoundaries();
-
-        // Check if the user's position is inside the boundaries of the start object
         bool isInsideStartObject = IsInsideStartObject();
 
-        // Update the material of the object's renderer based on the user's position
         if (isInsideStartObject)
         {
             objectRenderer.material = materialInsideStartObject;
+            ResetCountdown();
         }
         else if (isInsideBoundaries)
         {
             objectRenderer.material = materialInsideBoundaries;
+            ResetCountdown();
         }
         else
         {
             objectRenderer.material = materialOutsideAllBoundaries;
+            StartCountdown();
         }
-    }
 
-    // Check if the user's position is inside the boundaries of the start object
+        UpdateCountdown();
+
+    }
+        // Check if the user's position is inside the boundaries of the start object
     private bool IsInsideStartObject()
     {
         // Get the position and scale of the start object
@@ -70,4 +73,43 @@ public class ColorChanger : MonoBehaviour
 
         return false; // User's position is outside the boundaries of the start object
     }
+
+   
+
+    private void StartCountdown()
+    {
+        if (!isCountingDown)
+        {
+            isCountingDown = true;
+            countdownTimer = countdownDuration;
+        }
+    }
+
+    private void UpdateCountdown()
+    {
+        if (isCountingDown)
+        {
+            countdownTimer -= Time.deltaTime;
+            countdownText.text = Mathf.CeilToInt(countdownTimer).ToString();
+
+            if (countdownTimer <= 0)
+            {
+                GameOver();
+            }
+        }
+    }
+
+    private void ResetCountdown()
+    {
+        isCountingDown = false;
+        countdownTimer = countdownDuration;
+        countdownText.text = "";
+    }
+
+    private void GameOver()
+    {
+        IsGameOver = true; // Set the IsGameOver flag to true
+        gameOverText.gameObject.SetActive(true);
+    }
 }
+

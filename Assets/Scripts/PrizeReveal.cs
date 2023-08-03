@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PrizeReveal : MonoBehaviour
-
 {
     public bool hasPickedUpBox = false;
-    public bool isWithinBoundary = true;
 
     public GameObject prizeObject;
     public GameObject lavaNote;
+
+    // Reference to the ColorChanger script
+    public ColorChanger colorChanger;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +23,8 @@ public class PrizeReveal : MonoBehaviour
 
     private void Update()
     {
-        if (hasPickedUpBox && isWithinBoundary)
+        // Check if both conditions are met: box picked up and game over
+        if (hasPickedUpBox && colorChanger.IsGameOver)
         {
             // Show the prize object
             prizeObject.SetActive(true);
