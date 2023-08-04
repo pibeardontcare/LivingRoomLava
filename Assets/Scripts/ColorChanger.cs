@@ -13,17 +13,35 @@ public class ColorChanger : MonoBehaviour
     public Text countdownText; // Reference to the UI text for countdown
     public Text gameOverText; // Reference to the UI text for game over message
     public bool IsGameOver { get; private set; } = false; // Add a public property to indicate if the game is over
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip fadeInClip; // Audio clip for fading in
+    public AudioSource warningSoundSource; // Reference to the warning sound AudioSource
+    public AudioClip warningClip; // Warning sound clip
+
 
     private Renderer objectRenderer;
     private BoundaryChecker boundaryChecker;
     private bool isCountingDown = false;
     private float countdownTimer;
+    private float initialVolume; // Initial volume of the audio source
+    private bool isFadingOut = false;
+    
 
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
         boundaryChecker = GameObject.FindObjectOfType<BoundaryChecker>();
         countdownTimer = countdownDuration;
+
+         // Store the initial volume of the audio source
+        initialVolume = audioSource.volume;
+
+
+        // Make sure Game Over text is initially inactive
+        gameOverText.gameObject.SetActive(false);
+
+        // Set IsGameOver to false when the script starts
+        IsGameOver = false;
     }
 
     private void Update()
@@ -48,6 +66,20 @@ public class ColorChanger : MonoBehaviour
         }
 
         UpdateCountdown();
+
+
+        // Check if the player is outside both safe and start areas, then play warning sound
+        if (!isInsideStartObject && !isInsideBoundaries)
+            {
+                PlayWarningSound();
+            }
+
+        // Check if the player is returning to safe/start area
+        if ((isInsideStartObject || isInsideBoundaries) && isFadingOut)
+        {
+            FadeInAudio();
+
+        }
 
     }
         // Check if the user's position is inside the boundaries of the start object
@@ -81,8 +113,16 @@ public class ColorChanger : MonoBehaviour
         if (!isCountingDown)
         {
             isCountingDown = true;
+    
             countdownTimer = countdownDuration;
+
+
+            // Start fading out audio
+            isFadingOut = true;
+            StartCoroutine(FadeOutAudio());
         }
+
+        
     }
 
     private void UpdateCountdown()
@@ -99,8 +139,16 @@ public class ColorChanger : MonoBehaviour
         }
     }
 
+   
     private void ResetCountdown()
     {
+        if (isCountingDown)
+        {
+            // Stop fading out audio and start fading in
+            isFadingOut = false;
+            FadeInAudio();
+        }
+
         isCountingDown = false;
         countdownTimer = countdownDuration;
         countdownText.text = "";
@@ -108,8 +156,68 @@ public class ColorChanger : MonoBehaviour
 
     private void GameOver()
     {
-        IsGameOver = true; // Set the IsGameOver flag to true
+         if (isFadingOut)
+        {
+            // Stop fading out audio and start fading in
+            isFadingOut = false;
+            FadeInAudio();
+        }
+
+        IsGameOver = true;
         gameOverText.gameObject.SetActive(true);
+
+        // Hide the countdown timer text
+        countdownText.gameObject.SetActive(false);
+    }
+
+
+    private IEnumerator FadeOutAudio()
+    {
+        float startVolume = audioSource.volume;
+        float fadeDuration = 0.5f;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+
+        audioSource.Pause();
+    }
+
+    private void FadeInAudio()
+    {
+        if (!isFadingOut)
+        {
+            isFadingOut = true;
+            StartCoroutine(FadeInAudioCoroutine());
+        }
+    }
+
+  private IEnumerator FadeInAudioCoroutine()
+{
+    audioSource.clip = fadeInClip; // Use fadeInClip instead of fadeClip
+    audioSource.volume = 0;
+    audioSource.Play();
+
+    float startVolume = audioSource.volume;
+    float fadeDuration = 0.5f;
+
+    while (audioSource.volume < startVolume)
+    {
+        audioSource.volume += startVolume * Time.deltaTime / fadeDuration;
+        yield return null;
+    }
+
+    audioSource.volume = startVolume;
+    isFadingOut = false;
+}
+private void PlayWarningSound()
+{
+    if (!warningSoundSource.isPlaying)
+    {
+        warningSoundSource.clip = warningClip;
+        warningSoundSource.Play();
     }
 }
-
+}
