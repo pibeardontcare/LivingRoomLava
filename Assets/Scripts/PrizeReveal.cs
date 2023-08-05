@@ -4,35 +4,40 @@ using UnityEngine;
 
 public class PrizeReveal : MonoBehaviour
 {
-    public bool hasPickedUpBox = false;
+  
+    public ColorChanger colorChanger; // Drag your ColorChanger script here
+    public GameObject prizeDescriptionUI;
+    public GameObject nextLevelButton;
 
-    public GameObject prizeObject;
-    public GameObject lavaNote;
+    private bool hasBeenPickedUp = false;
 
-    // Reference to the ColorChanger script
-    public ColorChanger colorChanger;
+
+        private void Start()
+    {
+        // Deactivate the UI elements initially
+        prizeDescriptionUI.SetActive(false);
+        nextLevelButton.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box"))
+        if (!hasBeenPickedUp && other.CompareTag("Player"))
         {
-            hasPickedUpBox = true;
-            Destroy(other.gameObject); // Remove the box from the scene
-        }
-    }
+            if (!colorChanger.IsGameOver)
+            {
+                // Trigger the box opening animation here
 
-    private void Update()
-    {
-        // Check if both conditions are met: box picked up and game over
-        if (hasPickedUpBox && colorChanger.IsGameOver)
-        {
-            // Show the prize object
-            prizeObject.SetActive(true);
-        }
-        else
-        {
-            // Show the lava note
-            lavaNote.SetActive(true);
+                // Enable prize description UI and next level button
+                prizeDescriptionUI.SetActive(true);
+                nextLevelButton.SetActive(true);
+
+                hasBeenPickedUp = true;
+            }
+            else
+            {
+                return;
+                // Display a message or effect indicating the game is over
+            }
         }
     }
 }
