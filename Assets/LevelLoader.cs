@@ -5,9 +5,9 @@ public class LevelLoader : MonoBehaviour
 {
  public string sceneName; // The name of the scene you want to load
 
-    public void LoadScene()
+    public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(sceneName);
     }
 }
 
