@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PrizeReveal : MonoBehaviour
 {
-  
     public ColorChanger colorChanger; // Drag your ColorChanger script here
     public GameObject prizeDescriptionUI;
     public GameObject nextLevelButton;
+    public ParticleSystem particleEmitter; // Drag your particle emitter here
+    public Animator endSequenceAnimator; // Drag your end sequence animator here
 
     private bool hasBeenPickedUp = false;
 
-
-        private void Start()
+    private void Start()
     {
         // Deactivate the UI elements initially
         prizeDescriptionUI.SetActive(false);
@@ -31,11 +31,22 @@ public class PrizeReveal : MonoBehaviour
                 prizeDescriptionUI.SetActive(true);
                 nextLevelButton.SetActive(true);
 
+                // Start particle emitter
+                if (particleEmitter != null)
+                {
+                    particleEmitter.Play();
+                }
+
+                // Start end sequence animation
+                if (endSequenceAnimator != null)
+                {
+                    endSequenceAnimator.SetTrigger("StartEndSequence");
+                }
+
                 hasBeenPickedUp = true;
             }
             else
             {
-                return;
                 // Display a message or effect indicating the game is over
             }
         }
