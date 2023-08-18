@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: aa290d7e9fd0d4989a771313dac5130a
   - enabled: 0
-    path: Assets/Scenes/menu test.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: e81facf7b066b467cafb6417d4f26d6e
   - enabled: 0
     path: Assets/Scenes/old-test.unity
     guid: 709dbada722af44a3a6a47fa27a05ca4
   - enabled: 1
-    path: Assets/Scenes/Menu Samples.unity
+    path: Assets/Scenes/MainMenu1.unity
     guid: 40b84c299600a4aa89adcca6299d55be
   - enabled: 1
     path: Assets/Scenes/Level 1.unity

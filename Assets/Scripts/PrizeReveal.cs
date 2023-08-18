@@ -6,35 +6,43 @@ public class PrizeReveal : MonoBehaviour
 {
     public ColorChanger colorChanger; // Drag your ColorChanger script here
     public GameObject prizeDescriptionUI;
-    public GameObject nextLevelButton;
+   
     public ParticleSystem particleEmitter; // Drag your particle emitter here
     public Animator endSequenceAnimator; // Drag your end sequence animator here
 
-    private bool hasBeenPickedUp = false;
+    private bool triggerEntered = false; // Flag to track if the trigger has been entered
 
     private void Start()
     {
-        // Deactivate the UI elements initially
-        prizeDescriptionUI.SetActive(false);
-        nextLevelButton.SetActive(false);
+    
+       
+        
+        // Deactivate the particle emitter at the start
+        if (particleEmitter != null)
+        {
+            particleEmitter.Stop();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!hasBeenPickedUp && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             if (!colorChanger.IsGameOver)
             {
                 // Trigger the box opening animation here
 
-                // Enable prize description UI and next level button
-                prizeDescriptionUI.SetActive(true);
-                nextLevelButton.SetActive(true);
+             // Enable prize description UI and next level button if it's not already active
+                if (!prizeDescriptionUI.activeSelf)
+                {
+                    prizeDescriptionUI.SetActive(true);
+                }
 
-                // Start particle emitter
-                if (particleEmitter != null)
+                // Start particle emitter if the trigger hasn't been entered before
+                if (!triggerEntered && particleEmitter != null)
                 {
                     particleEmitter.Play();
+                    triggerEntered = true; // Set the flag to true to avoid playing the emitter again
                 }
 
                 // Start end sequence animation
@@ -42,8 +50,7 @@ public class PrizeReveal : MonoBehaviour
                 {
                     endSequenceAnimator.SetTrigger("StartEndSequence");
                 }
-
-                hasBeenPickedUp = true;
+                
             }
             else
             {
