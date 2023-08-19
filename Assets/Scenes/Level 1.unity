@@ -1275,6 +1275,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 472401347}
     m_Modifications:
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6694876611653652036, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1309,15 +1321,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.333
+      value: -0.263
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.158
+      value: 0.184
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.774
+      value: -0.773
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3143,15 +3155,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.345
+      value: -0.291
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.157
+      value: 0.177
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.172
+      value: -0.171
       objectReference: {fileID: 0}
     - target: {fileID: 8960898807358757210, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8568,6 +8580,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 472401347}
     m_Modifications:
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6694876611653652036, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -8643,10 +8671,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8579446700931236832, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2075850394528535986}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
 --- !u!4 &2075850394528535980 stripped
 Transform:
@@ -8658,71 +8683,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8579446700931236832, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
   m_PrefabInstance: {fileID: 2075850394528535979}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2075850394528535982 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2098070909641307586, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
-  m_PrefabInstance: {fileID: 2075850394528535979}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075850394528535981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2075850394528535983 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 151184253181279231, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
-  m_PrefabInstance: {fileID: 2075850394528535979}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075850394528535981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &2075850394528535984 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1184779848684799621, guid: 624ef1dfa9cde422f8f15bc457d254ea, type: 3}
-  m_PrefabInstance: {fileID: 2075850394528535979}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2075850394528535986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075850394528535981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baed3e011583e1844a6e85b1cd0657f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 2075850394528535982}
-  _rigidbody: {fileID: 2075850394528535984}
-  _physicsGrabbable: {fileID: 2075850394528535983}
-  _resetGrabOnGrabsUpdated: 1
-  _supportedGrabTypes: 1
-  _pinchGrabRules:
-    _thumbRequirement: 1
-    _indexRequirement: 1
-    _middleRequirement: 1
-    _ringRequirement: 0
-    _pinkyRequirement: 0
-    _unselectMode: 0
-  _palmGrabRules:
-    _thumbRequirement: 1
-    _indexRequirement: 2
-    _middleRequirement: 2
-    _ringRequirement: 2
-    _pinkyRequirement: 1
-    _unselectMode: 0
-  _movementProvider: {fileID: 0}
-  _handAligment: 1
-  _handGrabPoses: []
 --- !u!1001 &8638582912191936297
 PrefabInstance:
   m_ObjectHideFlags: 0
