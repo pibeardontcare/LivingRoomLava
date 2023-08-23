@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoundaryChecker : MonoBehaviour
 {
+    public delegate void BoundaryObjectCollidedEventHandler(GameObject boundaryObject);
+    public event BoundaryObjectCollidedEventHandler OnBoundaryObjectCollided;
     public Transform vrCameraTransform; // Reference to the VR camera transform
     public List<GameObject> boundaryObjects; // List of game objects representing the boundaries
 
@@ -66,6 +68,19 @@ public class BoundaryChecker : MonoBehaviour
         }
 
         return false;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            // Notify listeners that a boundary object has collided with the floor
+            if (OnBoundaryObjectCollided != null)
+            {
+                OnBoundaryObjectCollided(gameObject);
+            }
+        }
     }
 
 }

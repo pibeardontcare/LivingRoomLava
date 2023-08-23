@@ -17,8 +17,9 @@ public class ColorChanger : MonoBehaviour
     public AudioClip fadeInClip; // Audio clip for fading in
     public AudioSource warningSoundSource; // Reference to the warning sound AudioSource
     public AudioClip warningClip; // Warning sound clip
+     public Camera playerCamera; 
 
-
+    private bool boundaryObjectCollided = false;
     private Renderer objectRenderer;
     private BoundaryChecker boundaryChecker;
     private bool isCountingDown = false;
@@ -42,19 +43,44 @@ public class ColorChanger : MonoBehaviour
 
         // Set IsGameOver to false when the script starts
         IsGameOver = false;
+        boundaryObjectCollided = false; // Initialize the flag to false
+    }
+     private void OnEnable()
+    {
+        boundaryChecker.OnBoundaryObjectCollided += OnBoundaryObjectCollided;
     }
 
+    private void OnDisable()
+    {
+        boundaryChecker.OnBoundaryObjectCollided -= OnBoundaryObjectCollided;
+    }
+
+    private void OnBoundaryObjectCollided(GameObject boundaryObject)
+    {
+        // This method will be called when a boundary object collides with the floor
+        // Update the flag to indicate that a boundary object has collided
+        boundaryObjectCollided = true;
+
+        // You can place any logic here that should run when a boundary object is thrown and collides with the floor.
+        // For example, you can change colors or perform other actions.
+        // You can also start the countdown timer if necessary.
+    }
     private void Update()
     {
+       if (playerCamera.transform.position.z <= 0.5f)
+            return;
+
+    // Check if the user is inside the boundaries before updating colors and countdown
+  
         bool isInsideBoundaries = boundaryChecker.CheckInsideBoundaries();
         bool isInsideStartObject = IsInsideStartObject();
 
-        if (isInsideStartObject)
+        if (isInsideStartObject && !boundaryObjectCollided)
         {
             objectRenderer.material = materialInsideStartObject;
             ResetCountdown();
         }
-        else if (isInsideBoundaries)
+        else if (isInsideBoundaries && boundaryObjectCollided)
         {
             objectRenderer.material = materialInsideBoundaries;
             ResetCountdown();
@@ -69,7 +95,7 @@ public class ColorChanger : MonoBehaviour
 
 
         // Check if the player is outside both safe and start areas, then play warning sound
-        if (!isInsideStartObject && !isInsideBoundaries)
+        if (!isInsideStartObject && !isInsideBoundaries && boundaryObjectCollided)
             {
                 PlayWarningSound();
             }
