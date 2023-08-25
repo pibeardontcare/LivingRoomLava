@@ -350,6 +350,7 @@ MonoBehaviour:
   prizeDescriptionUI: {fileID: 1437794984}
   particleEmitter: {fileID: 1475083629}
   endSequenceAnimator: {fileID: 1743443808}
+  prizeBox: {fileID: 1743443808}
 --- !u!1001 &101879492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1792,6 +1793,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 0.00000008940696
       objectReference: {fileID: 0}
+    - target: {fileID: 3683889191300486408, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683889191300486408, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683889191300486408, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.002
+      objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1810,15 +1823,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.244
+      value: 0.251
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.224
+      value: 0.283
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.795
+      value: -0.788
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6167,7 +6180,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437794984}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.317}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
@@ -6177,10 +6190,10 @@ RectTransform:
   - {fileID: 1257199809}
   m_Father: {fileID: 445417858}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.514}
+  m_AnchoredPosition: {x: 0, y: 0.157}
   m_SizeDelta: {x: 15, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470912163
@@ -7438,6 +7451,7 @@ MonoBehaviour:
   prizeDescriptionUI: {fileID: 1844552551}
   particleEmitter: {fileID: 0}
   endSequenceAnimator: {fileID: 0}
+  prizeBox: {fileID: 0}
 --- !u!95 &1743443808
 Animator:
   serializedVersion: 5
@@ -7448,7 +7462,7 @@ Animator:
   m_GameObject: {fileID: 1743443801}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc0a4a77d952d438bb55cc97b11f68e5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9f3b571531777493a8d1e18586644399, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
