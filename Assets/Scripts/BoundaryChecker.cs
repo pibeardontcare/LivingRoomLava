@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoundaryChecker : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class BoundaryChecker : MonoBehaviour
     public event BoundaryObjectCollidedEventHandler OnBoundaryObjectCollided;
     public Transform vrCameraTransform; // Reference to the VR camera transform
     public List<GameObject> boundaryObjects; // List of game objects representing the boundaries
-
+    public Text boundariesText; // Reference to the UI 
     private bool isInsideBoundaries = false; // Flag to track if the user is inside the boundaries
 
     public delegate void BoundaryEnterEventHandler();
@@ -47,6 +48,13 @@ public class BoundaryChecker : MonoBehaviour
         // Get the user's position from the VR camera transform
         Vector3 userPosition = vrCameraTransform.position;
 
+
+//boundary variubles 
+    float minX = float.PositiveInfinity;
+    float maxX = float.NegativeInfinity;
+    float minZ = float.PositiveInfinity;
+    float maxZ = float.NegativeInfinity;
+
         // Loop through all the boundary objects and check if the user's position is within their X and Z boundaries
         foreach (GameObject boundaryObject in boundaryObjects)
         {
@@ -54,11 +62,12 @@ public class BoundaryChecker : MonoBehaviour
             Vector3 boundaryPosition = boundaryObject.transform.position;
             Vector3 boundaryScale = boundaryObject.transform.localScale;
 
-            // Calculate the boundaries
-            float minX = boundaryPosition.x - boundaryScale.x * 0.5f;
-            float maxX = boundaryPosition.x + boundaryScale.x * 0.5f;
-            float minZ = boundaryPosition.z - boundaryScale.z * 0.5f;
-            float maxZ = boundaryPosition.z + boundaryScale.z * 0.5f;
+           // Calculate the boundaries
+        minX = Mathf.Min(minX, boundaryPosition.x - boundaryScale.x * 0.5f);
+        maxX = Mathf.Max(maxX, boundaryPosition.x + boundaryScale.x * 0.5f);
+        minZ = Mathf.Min(minZ, boundaryPosition.z - boundaryScale.z * 0.5f);
+        maxZ = Mathf.Max(maxZ, boundaryPosition.z + boundaryScale.z * 0.5f);
+
 
             // Check if the user's position is inside the boundaries
             if (userPosition.x >= minX && userPosition.x <= maxX && userPosition.z >= minZ && userPosition.z <= maxZ)
@@ -66,6 +75,13 @@ public class BoundaryChecker : MonoBehaviour
                 return true;
             }
         }
+
+         // Update UI Text with boundaries
+    if (boundariesText != null)
+    {
+        boundariesText.text = string.Format("X Range: {0} - {1}\nZ Range: {2} - {3}", minX, maxX, minZ, maxZ);
+    }
+
 
         return false;
     }
