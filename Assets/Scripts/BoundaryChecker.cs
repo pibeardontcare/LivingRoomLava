@@ -18,6 +18,19 @@ public class BoundaryChecker : MonoBehaviour
     public delegate void BoundaryExitEventHandler();
     public event BoundaryExitEventHandler OnExitBoundaries;
 
+    public AudioSource collisionAudioSource; // Reference to the AudioSource component
+
+    public AudioClip soundForZAndXAxisUp;
+    public AudioClip soundForYAxisUp;
+
+private void Start()
+{
+    // Assign audio clips programmatically (assuming they're in the Resources folder)
+    collisionAudioSource = GetComponent<AudioSource>();
+    soundForZAndXAxisUp = Resources.Load<AudioClip>("SoundForZAndXAxisUp");
+    soundForYAxisUp = Resources.Load<AudioClip>("SoundForYAxisUp");
+}
+
     // Update is called once per frame
     private void Update()
     {
@@ -87,16 +100,44 @@ public class BoundaryChecker : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+  
+private void OnCollisionEnter(Collision collision)
+{
+    if (collision.gameObject.CompareTag("Floor"))
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        // Get the collision contact normal
+        Vector3 contactNormal = collision.contacts[0].normal;
+
+        // Calculate the dot product of the contact normal with the world up vectors
+        float dotZ = Vector3.Dot(contactNormal, Vector3.up); // Check if z-axis is up
+        float dotX = Vector3.Dot(contactNormal, Vector3.right); // Check if x-axis is up
+        float dotY = Vector3.Dot(contactNormal, Vector3.forward); // Check if y-axis is up
+
+        // Play the appropriate sound based on the collision orientation
+        if (dotZ >= 0.9f || dotX >= 0.9f) // Z-axis or X-axis is up
         {
-            // Notify listeners that a boundary object has collided with the floor
-            if (OnBoundaryObjectCollided != null)
+            if (collisionAudioSource != null)
             {
-                OnBoundaryObjectCollided(gameObject);
+                collisionAudioSource.clip = soundForZAndXAxisUp; // Assign the appropriate sound clip
+                collisionAudioSource.Play();
             }
         }
+        else if (dotY >= 0.9f) // Y-axis is up
+        {
+            if (collisionAudioSource != null)
+            {
+                collisionAudioSource.clip = soundForYAxisUp; // Assign the appropriate sound clip
+                collisionAudioSource.Play();
+            }
+        }
+
+        // Notify listeners that a boundary object has collided with the floor
+        if (OnBoundaryObjectCollided != null)
+        {
+            OnBoundaryObjectCollided(gameObject);
+        }
     }
+}
+
 
 }
