@@ -103,16 +103,20 @@ private void Start()
   
 private void OnCollisionEnter(Collision collision)
 {
+
+     Debug.Log("OnCollisionEnter called"); // 
     if (collision.gameObject.CompareTag("Floor"))
     {
-        // Get the collision contact normal
-        Vector3 contactNormal = collision.contacts[0].normal;
+         Debug.Log("Collision with floor detected"); //
+        if (collision.contacts.Length > 0)
+        {
+            Vector3 contactNormal = collision.contacts[0].normal;
+            boundariesText.text = "Contact Normal: " + contactNormal.ToString();
 
-        // Calculate the dot product of the contact normal with the world up vectors
-        float dotZ = Vector3.Dot(contactNormal, Vector3.up); // Check if z-axis is up
-        float dotX = Vector3.Dot(contactNormal, Vector3.right); // Check if x-axis is up
-        float dotY = Vector3.Dot(contactNormal, Vector3.forward); // Check if y-axis is up
-
+            // Calculate the dot product of the contact normal with the world up vectors
+            float dotZ = Vector3.Dot(contactNormal, Vector3.up); // Check if z-axis is up
+            float dotX = Vector3.Dot(contactNormal, Vector3.right); // Check if x-axis is up
+            float dotY = Vector3.Dot(contactNormal, Vector3.forward); // Check if y-axis is up
         // Play the appropriate sound based on the collision orientation
         if (dotZ >= 0.9f || dotX >= 0.9f) // Z-axis or X-axis is up
         {
@@ -139,5 +143,22 @@ private void OnCollisionEnter(Collision collision)
     }
 }
 
+
+}
+
+private void OnDrawGizmos()
+{
+    Gizmos.color = Color.red;
+
+    foreach (GameObject boundaryObject in boundaryObjects)
+    {
+        Collider collider = boundaryObject.GetComponent<Collider>();
+
+        if (collider != null)
+        {
+            Gizmos.DrawWireCube(collider.bounds.center, collider.bounds.size);
+        }
+    }
+}
 
 }
