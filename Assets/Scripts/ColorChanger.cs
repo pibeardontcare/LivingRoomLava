@@ -18,6 +18,7 @@ public class ColorChanger : MonoBehaviour
     public AudioSource warningSoundSource; // Reference to the warning sound AudioSource
     public AudioClip warningClip; // Warning sound clip
      public Camera playerCamera; 
+     public GameObject boundaryCheckerObject;
 
     private bool boundaryObjectCollided = false;
     private Renderer objectRenderer;
@@ -27,6 +28,11 @@ public class ColorChanger : MonoBehaviour
     private float initialVolume; // Initial volume of the audio source
     private bool isFadingOut = false;
     
+    private void Awake()
+{
+    // Make sure the boundaryCheckerObject field is assigned in the Inspector
+    boundaryChecker = boundaryCheckerObject.GetComponent<BoundaryChecker>();
+}
 
     private void Start()
     {
