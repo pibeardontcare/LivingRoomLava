@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e4a9fc99ac04d1497970b4283bde96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorChanger: {fileID: 1967428852}
+  colorChanger: {fileID: 0}
   prizeDescriptionUI: {fileID: 1437794984}
   particleEmitter: {fileID: 1475083629}
   endSequenceAnimator: {fileID: 1743443808}
@@ -793,7 +793,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -858,8 +858,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204869734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.397, z: 1.56}
-  m_LocalScale: {x: 0.24453168, y: 1, z: 0.23985092}
+  m_LocalPosition: {x: 0, y: -0.13, z: 1.56}
+  m_LocalScale: {x: 0.24453168, y: 0.058994, z: 0.23985092}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2181,7 +2181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.097
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2189,7 +2189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.406
+      value: -1.392
       objectReference: {fileID: 0}
     - target: {fileID: 3951085255447567303, guid: 5732238daab544ebd960f2a04eeb2fb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4549,7 +4549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5201,6 +5201,11 @@ MonoBehaviour:
   _asTriggers: 0
   _useLayer: 0
   _mask: 16777215
+--- !u!1 &1197419459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3294344132776879626, guid: 601b692edd3534ee491e3f745fd4d6cd, type: 3}
+  m_PrefabInstance: {fileID: 1822025907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1211751459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7492,13 +7497,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3294344132776879626, guid: 601b692edd3534ee491e3f745fd4d6cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1822025912}
+    - targetCorrespondingSourceObject: {fileID: 3294344132776879626, guid: 601b692edd3534ee491e3f745fd4d6cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1822025913}
   m_SourcePrefab: {fileID: 100100000, guid: 601b692edd3534ee491e3f745fd4d6cd, type: 3}
 --- !u!4 &1822025908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 603478881998507527, guid: 601b692edd3534ee491e3f745fd4d6cd, type: 3}
   m_PrefabInstance: {fileID: 1822025907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1822025912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197419459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe45dc9c199742b791056a9bcb10804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1822025913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197419459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7c557dbf70c407faf9cb15dcebaaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1844552551
 GameObject:
   m_ObjectHideFlags: 0
@@ -8209,9 +8244,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 263219563604794428, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1967428852}
-    - targetCorrespondingSourceObject: {fileID: 263219563604794428, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1967428856}
     - targetCorrespondingSourceObject: {fileID: 263219563604794428, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       insertIndex: -1
@@ -8222,31 +8254,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 263219563604794428, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
   m_PrefabInstance: {fileID: 1967428846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1967428852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967428847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e2679eea1b96494586049a7b8324f99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materialInsideStartObject: {fileID: 2100000, guid: ca5180ac6313244cd96f9e7cc8cfa388, type: 2}
-  materialInsideBoundaries: {fileID: 2100000, guid: f4257060529294407b41079fd733255a, type: 2}
-  materialOutsideAllBoundaries: {fileID: 2100000, guid: 4fec2b24f2b0046a5949eb4f8fd38a42, type: 2}
-  startObject: {fileID: 1530948492}
-  countdownDuration: 3
-  countdownText: {fileID: 139319268}
-  gameOverText: {fileID: 164727173}
-  audioSource: {fileID: 1967428856}
-  fadeInClip: {fileID: 8300000, guid: 295489511c9b84f4e98b4e115c4ccf49, type: 3}
-  warningSoundSource: {fileID: 1967428857}
-  warningClip: {fileID: 8300000, guid: 322fca8269a6f4a75ac205572f3b273d, type: 3}
-  playerCamera: {fileID: 1236552886}
-  boundaryCheckerObject: {fileID: 1567748023}
 --- !u!4 &1967428854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1923191459333442867, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}

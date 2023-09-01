@@ -18,11 +18,13 @@ public class ColorChanger : MonoBehaviour
     public AudioSource warningSoundSource; // Reference to the warning sound AudioSource
     public AudioClip warningClip; // Warning sound clip
      public Camera playerCamera; 
-     public GameObject boundaryCheckerObject;
+     
+
+     public SafeBoundaries safeBoundariesScript; 
 
     private bool boundaryObjectCollided = false;
     private Renderer objectRenderer;
-    private BoundaryChecker boundaryChecker;
+    
     private bool isCountingDown = false;
     private float countdownTimer;
     private float initialVolume; // Initial volume of the audio source
@@ -78,7 +80,10 @@ public class ColorChanger : MonoBehaviour
 
     // Check if the user is inside the boundaries before updating colors and countdown
   
-        bool isInsideBoundaries = boundaryChecker.CheckInsideBoundaries();
+    // Access the IsPlayerWithinBoundaries property from the SafeBoundaries script
+        bool isPlayerWithinBoundaries = safeBoundariesScript.IsPlayerWithinBoundaries;
+
+       
         bool isInsideStartObject = IsInsideStartObject();
 
         if (isInsideStartObject && !boundaryObjectCollided)
@@ -86,7 +91,7 @@ public class ColorChanger : MonoBehaviour
             objectRenderer.material = materialInsideStartObject;
             ResetCountdown();
         }
-        else if (isInsideBoundaries && boundaryObjectCollided)
+        else if (isPlayerWithinBoundaries && boundaryObjectCollided)
         {
             objectRenderer.material = materialInsideBoundaries;
             ResetCountdown();
@@ -101,13 +106,13 @@ public class ColorChanger : MonoBehaviour
 
 
         // Check if the player is outside both safe and start areas, then play warning sound
-        if (!isInsideStartObject && !isInsideBoundaries && boundaryObjectCollided)
+        if (!isInsideStartObject && !isPlayerWithinBoundaries && boundaryObjectCollided)
             {
                 PlayWarningSound();
             }
 
         // Check if the player is returning to safe/start area
-        if ((isInsideStartObject || isInsideBoundaries) && isFadingOut)
+        if ((isInsideStartObject || isPlayerWithinBoundaries) && isFadingOut)
         {
             FadeInAudio();
 
