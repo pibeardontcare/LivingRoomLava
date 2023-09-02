@@ -107,7 +107,7 @@ private void OnCollisionEnter(Collision collision)
      Debug.Log("OnCollisionEnter called"); // 
     if (collision.gameObject.CompareTag("Floor"))
     {
-         Debug.Log("Collision with floor detected"); //
+         Debug.Log("Collision with floor has been detected"); //
         if (collision.contacts.Length > 0)
         {
             Vector3 contactNormal = collision.contacts[0].normal;
