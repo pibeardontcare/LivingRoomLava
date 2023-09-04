@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ColorChanger : MonoBehaviour
 {
-    public Material materialInsideStartObject;
+   public Material materialInsideStartObject;
     public Material materialInsideBoundaries;
     public Material materialOutsideAllBoundaries;
     public GameObject startObject;
@@ -17,26 +17,25 @@ public class ColorChanger : MonoBehaviour
     public AudioClip fadeInClip; // Audio clip for fading in
     public AudioSource warningSoundSource; // Reference to the warning sound AudioSource
     public AudioClip warningClip; // Warning sound clip
-     public Camera playerCamera; 
+    public Camera playerCamera;
 
     private bool boundaryObjectCollided = false;
     private Renderer objectRenderer;
-    private BoundaryChecker boundaryChecker;
     private bool isCountingDown = false;
     private float countdownTimer;
     private float initialVolume; // Initial volume of the audio source
     private bool isFadingOut = false;
-    
+
+    private bool isOutsideSafeArea = false; // Add a flag to track if the player is outside the safe area
+    private bool isPlayingWarningSound = false; // Flag to track if the warning sound is playing
 
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
-        boundaryChecker = GameObject.FindObjectOfType<BoundaryChecker>();
         countdownTimer = countdownDuration;
 
-         // Store the initial volume of the audio source
+        // Store the initial volume of the audio source
         initialVolume = audioSource.volume;
-
 
         // Make sure Game Over text is initially inactive
         gameOverText.gameObject.SetActive(false);
@@ -45,75 +44,67 @@ public class ColorChanger : MonoBehaviour
         IsGameOver = false;
         boundaryObjectCollided = false; // Initialize the flag to false
     }
-     private void OnEnable()
-    {
-        if (boundaryChecker != null){
-        boundaryChecker.OnBoundaryObjectCollided += OnBoundaryObjectCollided;
-        }
-    }
 
-    private void OnDisable()
-    {
-         if (boundaryChecker != null){
-              boundaryChecker.OnBoundaryObjectCollided -= OnBoundaryObjectCollided;
-         }
-      
-    }
-
-    private void OnBoundaryObjectCollided(GameObject boundaryObject)
-    {
-        // This method will be called when a boundary object collides with the floor
-        // Update the flag to indicate that a boundary object has collided
-        boundaryObjectCollided = true;
-
-        // You can place any logic here that should run when a boundary object is thrown and collides with the floor.
-        // For example, you can change colors or perform other actions.
-        // You can also start the countdown timer if necessary.
-    }
     private void Update()
     {
-       if (playerCamera.transform.position.z <= 0.5f)
+        if (playerCamera.transform.position.z <= 0.5f)
             return;
 
-    // Check if the user is inside the boundaries before updating colors and countdown
-  
-        bool isInsideBoundaries = boundaryChecker.CheckInsideBoundaries();
         bool isInsideStartObject = IsInsideStartObject();
 
         if (isInsideStartObject && !boundaryObjectCollided)
         {
             objectRenderer.material = materialInsideStartObject;
             ResetCountdown();
+            isOutsideSafeArea = false; // Reset the flag when inside the start object
         }
-        else if (isInsideBoundaries && boundaryObjectCollided)
+        else if (IsInsideBoundaries() && boundaryObjectCollided)
         {
             objectRenderer.material = materialInsideBoundaries;
             ResetCountdown();
+            isOutsideSafeArea = false; // Reset the flag when inside the safe boundaries
         }
         else
         {
             objectRenderer.material = materialOutsideAllBoundaries;
             StartCountdown();
+            isOutsideSafeArea = true; // Set the flag when outside both safe area and boundaries
+
+            // Check if the player is outside the safe area and the warning sound is not playing
+            if (!isPlayingWarningSound)
+            {
+                PlayWarningSound();
+                isPlayingWarningSound = true; // Set the flag when starting to play the warning sound
+            }
         }
 
         UpdateCountdown();
 
-
-        // Check if the player is outside both safe and start areas, then play warning sound
-        if (!isInsideStartObject && !isInsideBoundaries && boundaryObjectCollided)
-            {
-                PlayWarningSound();
-            }
-
-        // Check if the player is returning to safe/start area
-        if ((isInsideStartObject || isInsideBoundaries) && isFadingOut)
+        // Check if the player is returning to the safe/start area
+        if ((isInsideStartObject || IsInsideBoundaries()) && isOutsideSafeArea)
         {
-            FadeInAudio();
-
+            StopWarningSound();
         }
-
     }
-        // Check if the user's position is inside the boundaries of the start object
+     private void PlayWarningSound()
+    {
+        if (!warningSoundSource.isPlaying)
+        {
+            warningSoundSource.clip = warningClip;
+            warningSoundSource.Play();
+        }
+    }
+
+    private void StopWarningSound()
+    {
+        if (warningSoundSource.isPlaying)
+        {
+            warningSoundSource.Stop();
+            isPlayingWarningSound = false; // Reset the flag when stopping the warning sound
+        }
+    }
+
+    // Check if the user's position is inside the boundaries of the start object
     private bool IsInsideStartObject()
     {
         // Get the position and scale of the start object
@@ -125,7 +116,7 @@ public class ColorChanger : MonoBehaviour
         float halfStartObjectZ = startObjectScale.z * 0.5f;
 
         // Get the user's position (VR headset camera position)
-        Vector3 userPosition = Camera.main.transform.position;
+        Vector3 userPosition = playerCamera.transform.position;
 
         // Check if the user's position is within the boundaries of the start object
         if (userPosition.x >= startObjectPosition.x - halfStartObjectX && userPosition.x <= startObjectPosition.x + halfStartObjectX &&
@@ -137,23 +128,26 @@ public class ColorChanger : MonoBehaviour
         return false; // User's position is outside the boundaries of the start object
     }
 
-   
+    private bool IsInsideBoundaries()
+    {
+        // Implement your logic for checking if the user is inside the boundaries
+        // You can use Collider or other methods to check the boundaries
+        // Replace the return statement with your implementation
+        return false; // Placeholder return
+    }
 
     private void StartCountdown()
     {
         if (!isCountingDown)
         {
             isCountingDown = true;
-    
-            countdownTimer = countdownDuration;
 
+            countdownTimer = countdownDuration;
 
             // Start fading out audio
             isFadingOut = true;
             StartCoroutine(FadeOutAudio());
         }
-
-        
     }
 
     private void UpdateCountdown()
@@ -170,7 +164,6 @@ public class ColorChanger : MonoBehaviour
         }
     }
 
-   
     private void ResetCountdown()
     {
         if (isCountingDown)
@@ -243,12 +236,5 @@ public class ColorChanger : MonoBehaviour
     audioSource.volume = startVolume;
     isFadingOut = false;
 }
-private void PlayWarningSound()
-{
-    if (!warningSoundSource.isPlaying)
-    {
-        warningSoundSource.clip = warningClip;
-        warningSoundSource.Play();
-    }
-}
+
 }
