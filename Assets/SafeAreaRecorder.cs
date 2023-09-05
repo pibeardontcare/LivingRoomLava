@@ -45,11 +45,11 @@ public class SafeAreaRecorder : MonoBehaviour
 
     if (isInsideAnyObject)
     {
-        Debug.Log("Camera is inside the safe area of at least one object.");
+        //Debug.Log("Camera is inside the safe area of at least one object.");
     }
     else
     {
-        Debug.Log("Camera is outside the safe area of all objects.");
+        //Debug.Log("Camera is outside the safe area of all objects.");
     }
 }
 
@@ -63,9 +63,9 @@ public class SafeAreaRecorder : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision with lava has been detected");
+       
         GameObject collidedObject = collision.gameObject;
-
+         Debug.Log("Collision with: " + collidedObject);
         // Get or create SafeAreaInfo for the collided object.
         SafeAreaInfo safeAreaInfo;
         if (!safeAreas.TryGetValue(collidedObject, out safeAreaInfo))
