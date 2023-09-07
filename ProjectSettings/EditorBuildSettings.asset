@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: e694cf4bee8e743f88bb2b8e35038ee6
   - enabled: 0
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level 4.unity
     guid: 77fd6d49dc3644522846eb382e8af424
+  - enabled: 1
+    path: Assets/Scenes/Collider Test.unity
+    guid: 102c861773ef243e797442efca45c846
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2983d6ef982184869a97f6d36383d97b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f892d560281dd45dbbfc8ba09715154e, type: 2}

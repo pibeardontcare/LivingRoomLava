@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EndSequence : MonoBehaviour
+public class TriggerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator animator; // Drag and drop the Animator component from the Inspector.
+    public ParticleSystem particleEmitter; // Drag and drop the Particle System component from the Inspector.
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        // Check if the entering object is the TargetObject.
+        if (other.gameObject.CompareTag("Player")) // Make sure to set a unique tag for your TargetObject.
+        {
+            // Play the animation.
+            if (animator != null)
+            {
+                animator.SetTrigger("YourAnimationTriggerName");
+            }
+
+            // Activate the particle emitter.
+            if (particleEmitter != null)
+            {
+                particleEmitter.Play();
+            }
+        }
     }
 }

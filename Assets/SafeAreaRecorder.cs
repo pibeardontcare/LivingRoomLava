@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SafeAreaRecorder : MonoBehaviour
 {
     public Camera oculusMainCamera;
+    public Text safeAreaText; //print safe area for debug
+
+    public  bool isInsideAnyObject = false;
     // Create a dictionary to store safe area information for each object.
     private Dictionary<GameObject, SafeAreaInfo> safeAreas = new Dictionary<GameObject, SafeAreaInfo>();
 
@@ -23,7 +27,7 @@ public class SafeAreaRecorder : MonoBehaviour
     // Get the position of the Oculus Main Camera.
     Vector3 cameraPosition = oculusMainCamera.transform.position;
 
-    bool isInsideAnyObject = false;
+ 
 
     foreach (var kvp in safeAreas)
     {
@@ -124,6 +128,24 @@ public class SafeAreaRecorder : MonoBehaviour
         // Update the safe area info with the new position and dimensions.
         safeAreaInfo.Dimensions = new Vector2(dimensions.x, dimensions.z);
         safeAreaInfo.Position = new Vector2(position.x, position.z);}
+
+        // Update the UI Text element with the safe area data
+        UpdateSafeAreaUIText(safeAreaInfo);
         
+    }
+
+
+    // Function to update the UI Text element with safe area data
+    private void UpdateSafeAreaUIText(SafeAreaInfo safeAreaInfo)
+    {
+        if (safeAreaText != null)
+        {
+            // Format the safe area information as a string
+            string infoText = "Safe Area Dimensions: " + safeAreaInfo.Dimensions.ToString() +
+                              "\nSafe Area Position: " + safeAreaInfo.Position.ToString();
+
+            // Set the UI Text element's text to the formatted information
+            safeAreaText.text = infoText;
+        }
     }
 }
