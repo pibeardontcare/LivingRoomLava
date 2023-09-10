@@ -729,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202679670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 1.317}
+  m_LocalPosition: {x: 0.9, y: 0, z: -0.459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4478,7 +4478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5670,8 +5670,9 @@ MonoBehaviour:
   oculusMainCamera: {fileID: 1236552886}
   minX: -1.13
   maxX: 0.9
-  minZ: 0.5
-  maxZ: 1.3
+  minZ: -0.4
+  maxZ: 0.5
+  prizeAnimator: {fileID: 1743443808}
 --- !u!1001 &1399119596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7134,7 +7135,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9f3b571531777493a8d1e18586644399, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class ShowHideObject : MonoBehaviour
-{public GameObject objectToShowHide;
+{
+    public GameObject objectToShowHide;
     public ParticleSystem particleEmitter;
     public Camera oculusMainCamera;
 
@@ -10,6 +11,11 @@ public class ShowHideObject : MonoBehaviour
     public float maxX;
     public float minZ;
     public float maxZ;
+
+    public Animator prizeAnimator; // Reference to the Animator component on the prize object.
+
+    // Trigger parameter name
+    private static readonly string StartFloatingTrigger = "StartFloating";
 
     private bool isInsidePerimeter = false;
 
@@ -50,6 +56,9 @@ public class ShowHideObject : MonoBehaviour
 
                 objectToShowHide.SetActive(true);
                 particleEmitter.Play();
+
+                // Trigger the animation sequence
+                prizeAnimator.SetTrigger(StartFloatingTrigger);
             }
             else
             {
