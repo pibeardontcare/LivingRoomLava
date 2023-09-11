@@ -24,6 +24,7 @@ public class ShowHideObject : MonoBehaviour
         // Hide the objectToShowHide and stop the particle emitter at the start
         objectToShowHide.SetActive(false);
         particleEmitter.Stop();
+        
     }
 
     bool IsCameraWithinObjectPerimeter()
@@ -57,8 +58,8 @@ public class ShowHideObject : MonoBehaviour
                 objectToShowHide.SetActive(true);
                 particleEmitter.Play();
 
-                // Trigger the animation sequence
-                prizeAnimator.SetTrigger(StartFloatingTrigger);
+                // Trigger the open animation sequence
+                prizeAnimator.SetTrigger("BoxOpen");
             }
             else
             {
