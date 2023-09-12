@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ColorChangeScript : MonoBehaviour
 {
+    public GameObject objectToShowHide;
     // Reference to the SafeAreaRecorder script
     public SafeAreaRecorder safeAreaRecorder;
 
@@ -27,10 +28,12 @@ public class ColorChangeScript : MonoBehaviour
         if (isInsideSafeArea)
         {
             objectRenderer.material = insideSafeAreaMaterial;
+            objectToShowHide.SetActive(true);
         }
         else
         {
             objectRenderer.material = outsideSafeAreaMaterial;
+            objectToShowHide.SetActive(false);
         }
     }
 }
