@@ -53,7 +53,8 @@ public class SafeAreaRecorder : MonoBehaviour
     }
     else
     {
-        //Debug.Log("Camera is outside the safe area of all objects.");
+        Debug.Log("Camera is outside the safe area of all objects.");
+        isInsideAnyObject = false;
     }
 }
 
@@ -69,8 +70,10 @@ public class SafeAreaRecorder : MonoBehaviour
     {
        
         GameObject collidedObject = collision.gameObject;
-         Debug.Log("Collision with: " + collidedObject);
-        // Get or create SafeAreaInfo for the collided object.
+         Debug.Log("Collision with: " + collidedObject + "Tag of collidedObject: " + collidedObject.tag);
+         
+         if (collidedObject.CompareTag("SafeLines")){
+              // Get or create SafeAreaInfo for the collided object.
         SafeAreaInfo safeAreaInfo;
         if (!safeAreas.TryGetValue(collidedObject, out safeAreaInfo))
         {
@@ -110,20 +113,7 @@ public class SafeAreaRecorder : MonoBehaviour
 
         // Set the object's rotation to the target rotation.
         collidedObject.transform.rotation = targetRotation;
-        // // Check if the object has a Rigidbody component.
-        // Rigidbody rb = collidedObject.GetComponent<Rigidbody>();
-        //     if (rb == null)
-        //     {
-        //     // If the object doesn't have a Rigidbody, add one dynamically.
-        //     rb = collidedObject.AddComponent<Rigidbody>();
-        //     }
-
-        // // Calculate the direction to apply the force (perpendicular to the up vector).
-        // Vector3 forceDirection = Vector3.Cross(collidedObject.transform.up, Vector3.up).normalized;
-
-        // // Apply a small force to knock the object off its edge.
-        // float forceMagnitude = 100f; // Adjust the force magnitude as needed.
-        // rb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
+       
         
         // Update the safe area info with the new position and dimensions.
         safeAreaInfo.Dimensions = new Vector2(dimensions.x, dimensions.z);
@@ -131,6 +121,14 @@ public class SafeAreaRecorder : MonoBehaviour
 
         // Update the UI Text element with the safe area data
         UpdateSafeAreaUIText(safeAreaInfo);
+
+         }
+
+         else{
+             Debug.Log("Smash!");
+         }
+          
+      
         
     }
 

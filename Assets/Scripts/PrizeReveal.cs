@@ -10,6 +10,8 @@ public class PrizeReveal : MonoBehaviour
     public Animator endSequenceAnimator; // Drag your end sequence animator here
 
     [SerializeField] private Animator prizeBox;
+    public Transform playerCameraTransform; // Drag your VR Camera transform here
+
     private bool triggerEntered = false; // Flag to track if the trigger has been entered
 
     private void Start()
@@ -19,7 +21,7 @@ public class PrizeReveal : MonoBehaviour
         {
             particleEmitter.Stop();
         }
-        prizeBox.SetBool("PrizeReveal", false); // Fixed missing semicolon and added the missing parameter
+        prizeBox.SetBool("PrizeReveal", false);
     }
 
     private IEnumerator PlayEndSequenceWithDelay(float delay)
@@ -37,23 +39,41 @@ public class PrizeReveal : MonoBehaviour
     {
         if (other.CompareTag("Player") && !colorChanger.IsGameOver)
         {
-            prizeBox.SetBool("PrizeReveal", true);
-            // Enable prize description UI and next level button if it's not already active
-            if (!prizeDescriptionUI.activeSelf)
+            // Check if the player's camera transform enters the trigger
+            Vector3 cameraPosition = playerCameraTransform.position;
+            if (IsPointInsideTriggerZone(cameraPosition))
             {
-                prizeDescriptionUI.SetActive(true);
-            }
+                prizeBox.SetBool("PrizeReveal", true);
+                // Enable prize description UI and next level button if it's not already active
+                if (!prizeDescriptionUI.activeSelf)
+                {
+                    prizeDescriptionUI.SetActive(true);
+                }
 
-            // Start particle emitter
-            if (!triggerEntered && particleEmitter != null)
-            {
-                particleEmitter.Play();
-                triggerEntered = true;
-            }
+                // Start particle emitter
+                if (!triggerEntered && particleEmitter != null)
+                {
+                    particleEmitter.Play();
+                    triggerEntered = true;
+                }
 
-            // Delay before starting the end sequence animation
-            float delayBeforeEndSequence = 2.0f; // Adjust the delay time as needed
-            StartCoroutine(PlayEndSequenceWithDelay(delayBeforeEndSequence));
+                // Delay before starting the end sequence animation
+                float delayBeforeEndSequence = 2.0f; // Adjust the delay time as needed
+                StartCoroutine(PlayEndSequenceWithDelay(delayBeforeEndSequence));
+            }
         }
+    }
+
+    // Check if a point is inside the trigger zone
+    private bool IsPointInsideTriggerZone(Vector3 point)
+    {
+        Collider triggerCollider = GetComponent<Collider>();
+
+        if (triggerCollider != null)
+        {
+            return triggerCollider.bounds.Contains(point);
+        }
+
+        return false;
     }
 }

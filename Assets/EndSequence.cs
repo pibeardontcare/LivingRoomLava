@@ -3,6 +3,8 @@ using UnityEngine;
 public class ShowHideObject : MonoBehaviour
 {
     public GameObject objectToShowHide;
+
+    public InOrOutColor inOrOutColor;
     public ParticleSystem particleEmitter;
     public Camera oculusMainCamera;
 
@@ -15,7 +17,7 @@ public class ShowHideObject : MonoBehaviour
     public Animator prizeAnimator; // Reference to the Animator component on the prize object.
 
     // Trigger parameter name
-    private static readonly string StartFloatingTrigger = "StartFloating";
+   
 
     private bool isInsidePerimeter = false;
 
@@ -43,14 +45,14 @@ public class ShowHideObject : MonoBehaviour
     void Update()
     {
         bool isWithinPerimeter = IsCameraWithinObjectPerimeter();
-
+        bool isGameOver = inOrOutColor.gameOver;
         // Check if the camera has entered or exited the perimeter
         if (isWithinPerimeter != isInsidePerimeter)
         {
             isInsidePerimeter = isWithinPerimeter;
 
             // Do something based on whether the camera is within the object's perimeter.
-            if (isInsidePerimeter)
+            if (isInsidePerimeter && !isGameOver)
             {
                 Debug.Log("Camera is within the object's perimeter.");
                 // Add your code here for when the camera is within the object.
