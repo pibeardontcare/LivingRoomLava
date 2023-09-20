@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - SafeLines
   - Items
+  - SamplesInfoPanel
+  - Lava
   layers:
   - Default
   - TransparentFX
