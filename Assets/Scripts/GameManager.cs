@@ -6,10 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject vrHeadsetReference;
-    public Collider floorCollider;
-    public GameObject signFace;
-    public GameObject startArea;
+   
 
      // Define the total number of levels
     private int totalNumberOfLevels = 3;

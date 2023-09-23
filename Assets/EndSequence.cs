@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class ShowHideObject : MonoBehaviour
+public class endSequence : MonoBehaviour
 {
     public GameObject objectToShowHide;
+    
 
     public InOrOutColor inOrOutColor;
     public ParticleSystem particleEmitter;
@@ -17,7 +18,8 @@ public class ShowHideObject : MonoBehaviour
     public Animator prizeAnimator; // Reference to the Animator component on the prize object.
 
     // Trigger parameter name
-   
+    // Reference to the GameManager instance.
+    private GameManager gameManager;
 
     private bool isInsidePerimeter = false;
 
@@ -26,6 +28,9 @@ public class ShowHideObject : MonoBehaviour
         // Hide the objectToShowHide and stop the particle emitter at the start
         objectToShowHide.SetActive(false);
         particleEmitter.Stop();
+
+        // Find the GameManager instance in the scene.
+        gameManager = GameManager.instance;
         
     }
 
