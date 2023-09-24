@@ -22,8 +22,8 @@ public class SafeOutline : MonoBehaviour
    private void Start()
 {
     // Access the GameManager and retrieve the VR headset reference
-    vrHeadsetReference = GameManager.instance.vrHeadsetReference;
-    floorCollider = GameManager.instance.floorCollider;
+    
+    
 
     // Get the Renderer component attached to the target object
     if (signFace != null)

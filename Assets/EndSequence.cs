@@ -19,7 +19,7 @@ public class endSequence : MonoBehaviour
 
     // Trigger parameter name
     // Reference to the GameManager instance.
-    private GameManager gameManager;
+  
 
     private bool isInsidePerimeter = false;
 
@@ -30,7 +30,7 @@ public class endSequence : MonoBehaviour
         particleEmitter.Stop();
 
         // Find the GameManager instance in the scene.
-        gameManager = GameManager.instance;
+     
         
     }
 
@@ -46,6 +46,7 @@ public class endSequence : MonoBehaviour
 
         return isWithinBounds;
     }
+
 
     void Update()
     {
@@ -67,6 +68,8 @@ public class endSequence : MonoBehaviour
 
                 // Trigger the open animation sequence
                 prizeAnimator.SetTrigger("BoxOpen");
+
+               
             }
             else
             {
