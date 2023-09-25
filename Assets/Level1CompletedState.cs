@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    public GameObject[] levelButtons; // An array of buttons for each level
-    public GameObject[] prizeImages; // An array of prize images for each level
+    public GameObject[] levelButtonsWithImages; // An array of buttons, each containing the button and prize image
 
     void Start()
     {
         // Iterate through all levels
-        for (int i = 0; i < levelButtons.Length; i++)
+        for (int i = 0; i < levelButtonsWithImages.Length; i++)
         {
             int levelCompleted = PlayerPrefs.GetInt("Level" + i + "Completed");
             
@@ -19,8 +18,7 @@ public class MenuController : MonoBehaviour
             if (levelCompleted == 1)
             {
                 // Enable the button and show the prize image for the completed level
-                levelButtons[i].SetActive(true);
-                prizeImages[i].SetActive(true);
+                levelButtonsWithImages[i].SetActive(true);
             }
         }
     }
