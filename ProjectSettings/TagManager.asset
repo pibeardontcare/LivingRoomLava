@@ -10,6 +10,7 @@ TagManager:
   - Items
   - SamplesInfoPanel
   - Lava
+  - Hand
   layers:
   - Default
   - TransparentFX

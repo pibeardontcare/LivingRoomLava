@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IndicatorMovement : MonoBehaviour
-
 {
     public Transform target; // The VR headset camera transform (player position)
     public float moveSpeed = 2.0f; // Speed at which the object moves
@@ -26,7 +24,7 @@ public class IndicatorMovement : MonoBehaviour
         while (isMoving)
         {
             // Calculate the direction to the player
-            Vector3 directionToPlayer = target.position - transform.position;
+            Vector3 directionToPlayer = (target.position + target.forward * stopDistance) - transform.position;
 
             // If close enough, stop moving
             if (directionToPlayer.magnitude <= stopDistance)
@@ -39,7 +37,7 @@ public class IndicatorMovement : MonoBehaviour
             }
             else
             {
-                // Move the object towards the player
+                // Move the object towards the player with the added offset
                 transform.Translate(directionToPlayer.normalized * moveSpeed * Time.deltaTime);
 
                 // Interpolate the Y position towards 1 over time

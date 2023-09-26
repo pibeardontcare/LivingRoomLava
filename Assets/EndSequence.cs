@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class endSequence : MonoBehaviour
 {
-    public GameObject objectToShowHide;
+   
     
 
     public InOrOutColor inOrOutColor;
     public ParticleSystem particleEmitter;
     public Camera oculusMainCamera;
 
-    // Define x and z boundaries for the object
+    // Define x and z boundaries for the end zone area
     public float minX;
     public float maxX;
     public float minZ;
@@ -20,16 +20,17 @@ public class endSequence : MonoBehaviour
     // Trigger parameter name
     // Reference to the GameManager instance.
   
-
+     // Create a public static variable to store the prize unlocked state.
+    public static bool prizeUnlocked = false;
     private bool isInsidePerimeter = false;
 
     private void Start()
     {
         // Hide the objectToShowHide and stop the particle emitter at the start
-        objectToShowHide.SetActive(false);
+       
         particleEmitter.Stop();
 
-        // Find the GameManager instance in the scene.
+       
      
         
     }
@@ -63,20 +64,26 @@ public class endSequence : MonoBehaviour
                 Debug.Log("Camera is within the object's perimeter.");
                 // Add your code here for when the camera is within the object.
 
-                objectToShowHide.SetActive(true);
+            
                 particleEmitter.Play();
 
                 // Trigger the open animation sequence
                 prizeAnimator.SetTrigger("BoxOpen");
 
-               
+               // Set a PlayerPrefs key to indicate that the level is completed
+                PlayerPrefs.SetInt("Level1Completed", 1); // You can use a unique key for each level
+                PlayerPrefs.Save();
+
+                 // unlock the prize
+                prizeUnlocked = true;
+
             }
             else
             {
                 Debug.Log("Camera is NOT within the object's perimeter.");
                 // Add your code here for when the camera is NOT within the object.
 
-                objectToShowHide.SetActive(false);
+              
                 particleEmitter.Stop();
             }
         }
