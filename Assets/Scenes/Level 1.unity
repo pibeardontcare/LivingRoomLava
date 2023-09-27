@@ -2915,6 +2915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615e4eca405224aa1a0054797f3eb77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShowHide: {fileID: 1227688457}
 --- !u!1001 &1173623104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3637,6 +3638,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1636647054044697617, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 1649869645161045650, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: _interactors.Array.size
       value: 2
@@ -4228,6 +4233,10 @@ PrefabInstance:
     - target: {fileID: 3936237592472241079, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936237592472241079, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 4029759104594110088, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_Layer
@@ -8629,19 +8638,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.99999785
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0020944288
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 51c168ad6c00845ab81840fc9ee030aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -8717,10 +8726,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1705562588}
-  moveSpeed: 2
+  rotationSpeed: 20
   stopDistance: 0.5
   bounceHeight: 0.2
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9fc88288ee14d4232b435cf96a2749ae, type: 3}
 --- !u!82 &1967428850
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8731,7 +8740,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9fc88288ee14d4232b435cf96a2749ae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9026,7 +9035,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f04cd8114cb4d33bd09adf36175ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShowHide: {fileID: 1227688457}
   safeAreaRecorder: {fileID: 1822025910}
   insideSafeAreaMaterial: {fileID: 2100000, guid: f4257060529294407b41079fd733255a, type: 2}
   outsideSafeAreaMaterial: {fileID: 2100000, guid: 4fec2b24f2b0046a5949eb4f8fd38a42, type: 2}
