@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using System.Collections; 
 public class endSequence : MonoBehaviour
 {
    
@@ -30,7 +31,10 @@ public class endSequence : MonoBehaviour
        
         particleEmitter.Stop();
 
-       
+       // Set PlayerPrefs to "none" at the start of the level
+        PlayerPrefs.SetString("LevelCompleted", "none");
+        PlayerPrefs.Save();
+
      
         
     }
@@ -73,6 +77,8 @@ public class endSequence : MonoBehaviour
                // Set a PlayerPrefs key to indicate that the level is completed
                 PlayerPrefs.SetInt("Level1Completed", 1); // You can use a unique key for each level
                 PlayerPrefs.Save();
+                 StartCoroutine(DelayedSceneChange());
+
 
                  // unlock the prize
                 prizeUnlocked = true;
@@ -87,5 +93,14 @@ public class endSequence : MonoBehaviour
                 particleEmitter.Stop();
             }
         }
+    }
+
+     IEnumerator DelayedSceneChange()
+    {
+        // Wait for 3 seconds
+        yield return new WaitForSeconds(3.0f);
+
+        // Change the scene here, you can specify the scene name or index
+        SceneManager.LoadScene("MainMenu1");
     }
 }
