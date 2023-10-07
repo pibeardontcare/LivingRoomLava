@@ -4788,7 +4788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.732
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5550776016039436608, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6143,7 +6143,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380783545}
-  - component: {fileID: 1380783544}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -6151,18 +6150,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1380783544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380783543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8474eb827e9c24fc9b9baeeb05665b3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1380783545
 Transform:
   m_ObjectHideFlags: 0
@@ -6226,6 +6213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373df27104c7b4934886dac27c7e1245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToShowHide: {fileID: 1227688457}
   inOrOutColor: {fileID: 1967428860}
   particleEmitter: {fileID: 687555043}
   oculusMainCamera: {fileID: 1236552886}
