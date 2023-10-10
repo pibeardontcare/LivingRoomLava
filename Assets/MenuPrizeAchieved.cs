@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MenuPrizeAchieved : MonoBehaviour
 {
     // Reference to the GameObject you want to show for level 1 achievement.
     public GameObject level1GameObject;
+    public GameObject prizeDescription;
 
     private void Start()
     {
+        // Ensure the UI object is initially hidden
+         prizeDescription.SetActive(false);
         // Check the level progress to determine if level 1 is achieved.
         int levelProgress = GameManager.instance.GetLevelProgress();
 
@@ -28,6 +33,15 @@ public class MenuPrizeAchieved : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         
+        
+    }
+
+       public void OnButtonClick()
+    {
+        // Toggle the visibility of the UI object
+        prizeDescription.SetActive(!prizeDescription.activeSelf);
     }
 }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections; 
+using UnityEngine.UI;
+
 public class endSequence : MonoBehaviour
 {
    
@@ -111,7 +113,7 @@ public GameObject objectToShowHide;
         // Wait for 3 seconds
         yield return new WaitForSeconds(3.0f);
 
-        // Change the scene here, you can specify the scene name or index
+        // specify the scene name or index
         SceneManager.LoadScene("MainMenu1");
     }
 }
