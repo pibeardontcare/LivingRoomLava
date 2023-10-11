@@ -20,6 +20,8 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 namespace Oculus.Interaction
 {
@@ -59,6 +61,10 @@ namespace Oculus.Interaction
         private ITransformer _activeTransformer = null;
         private ITransformer OneGrabTransformer;
         private ITransformer TwoGrabTransformer;
+        private Rigidbody _rigidbody; 
+        private bool isGrabbed = false;
+
+        public Text kinematicText;
 
         protected override void Awake()
         {
@@ -98,7 +104,13 @@ namespace Oculus.Interaction
                 OneGrabTransformer.Initialize(this);
             }
 
+            // Get the Rigidbody component
+            _rigidbody = GetComponent<Rigidbody>();
+
             this.EndStart(ref _started);
+            
+            // Make the object kinematic at start
+            SetRigidbodyKinematic(true);
         }
 
         public override void ProcessPointerEvent(PointerEvent evt)
@@ -121,10 +133,22 @@ namespace Oculus.Interaction
             switch (evt.Type)
             {
                 case PointerEventType.Select:
-                    BeginTransform();
+                    if (!isGrabbed)
+                    {
+                        BeginTransform();
+                        isGrabbed = true;
+                        // Make the object non-kinematic when picked up
+                        SetRigidbodyKinematic(false);
+                    }
                     break;
                 case PointerEventType.Unselect:
-                    BeginTransform();
+                    if (isGrabbed)
+                    {
+                        EndTransform();
+                        isGrabbed = false;
+                        // Make the object kinematic when released
+                        SetRigidbodyKinematic(true);
+                    }
                     break;
                 case PointerEventType.Move:
                     UpdateTransform();
@@ -132,8 +156,14 @@ namespace Oculus.Interaction
             }
         }
 
-        // Whenever we change the number of grab points, we save the
-        // current transform data
+     private void SetRigidbodyKinematic(bool isKinematic)
+{
+    if (_rigidbody != null)
+    {
+        _rigidbody.isKinematic = isKinematic;
+        kinematicText.text = isKinematic ? "true" : "false";
+    }
+}
         private void BeginTransform()
         {
             // End the transform on any existing transformer before we

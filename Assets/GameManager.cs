@@ -23,13 +23,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Load the level progress from PlayerPrefs (if it exists).
+        if (PlayerPrefs.HasKey("LevelProgress"))
+        {
+            levelProgress = PlayerPrefs.GetInt("LevelProgress");
+        }
+        else
+        {
+            // If no level progress is saved, set it to the default value of 0.
+            levelProgress = 0;
+            PlayerPrefs.SetInt("LevelProgress", levelProgress);
+            PlayerPrefs.Save();
+        }
     }
 
-    private void Start()
-    {
-        // Initialize the level progress to 0 when the menu first loads.
-        levelProgress = 0;
-    }
+    
 
     // Call this method when a level is completed to update the progress.
     public void LevelCompleted()
