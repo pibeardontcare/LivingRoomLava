@@ -147,7 +147,7 @@ namespace Oculus.Interaction
                         EndTransform();
                         isGrabbed = false;
                         // Make the object kinematic when released
-                        SetRigidbodyKinematic(true);
+                        SetRigidbodyKinematic(false);
                     }
                     break;
                 case PointerEventType.Move:

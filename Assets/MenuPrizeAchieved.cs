@@ -17,6 +17,7 @@ public class MenuPrizeAchieved : MonoBehaviour
     {
         // Ensure the UI object is initially hidden
         prizeDescription.SetActive(false);
+        prizeObject.SetActive(false);
 
         // Check the level progress to determine if this level is achieved.
         int levelProgress = GameManager.instance.GetLevelProgress();
