@@ -7,7 +7,7 @@ public class endSequence : MonoBehaviour
 {
    
     
-public GameObject objectToShowHide; 
+
     public InOrOutColor inOrOutColor;
     public ParticleSystem particleEmitter;
     public Camera oculusMainCamera;
@@ -44,11 +44,11 @@ public GameObject objectToShowHide;
         // If "Level1Completed" is set to 1, show the object; otherwise, hide it.
         if (levelCompleted == 1)
         {
-            objectToShowHide.SetActive(true);
+            
         }
         else
         {
-            objectToShowHide.SetActive(false);
+            
         }
     }
 
