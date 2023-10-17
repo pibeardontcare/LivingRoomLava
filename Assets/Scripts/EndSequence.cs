@@ -34,22 +34,15 @@ public class endSequence : MonoBehaviour
         particleEmitter.Stop();
 
        // Set PlayerPrefs to "none" at the start of the level
-        PlayerPrefs.SetString("LevelCompleted", "none");
+        PlayerPrefs.SetString("Level Progress", "none");
         PlayerPrefs.Save();
 
      
-         // Check the value of "Level1Completed" in PlayerPrefs
-        int levelCompleted = PlayerPrefs.GetInt("Level1Completed", 0);
+        
+        // Check the value of "Level Progress" in PlayerPrefs
+        int levelProgress = PlayerPrefs.GetInt("Level Progress", 0);
 
-        // If "Level1Completed" is set to 1, show the object; otherwise, hide it.
-        if (levelCompleted == 1)
-        {
-            
-        }
-        else
-        {
-            
-        }
+        
     }
 
     bool IsCameraWithinObjectPerimeter()
@@ -88,8 +81,9 @@ public class endSequence : MonoBehaviour
                 prizeAnimator.SetTrigger("BoxOpen");
 
                // Set a PlayerPrefs key to indicate that the level is completed
-                PlayerPrefs.SetInt("Level1Completed", 1); // You can use a unique key for each level
-                PlayerPrefs.Save();
+            int levelProgress = PlayerPrefs.GetInt("Level Progress", 0);
+            PlayerPrefs.SetInt("Level Progress", levelProgress + 1);
+            PlayerPrefs.Save();
                  StartCoroutine(DelayedSceneChange());
 
 
