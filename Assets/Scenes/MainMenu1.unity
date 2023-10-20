@@ -2735,8 +2735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1e2573f3b7c4fc8831ce2afc3d02ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1588518994}
-  oculusCamera: {fileID: 7079690332569821015}
+  head: {fileID: 684434832}
+  origin: {fileID: 7079690332569821013}
+  target: {fileID: 1588518994}
   objectToShow: {fileID: 794260037}
 --- !u!1 &1630576777
 GameObject:

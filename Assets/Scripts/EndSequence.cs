@@ -34,13 +34,13 @@ public class endSequence : MonoBehaviour
         particleEmitter.Stop();
 
        // Set PlayerPrefs to "none" at the start of the level
-        PlayerPrefs.SetString("Level Progress", "none");
+        PlayerPrefs.SetString("LevelProgress", "none");
         PlayerPrefs.Save();
 
      
         
         // Check the value of "Level Progress" in PlayerPrefs
-        int levelProgress = PlayerPrefs.GetInt("Level Progress", 0);
+        int levelProgress = PlayerPrefs.GetInt("LevelProgress", 0);
 
         
     }
@@ -81,7 +81,7 @@ public class endSequence : MonoBehaviour
                 prizeAnimator.SetTrigger("BoxOpen");
 
                // Set a PlayerPrefs key to indicate that the level is completed
-            int levelProgress = PlayerPrefs.GetInt("Level Progress", 0);
+            int levelProgress = PlayerPrefs.GetInt("LevelProgress", 0);
             PlayerPrefs.SetInt("Level Progress", levelProgress + 1);
             PlayerPrefs.Save();
                  StartCoroutine(DelayedSceneChange());

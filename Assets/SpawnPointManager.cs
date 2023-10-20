@@ -2,10 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SpawnPointManager : MonoBehaviour
 {
-    public Transform spawnPoint; // Reference to spawn point Transform
-    public Camera oculusCamera; // Reference Oculus main camera
-
+    public Transform head; // Reference to spawn point Transform
+    public Transform origin; // Reference Oculus main camera
+    public Transform target;
     public GameObject objectToShow;
+
+    public Color newColor = Color.yellow; //color change
+
+    private Renderer objectRenderer; //
 
 
  private void Awake()
@@ -14,32 +18,24 @@ public class SpawnPointManager : MonoBehaviour
     {
            // Show the object
         objectToShow.SetActive(true);
-        // Your initializatio if (oculusCamera == null)
-        {
-            Debug.LogError("Oculus main camera not assigned. Camera may not spawn correctly.");
-            return;
-        }
-
-        // Check if the scene is the "MainMenu" scene
-        if (SceneManager.GetActiveScene().name == "MainMenu1")
-        {
-            if (spawnPoint != null)
-            {
-                // Move the Oculus camera to the spawn point's position and rotation
-                oculusCamera.transform.position = spawnPoint.position;
-                oculusCamera.transform.rotation = spawnPoint.rotation;
-            }
-            else
-            {
-                Debug.LogError("Spawn point not assigned. Camera may not spawn correctly.");
-            }
-        }
+       
+        Recenter();
+       
     }
 
     void Start()
-
     {
-
-       
+        // Change the color of the objectToShow
+        if (objectRenderer != null)
+        {
+            objectRenderer.material.color = newColor;
+        }
     }
+
+  public void Recenter()
+{
+    Vector3 offset = head.position - origin.position;
+    offset.y = 0;
+    origin.position = target.position;
+}
 }
