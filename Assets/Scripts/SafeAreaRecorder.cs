@@ -49,7 +49,7 @@ public class SafeAreaRecorder : MonoBehaviour
 
     if (isInsideAnyObject)
     {
-        //Debug.Log("Camera is inside the safe area of at least one object.");
+        Debug.Log("Camera is inside the safe area of at least one object.");
     }
     else
     {
