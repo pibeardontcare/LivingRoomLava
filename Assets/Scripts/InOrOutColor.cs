@@ -83,6 +83,6 @@ public class InOrOutColor : MonoBehaviour
         countdownText.text = "Game Over";
         gameOver = true;
 
-        // You can perform any additional actions when the countdown ends here.
+        
     }
 }
