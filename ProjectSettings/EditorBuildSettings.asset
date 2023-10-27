@@ -56,9 +56,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/PassthroughHands.unity
     guid: c94e480e4a6da614693c0cd3372e2d2d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
+  - enabled: 1
+    path: Assets/Scenes/Balloon Test.unity
+    guid: 5488c65c8de7a4e8b964b2945b9f2a06
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2983d6ef982184869a97f6d36383d97b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f892d560281dd45dbbfc8ba09715154e, type: 2}
