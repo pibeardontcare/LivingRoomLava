@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDeviceTypes: 010000000200000003000000
   allowOptional3DofHeadTracking: 0
-  handTrackingSupport: 2
+  handTrackingSupport: 1
   handTrackingFrequency: 2
   handTrackingVersion: 2
   anchorSupport: 1
@@ -31,7 +31,7 @@ MonoBehaviour:
   skipUnneededShaders: 0
   focusAware: 1
   requiresSystemKeyboard: 0
-  experimentalFeaturesEnabled: 1
+  experimentalFeaturesEnabled: 0
   insightPassthroughEnabled: 0
   _insightPassthroughSupport: 2
   systemSplashScreen: {fileID: 0}
