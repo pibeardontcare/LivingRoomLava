@@ -1,39 +1,28 @@
+// 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Import SceneManager
 
-public class PlayerController : MonoBehaviour
+public class SnapObjectToPlayer : MonoBehaviour
 {
-    [SerializeField] Transform resetTransform;
-    [SerializeField] GameObject player;
-    [SerializeField] Camera oculusCamera;
+    public OVRCameraRig cameraRig; // Reference to the OVRCameraRig in the scene
+    public GameObject objectToSnap; // The object you want to snap to the player
 
     private void Start()
     {
-        // Check the level progression and scene name
-        if (SceneManager.GetActiveScene().name == "YourSceneName" && YourLevelProgressionCheck() > 0)
+        if (cameraRig != null && objectToSnap != null)
         {
-            ResetPosition();
+            // Get the position and rotation of the camera rig's tracking space
+            Vector3 playerPosition = cameraRig.trackingSpace.position;
+            Quaternion playerRotation = cameraRig.trackingSpace.rotation;
+
+            // Set the position and rotation of the object to match the player's position and rotation
+            objectToSnap.transform.position = playerPosition;
+            objectToSnap.transform.rotation = playerRotation;
         }
-    }
-
-
-    private int YourLevelProgressionCheck()
-    {
-       //check player level
-        return PlayerPrefs.GetInt("LevelProgression", 0);
-    }
-
-    public void ResetPosition()
-    {
-        var rotationAngleY = 180;
-        player.transform.Rotate(0, rotationAngleY, 0);
-
-        var distanceDiff = resetTransform.position - oculusCamera.transform.position;
-
-        player.transform.position += distanceDiff;
-
-        Debug.Log("reset player called");
+        else
+        {
+            Debug.LogError("Missing references. Make sure to assign OVRCameraRig and ObjectToSnap in the Inspector.");
+        }
     }
 }
