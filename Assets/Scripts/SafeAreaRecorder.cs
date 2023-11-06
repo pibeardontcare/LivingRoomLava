@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class SafeAreaRecorder : MonoBehaviour
 {
+    public Text isInsideText;
     public Camera oculusMainCamera;
     public Text safeAreaText; //print safe area for debug
 
@@ -27,7 +28,8 @@ public class SafeAreaRecorder : MonoBehaviour
     // Get the position of the Oculus Main Camera.
     Vector3 cameraPosition = oculusMainCamera.transform.position;
 
- 
+
+    isInsideAnyObject = false; // Reset the flag to false
 
     foreach (var kvp in safeAreas)
     {
@@ -49,7 +51,7 @@ public class SafeAreaRecorder : MonoBehaviour
 
     if (isInsideAnyObject)
     {
-        //Debug.Log("Camera is inside the safe area of at least one object.");
+        Debug.Log("Camera is inside the safe area of at least one object.");
     }
     else
     {
@@ -145,5 +147,11 @@ public class SafeAreaRecorder : MonoBehaviour
             // Set the UI Text element's text to the formatted information
             safeAreaText.text = infoText;
         }
+
+         if (isInsideText != null)
+    {
+        // Display the value of isInsideAnyObject
+        isInsideText.text = "Is Inside Any Object: " + isInsideAnyObject.ToString();
+    }
     }
 }
