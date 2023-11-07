@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class IndicatorMovement : MonoBehaviour
 {
-    public Transform target; // The VR headset camera transform (player position)
+    public Camera oculusMainCamera; // The VR headset camera transform (player position)
     public float rotationSpeed = 20.0f; // Speed of rotation towards the player
     public float stopDistance = 0.5f; // Distance to stop from the player
     public float bounceHeight = 0.2f; // Bounce height
@@ -19,12 +19,12 @@ public class IndicatorMovement : MonoBehaviour
 
     private IEnumerator BounceAndRotate()
     {
-        Vector3 initialPosition = transform.position; // Store the initial position
+        Vector3 initialPosition = oculusMainCamera.transform.position; // Store the initial position
 
         while (isMoving)
         {
             // Calculate the direction to the player
-            Vector3 directionToPlayer = (target.position - transform.position);
+            Vector3 directionToPlayer = (target.position - oculusMainCamera.transform.position);
 
             // Rotate towards the player
             Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
