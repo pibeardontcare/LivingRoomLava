@@ -6263,6 +6263,7 @@ MonoBehaviour:
   inOrOutColor: {fileID: 1967428860}
   particleEmitter: {fileID: 687555043}
   oculusMainCamera: {fileID: 1236552886}
+  nextSceneName: MainMenu2
   minX: -1.13
   maxX: 0.9
   minZ: 2.57
@@ -9338,11 +9339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253e54784070a4cf3af6e81c0340006d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1705562588}
-  rotationSpeed: 20
-  stopDistance: 0.5
-  bounceHeight: 0.2
-  audioClip: {fileID: 8300000, guid: 9fc88288ee14d4232b435cf96a2749ae, type: 3}
 --- !u!82 &1967428850
 AudioSource:
   m_ObjectHideFlags: 0

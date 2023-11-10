@@ -51,7 +51,7 @@ public class InOrOutColor : MonoBehaviour
         if (gameOver)
         {
             // Handle game over logic here
-            // For example, you can show a game over screen or restart the game.
+            //
         }
     }
 
@@ -83,6 +83,6 @@ public class InOrOutColor : MonoBehaviour
         countdownText.text = "Game Over";
         gameOver = true;
 
-        // You can perform any additional actions when the countdown ends here.
+     //add game is over return to start here   }
     }
 }
