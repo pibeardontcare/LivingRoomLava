@@ -158,11 +158,11 @@ namespace Oculus.Interaction
 
      private void SetRigidbodyKinematic(bool isKinematic)
 {
-    if (_rigidbody != null)
-    {
-        _rigidbody.isKinematic = isKinematic;
-        kinematicText.text = isKinematic ? "true" : "false";
-    }
+    // if (_rigidbody != null)
+    // {
+    //     _rigidbody.isKinematic = isKinematic;
+    //     kinematicText.text = isKinematic ? "true" : "false";
+    // }
 }
         private void BeginTransform()
         {
