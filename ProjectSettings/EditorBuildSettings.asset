@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level 2.unity
     guid: 7efc2ac4a73d9487db386ea09345c357
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/testLevel.unity
     guid: 23550470900d3477d94630ad1a3fb489
+  - enabled: 1
+    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/HandGrabExamples.unity
+    guid: 39ae0e546b9edc0408d3b11c6a7c2814
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2983d6ef982184869a97f6d36383d97b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f892d560281dd45dbbfc8ba09715154e, type: 2}
