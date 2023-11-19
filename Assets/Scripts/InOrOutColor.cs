@@ -18,6 +18,9 @@ public class InOrOutColor : MonoBehaviour
 
     public bool gameOver = false;
 
+       // Declare an event for game over
+    public event System.Action GameOverEvent;
+
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -50,8 +53,12 @@ public class InOrOutColor : MonoBehaviour
         // Check if the game is over
         if (gameOver)
         {
-            // Handle game over logic here
-            //
+
+            // Trigger the game over event
+            if (GameOverEvent != null)
+            {
+                GameOverEvent.Invoke();
+            }
         }
     }
 
