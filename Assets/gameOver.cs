@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class GameOverHandler : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public InOrOutColor inOrOutColor;// Reference to the script controlling game over status
-    public GameObject startCouch; // Reference to the object you want to disappear
-    public GameObject gameOverCouch; // Reference to the object you want to reappear
-    public Light sceneLight; // Reference to the main light in your scene
+    public InOrOutColor inOrOutColor; // Reference to the script controlling game over status
+    public List<GameObject> objectsToUpdateMaterials; // List of objects whose materials you want to update
+    public Material newMaterial; // The new material to apply
+
+     public Light sceneLight; // Reference to the light component
 
     private void Start()
     {
-        // Ensure the references are set
-        if (inOrOutColor == null || startCouch == null || gameOverCouch == null || sceneLight == null)
+         // Ensure the references are set
+        if (inOrOutColor == null || objectsToUpdateMaterials.Count == 0 || newMaterial == null || sceneLight == null)
         {
             Debug.LogError("References not set. Please assign all necessary references in the inspector.");
             enabled = false; // Disable the script if references are not set
         }
+
 
         // Subscribe to the game over event
         inOrOutColor.GameOverEvent += OnGameOver;
@@ -25,14 +26,42 @@ public class GameOverHandler : MonoBehaviour
 
     private void OnGameOver()
     {
-        // Change lighting when the game is over (you can customize this part based on your requirements)
-        sceneLight.color = Color.red;
-        sceneLight.intensity = 0.5f;
+        // Change lighting when the game is over (customize this part based on your requirements)
+        ChangeLighting();
 
-        // Make one object disappear and the other reappear
-        startCouch.SetActive(false);
-        gameOverCouch.SetActive(true);
-        gameOverCouch.transform.position = new Vector3(0, 0.1f, 0.5f);
+        // Update materials for each object
+        foreach (GameObject obj in objectsToUpdateMaterials)
+        {
+            UpdateObjectMaterial(obj);
+        }
+    }
+
+    private void ChangeLighting()
+    {
+        // Change lighting when the game is over (customize this part based on your requirements)
+        if (sceneLight != null)
+        {
+            sceneLight.color = Color.red;
+            sceneLight.intensity = 0.5f;
+        }
+        else
+        {
+            Debug.LogWarning("Light component not found. Please assign a Light component in the inspector.");
+        }
+    }
+
+    private void UpdateObjectMaterial(GameObject obj)
+    {
+        // Update the material of the specified object
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material = newMaterial;
+        }
+        else
+        {
+            Debug.LogWarning("Renderer component not found on " + obj.name);
+        }
     }
 
     // Ensure to unsubscribe from events when the script is disabled or destroyed
@@ -40,7 +69,7 @@ public class GameOverHandler : MonoBehaviour
     {
         if (inOrOutColor != null)
         {
-        inOrOutColor.GameOverEvent -= OnGameOver;
+            inOrOutColor.GameOverEvent -= OnGameOver;
         }
     }
 }
