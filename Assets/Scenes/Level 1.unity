@@ -7413,6 +7413,10 @@ MonoBehaviour:
   - {fileID: 1688861914}
   newMaterial: {fileID: 2100000, guid: 95889229e7cb441f394008c2b85b12a5, type: 2}
   sceneLight: {fileID: 705507994}
+  restartTrigger: {fileID: 7722817949313898207, guid: dac949f95b42d48ad85154ef3144927c, type: 3}
+  restartTriggerPosition: {fileID: 5343506903725991306, guid: dac949f95b42d48ad85154ef3144927c, type: 3}
+  menuTrigger: {fileID: 2616221026194623164, guid: 64fd05066e0c7464686cf45003816ddb, type: 3}
+  menuTriggerPosition: {fileID: 6550153455187179874, guid: 64fd05066e0c7464686cf45003816ddb, type: 3}
 --- !u!4 &1701781904
 Transform:
   m_ObjectHideFlags: 0
@@ -7441,6 +7445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToRestart: Level 1
+  mainMenu: 
   minX: -0.76
   maxX: 0.99
   minZ: -0.32

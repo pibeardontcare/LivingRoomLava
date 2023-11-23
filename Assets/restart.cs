@@ -13,6 +13,8 @@ public class restart : MonoBehaviour
     public float minZ; // Minimum Z-coordinate of the restart area
     public float maxZ; // Maximum Z-coordinate of the restart area
 
+    private bool leveRestart = true; //restart variable
+
     private void Start()
     {
         // Subscribe to the GameOverEvent in InOrOutColor script
@@ -25,9 +27,9 @@ public class restart : MonoBehaviour
 
    private void OnGameOver()
 {
-    // Check if the game is over
+    // Check if the game is over and the restart button has been pressed
     InOrOutColor inOrOutColorScript = FindObjectOfType<InOrOutColor>();
-    if (inOrOutColorScript != null && inOrOutColorScript.gameOver && restart)
+    if (inOrOutColorScript != null && inOrOutColorScript.gameOver && leveRestart)
     {
         // Restart the scene
         SceneManager.LoadScene(sceneToRestart);

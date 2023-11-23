@@ -10,6 +10,11 @@ public class GameOver : MonoBehaviour
 
      public Light sceneLight; // Reference to the light component
 
+    public GameObject restartTrigger;
+    public Transform restartTriggerPosition;
+
+    public GameObject menuTrigger;
+    public Transform menuTriggerPosition;
     private void Start()
     {
          // Ensure the references are set
@@ -34,6 +39,8 @@ public class GameOver : MonoBehaviour
         {
             UpdateObjectMaterial(obj);
         }
+
+
     }
 
     private void ChangeLighting()
@@ -48,6 +55,10 @@ public class GameOver : MonoBehaviour
         {
             Debug.LogWarning("Light component not found. Please assign a Light component in the inspector.");
         }
+         // Spawn new GameObjects at specific positions
+        Instantiate(menuTrigger, menuTriggerPosition.position, menuTriggerPosition.rotation);
+        Instantiate(restartTrigger, restartTriggerPosition.position, restartTriggerPosition.rotation);
+    
     }
 
     private void UpdateObjectMaterial(GameObject obj)
