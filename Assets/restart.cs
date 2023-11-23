@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class restart : MonoBehaviour
 {
     public string sceneToRestart; // Name of the scene to restart
+
+    public string mainMenu; //back to main menu
     public float minX; // Minimum X-coordinate of the restart area
     public float maxX; // Maximum X-coordinate of the restart area
     public float minZ; // Minimum Z-coordinate of the restart area
@@ -25,7 +27,7 @@ public class restart : MonoBehaviour
 {
     // Check if the game is over
     InOrOutColor inOrOutColorScript = FindObjectOfType<InOrOutColor>();
-    if (inOrOutColorScript != null && inOrOutColorScript.gameOver)
+    if (inOrOutColorScript != null && inOrOutColorScript.gameOver && restart)
     {
         // Restart the scene
         SceneManager.LoadScene(sceneToRestart);
