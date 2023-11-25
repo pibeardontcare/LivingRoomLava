@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 343746056800082601}
   - component: {fileID: 7210673032186359520}
   - component: {fileID: 4959630147414312886}
+  - component: {fileID: 2663165283624363092}
   m_Layer: 0
-  m_Name: RestartTrigger
+  m_Name: RestartTrigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.1028596, z: 1}
   m_Center: {x: 0, y: 0.051429268, z: 0}
+--- !u!114 &2663165283624363092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722817949313898207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e470b730c14cd4cb9ac99b9519186ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Level 1
