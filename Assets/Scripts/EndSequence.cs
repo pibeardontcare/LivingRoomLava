@@ -19,8 +19,11 @@ public class endSequence : MonoBehaviour
 
     public Animator prizeAnimator; // Reference to the Animator component on a prize object
 
-    // Static variable to store the unlocked state of a prize
+    // Public variable to store the unlocked state of a prize
     public static bool prizeUnlocked = false;
+
+    // Public variable to store the level progress
+    public int levelProgress = 0;
 
     // Internal variable to track if the camera is within the defined area
     private bool isInsidePerimeter = false;
@@ -36,7 +39,7 @@ public class endSequence : MonoBehaviour
         PlayerPrefs.Save();
 
         // Check the value of "Level Progress" in player preferences
-        int levelProgress = PlayerPrefs.GetInt("LevelProgress", 0);
+        levelProgress = PlayerPrefs.GetInt("LevelProgress", 0);
     }
 
     // Checks if the camera is within the defined area
@@ -75,9 +78,9 @@ public class endSequence : MonoBehaviour
                 // Trigger an animation sequence
                 prizeAnimator.SetTrigger("BoxOpen");
 
-                // Set a player preference key to indicate that the level is completed
-                int levelProgress = PlayerPrefs.GetInt("LevelProgress", 0);
-                PlayerPrefs.SetInt("LevelProgress", levelProgress + 1);
+                // Update the level progress
+                levelProgress++;
+                PlayerPrefs.SetInt("LevelProgress", levelProgress);
                 PlayerPrefs.Save();
 
                 // Initiate a delayed scene change
