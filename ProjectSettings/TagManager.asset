@@ -4,25 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RoomLight
-  - Floor
-  - SafeLines
-  - Items
-  - SamplesInfoPanel
-  - Lava
-  - Hand
+  - paint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - SafeArea
+  - 
   - Water
   - UI
-  - Player
-  - Grabbables
-  - LeftEye
-  - RightEye
-  - Balloon
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

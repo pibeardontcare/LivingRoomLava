@@ -5,24 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/DemoScene.unity
+    guid: 319dafa5c80f29f428dc1e0d03f04177
   - enabled: 1
-    path: Assets/Scenes/MainMenu1.unity
-    guid: d00cfe368b034444ea401bc8f1861371
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 102c861773ef243e797442efca45c846
-  - enabled: 0
-    path: Assets/Scenes/MainMenu2.unity
-    guid: 41ba4c4d7882946628dc8081bdabaafb
-  - enabled: 0
-    path: Assets/Scenes/Level 2.unity
-    guid: 7efc2ac4a73d9487db386ea09345c357
-  - enabled: 0
-    path: Assets/Scenes/testLevel.unity
-    guid: 23550470900d3477d94630ad1a3fb489
-  - enabled: 0
-    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/HandGrabExamples.unity
-    guid: 39ae0e546b9edc0408d3b11c6a7c2814
+    path: Assets/Scenes/3DPaint.unity
+    guid: b898b1a41bca1456881c20578bc1c5c6
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2983d6ef982184869a97f6d36383d97b, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f892d560281dd45dbbfc8ba09715154e, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 32e119b85e7504012880a747fc4f6270,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c223f11f67b944c579ccb6ee36c7b3a2,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1664c08e3255e4138a5dd1a264d0b0a6,
+      type: 2}
