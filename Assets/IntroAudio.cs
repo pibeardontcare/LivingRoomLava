@@ -6,7 +6,11 @@ public class IntroAudio : MonoBehaviour
 {
     public AudioClip audioClip; // Assign your audio clip in the inspector
     public ColliderHandler colliderHandler; // Assign the ColliderHandler in the inspector
+    public Material colliderAvailableMaterial; // Assign your material in the inspector
+    public GameObject nextObject;
+    
     private AudioSource audioSource;
+     private Renderer nextObjectRenderer; 
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +20,7 @@ public class IntroAudio : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
+        nextObjectRenderer = nextObject.GetComponent<Renderer>(); 
 
         // Delay the start of the audio clip by 5 seconds
         StartCoroutine(PlayAudioDelayed(5f));
@@ -52,6 +57,15 @@ public class IntroAudio : MonoBehaviour
             // Enable the collider 
             colliderHandler.GetComponent<Collider>().enabled = true;
             Debug.Log("Collider ready!");
+            SwitchMaterialOnNextObject();
         }
+    }
+
+    void SwitchMaterialOnNextObject()
+    {
+        // Assuming nextObjectRenderer is declared and assigned somewhere in your code
+        // Switch to the material after the collision for the next object
+        Debug.Log("Material switched on next object to: " + colliderAvailableMaterial.name);
+        nextObjectRenderer.material = colliderAvailableMaterial;
     }
 }

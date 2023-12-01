@@ -1,94 +1,114 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TouchPaint : MonoBehaviour
 {
-    public Material beforeCollisionMaterial; // Material before the collision
-    public Material afterCollisionMaterial; // Material after the collision
-    public GameObject targetObject; // Paint object
-    public GameObject otherObject; // Another object with a collider
-    public AudioClip changeColorSound1; // First sound clip
-    public AudioClip changeColorSound2; // Second sound clip
+    public Material notReadyMaterial; // Red not ready material
+    public Material colliderAvailableMaterial;
+    public Material afterCollisionMaterial;
+    public GameObject targetObject;
+    public AudioClip changeColorSound1;
+    public AudioClip nextPaintObject;
+
+    public ColliderHandler colliderHandler;
+    public GameObject nextObject;
 
     private Renderer targetRenderer;
+    private Renderer nextObjectRenderer;
     private AudioSource audioSource;
-    private bool sound1Played = false;
-    private bool sound2Played = false;
+
+    private bool changeColorSound1Played = false;
+    private bool nextPaintObjectPlayed = false;
 
     void Start()
     {
-        // Get the renderer component of the target object
         targetRenderer = targetObject.GetComponent<Renderer>();
 
-        // Set the initial material of the target object
-        targetRenderer.material = beforeCollisionMaterial;
+        // Ensure notReadyMaterial is assigned before starting
+        if (notReadyMaterial != null)
+        {
+            targetRenderer.material = notReadyMaterial;
+        }
+        else
+        {
+            Debug.LogError("notReadyMaterial not assigned!");
+        }
 
-        // Add an AudioSource component for sound playback
+        nextObjectRenderer = nextObject.GetComponent<Renderer>();
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = changeColorSound1;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // Check if the collider's GameObject has the specified tag
         if (other.gameObject.CompareTag("paint"))
         {
             Debug.Log("Collision with paint detected!");
             SwitchMaterial();
 
-            // Play the first sound if not already played
-            if (!sound1Played)
+            if (!changeColorSound1Played)
             {
                 PlayChangeColorSound1();
-                sound1Played = true;
+                changeColorSound1Played = true;
             }
 
-            // Invoke a method to play the second sound and enable collider after a delay
-            Invoke("PlayChangeColorSound2AndEnableCollider", 2.0f);
+            if (!nextPaintObjectPlayed)
+            {
+                StartCoroutine(PlayNextPaintObjectAndEnableCollider());
+                nextPaintObjectPlayed = true;
+            }
         }
     }
 
     void SwitchMaterial()
     {
-        // Switch to the material after the collision for the target object
         Debug.Log("Material switched to: " + afterCollisionMaterial.name);
         targetRenderer.material = afterCollisionMaterial;
     }
 
     void PlayChangeColorSound1()
     {
-        // Play the first assigned sound clip
         if (audioSource != null && changeColorSound1 != null)
         {
-            audioSource.Play();
+            audioSource.PlayOneShot(changeColorSound1);
         }
     }
 
-    void PlayChangeColorSound2AndEnableCollider()
+    IEnumerator PlayNextPaintObjectAndEnableCollider()
     {
-        // Change the sound clip to the second one
-        audioSource.clip = changeColorSound2;
+        audioSource.clip = nextPaintObject;
 
-        // Play the second sound clip if not already played
-        if (!sound2Played && audioSource != null && changeColorSound2 != null)
+        if (audioSource != null && nextPaintObject != null)
         {
-            audioSource.Play();
-            sound2Played = true;
+            audioSource.PlayOneShot(nextPaintObject);
         }
 
-        // Enable the collider on the other object
-        EnableColliderOnOtherObject();
+// Wait until the audio finishes playing
+    while (audioSource.isPlaying)
+    {
+        yield return null;
+    }
+        //yield return new WaitForSeconds(5f);
+
+        EnableColliderOnOtherGameObject();
+        Debug.Log("Collider ready!");
+        SwitchMaterialOnNextObject(); // Update material on the next object
     }
 
-    void EnableColliderOnOtherObject()
+    void EnableColliderOnOtherGameObject()
     {
-        // Enable the collider on the specified other object
-        Collider otherObjectCollider = otherObject.GetComponent<Collider>();
-        if (otherObjectCollider != null)
+        if (colliderHandler != null)
         {
-            otherObjectCollider.enabled = true;
-            Debug.Log("Collider on other object enabled!");
+            colliderHandler.GetComponent<Collider>().enabled = true;
+            Debug.Log("Collider ready!");
         }
+    }
+
+    void SwitchMaterialOnNextObject()
+    {
+        // Assuming nextObjectRenderer is declared and assigned somewhere in your code
+        // Switch to the material after the collision for the next object
+        Debug.Log("Material switched on next object to: " + colliderAvailableMaterial.name);
+        nextObjectRenderer.material = colliderAvailableMaterial;
     }
 }
