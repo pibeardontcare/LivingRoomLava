@@ -10,7 +10,7 @@ public class TouchPaint : MonoBehaviour
     public AudioClip changeColorSound1;
     public AudioClip nextPaintObject;
 
-    public ColliderHandler colliderHandler;
+    public  MonoBehaviour colliderHandler;
     public GameObject nextObject;
 
     private Renderer targetRenderer;
