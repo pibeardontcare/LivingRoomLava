@@ -10,7 +10,7 @@ public class IntroAudio : MonoBehaviour
     public GameObject nextObject;
     
     private AudioSource audioSource;
-     private Renderer nextObjectRenderer; 
+    private Renderer nextObjectRenderer; 
 
     // Start is called before the first frame update
     void Start()
