@@ -4,46 +4,54 @@ using UnityEngine;
 
 public class MenuSelect : MonoBehaviour
 {
-    private Dictionary<GameObject, Material> originalMaterialsDict = new Dictionary<GameObject, Material>();
+    private List<GameObject> balloonObjects = new List<GameObject>();
     public Material hoverMaterial;  // Assign the material for hover state in the Inspector
+    public Material originalMaterial; // Static variable to store the original material
 
     void Start()
     {
-        // Store the original materials for all child objects
-        Renderer[] childRenderers = GetComponentsInChildren<Renderer>(true);
+        // Find all objects in the scene with the tag "balloon"
+        GameObject[] balloons = GameObject.FindGameObjectsWithTag("balloon");
 
-        foreach (Renderer childRenderer in childRenderers)
+        // Store the objects in the list
+        balloonObjects.AddRange(balloons);
+
+        // Store the original material (if not already stored)
+        if (originalMaterial == null && balloonObjects.Count > 0)
         {
-            originalMaterialsDict[childRenderer.gameObject] = childRenderer.sharedMaterial;
+            MeshRenderer meshRenderer = balloonObjects[0].GetComponent<MeshRenderer>();
+            if (meshRenderer != null)
+            {
+                originalMaterial = meshRenderer.material;
+            }
         }
     }
 
     public void HoverOver()
     {
-        // Change materials to the hover material for all child objects
-        foreach (var kvp in originalMaterialsDict)
+        // Change materials to the hover material for all balloons
+        foreach (GameObject balloon in balloonObjects)
         {
-            SetMaterial(kvp.Key, hoverMaterial);
+            SetMaterial(balloon, hoverMaterial);
         }
     }
 
     public void HoverExit()
     {
-        // Revert to the original materials for all child objects when the hover state is exited
-        foreach (var kvp in originalMaterialsDict)
+        // Revert to the original material for all balloons when the hover state is exited
+        foreach (GameObject balloon in balloonObjects)
         {
-            SetMaterial(kvp.Key, kvp.Value);
+            SetMaterial(balloon, originalMaterial);
         }
     }
 
-    // Helper method to set a single material for both Renderer and MeshRenderer of a specific game object
-    private void SetMaterial(GameObject obj, Material material)
+    // Helper method to set a material for the MeshRenderer of a specific game object
+    private void SetMaterial(GameObject obj, Material newMaterial)
     {
-        Renderer renderer = obj.GetComponent<Renderer>();
-        if (renderer != null)
+        MeshRenderer meshRenderer = obj.GetComponent<MeshRenderer>();
+        if (meshRenderer != null)
         {
-            // If the object has a Renderer component
-            renderer.sharedMaterial = material;
+            meshRenderer.material = newMaterial;
         }
     }
 }
