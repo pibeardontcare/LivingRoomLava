@@ -1,0 +1,54 @@
+using Unity.VisualScripting;
+
+[UnitCategory("Custom")]
+[UnitTitle("Refract")]
+public class RefractNode : Unit
+{
+    [DoNotSerialize]
+    public ControlInput enter;
+
+    [DoNotSerialize]
+    public ControlOutput exit;
+
+    [DoNotSerialize]
+    public ValueInput incidence;
+
+    [DoNotSerialize]
+    public ValueInput normal;
+
+    [DoNotSerialize]
+    public ValueInput eta;
+
+    [DoNotSerialize]
+    public ValueOutput result;
+
+    protected override void Definition()
+    {
+        enter = ControlInput("enter", Enter);
+        exit = ControlOutput("exit");
+
+        incidence = ValueInput<float>("incidence", 0);
+        normal = ValueInput<float>("normal", 0);
+        eta = ValueInput<float>("eta", 1);
+
+        result = ValueOutput<float>("result", (flow) =>
+        {
+            return refract(
+                flow.GetValue<float>(incidence),
+                flow.GetValue<float>(normal),
+                flow.GetValue<float>(eta)
+            );
+        });
+
+        Succession(enter, exit);
+        Assignment(enter, result);
+    }
+
+    float refract(float i, float n, float eta)
+    {
+        float cosi = -i * n;
+        float cost2 = 1.0f - eta * eta * (1.0f - cosi * cosi);
+        float t = eta * i + ((eta * cosi - sqrt(abs(cost2))) * n);
+        return t * (cost2 > 0 ? 1 : 0);
+    }
+}
