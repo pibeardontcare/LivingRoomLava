@@ -2987,11 +2987,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad0fef070e484149b3df1d0eba6bfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b8214b87d664343a9b8be2f1f7bdd6ee, type: 3}
-  colliderHandler: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 7bf58e4ec0a5940628063e840f7001de, type: 3}
+  colliderHandler: {fileID: 7868023007687810027}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
-  nextObject: {fileID: 0}
+  nextObject: {fileID: 7607639701652288508}
 --- !u!1001 &1731298970
 PrefabInstance:
   m_ObjectHideFlags: 0
