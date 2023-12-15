@@ -3960,7 +3960,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 02f0edd4d438c4dfb8d15fd86fd9a34d,
         type: 3}
       propertyPath: m_Name
-      value: ZuriBody
+      value: _ZuriBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3969,11 +3969,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f0edd4d438c4dfb8d15fd86fd9a34d,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8680838053790105801}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f0edd4d438c4dfb8d15fd86fd9a34d,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 8207043924421354850}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f0edd4d438c4dfb8d15fd86fd9a34d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8680838053790105801}
+      addedObject: {fileID: 8680838053790105802}
   m_SourcePrefab: {fileID: 100100000, guid: 02f0edd4d438c4dfb8d15fd86fd9a34d, type: 3}
 --- !u!4 &144430349514612037 stripped
 Transform:
@@ -4012,24 +4016,10 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 7361855518829916631}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 306aecd2a38e1470ea8fb9924913fb1e,
     type: 3}
-  colliderHandler: {fileID: 6526845601772842851}
+  colliderHandler: {fileID: 5092488356747507036}
   nextObject: {fileID: 1068498791226590879}
---- !u!114 &913160421330496901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4382514526519497942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
-  otherObject: {fileID: 5534313222155512859}
 --- !u!114 &996182995388250075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4115,7 +4105,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 9d71c8a8e89b54c64bd1d639111ea580,
         type: 3}
       propertyPath: m_Name
-      value: ZuriMouth
+      value: _ZuriMouth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4124,11 +4114,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d71c8a8e89b54c64bd1d639111ea580,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 996182995388250075}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d71c8a8e89b54c64bd1d639111ea580,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 3809895020913268460}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d71c8a8e89b54c64bd1d639111ea580,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 996182995388250075}
+      addedObject: {fileID: 3809895020913268461}
   m_SourcePrefab: {fileID: 100100000, guid: 9d71c8a8e89b54c64bd1d639111ea580, type: 3}
 --- !u!4 &1025696280567399731 stripped
 Transform:
@@ -4167,9 +4161,9 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 8320916423631496673}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 529f14c4f996c429c85b1d90a8565300,
     type: 3}
-  colliderHandler: {fileID: 8297196723367719356}
+  colliderHandler: {fileID: 2927265539667414519}
   nextObject: {fileID: 7747203649522810223}
 --- !u!1001 &1068498791226590877
 PrefabInstance:
@@ -4242,7 +4236,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 258d9bfe13aca4a86bba914f6aa4d6e4,
         type: 3}
       propertyPath: m_Name
-      value: Zuru Pupil Right
+      value: _Zuru Pupil Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4251,11 +4245,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 258d9bfe13aca4a86bba914f6aa4d6e4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5092488356747507036}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 258d9bfe13aca4a86bba914f6aa4d6e4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6526845601772842851}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 258d9bfe13aca4a86bba914f6aa4d6e4,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5092488356747507036}
+      addedObject: {fileID: 6526845601772842852}
   m_SourcePrefab: {fileID: 100100000, guid: 258d9bfe13aca4a86bba914f6aa4d6e4, type: 3}
 --- !u!4 &1068498791226590878 stripped
 Transform:
@@ -4308,9 +4306,9 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 6728837692260193265}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: a0252b580a1704c1ba1e24269ac3098d,
     type: 3}
-  colliderHandler: {fileID: 3809895020913268460}
+  colliderHandler: {fileID: 996182995388250075}
   nextObject: {fileID: 1025696280567399732}
 --- !u!114 &2927265539667414519
 MonoBehaviour:
@@ -4345,9 +4343,9 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 7607639701652288508}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 9f870afde9b1d42fca19b7d43dad9187,
+  promptNextObjectSound: {fileID: 8300000, guid: 7ce8360009d1945eea305cd05cdb4b76,
     type: 3}
-  colliderHandler: {fileID: 6619570657693497365}
+  colliderHandler: {fileID: 6619570657693497366}
   nextObject: {fileID: 4382514526519497941}
 --- !u!114 &3309875606762318884
 MonoBehaviour:
@@ -4368,9 +4366,9 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 5534313222155512859}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: d5d0a344de2714e2cbfae19f666edb6b,
     type: 3}
-  colliderHandler: {fileID: 1043014299112851456}
+  colliderHandler: {fileID: 6907973270456410412}
   nextObject: {fileID: 8320916423631496673}
 --- !u!114 &3809895020913268460
 MonoBehaviour:
@@ -4391,10 +4389,31 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 1025696280567399732}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 7d26e213184f2493a992dd78812fc1aa,
     type: 3}
-  colliderHandler: {fileID: 8207043924421354850}
+  colliderHandler: {fileID: 8680838053790105801}
   nextObject: {fileID: 144430349514612038}
+--- !u!65 &3809895020913268461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025696280567399733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 65.14038, y: 188.99069, z: 370.85345}
+  m_Center: {x: -390.6984, y: 1559.0283, z: -224.62624}
 --- !u!4 &3857285422265774063
 Transform:
   m_ObjectHideFlags: 0
@@ -4498,7 +4517,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: df7ec19d2c46443d0a21dca21c0c9f50,
         type: 3}
       propertyPath: m_Name
-      value: ZuriHead
+      value: _ZuriHead
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4507,11 +4526,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df7ec19d2c46443d0a21dca21c0c9f50,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6619570657693497366}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df7ec19d2c46443d0a21dca21c0c9f50,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6619570657693497365}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: df7ec19d2c46443d0a21dca21c0c9f50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 913160421330496901}
+      addedObject: {fileID: 6619570657693497367}
   m_SourcePrefab: {fileID: 100100000, guid: df7ec19d2c46443d0a21dca21c0c9f50, type: 3}
 --- !u!4 &4382514526519497940 stripped
 Transform:
@@ -4646,7 +4669,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 5ffbd17feff5c43a8a284e2a552dbd93,
         type: 3}
       propertyPath: m_Name
-      value: Zuri Eye Outlines
+      value: _Zuri Eye Outlines
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4655,11 +4678,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ffbd17feff5c43a8a284e2a552dbd93,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7899368535925580739}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ffbd17feff5c43a8a284e2a552dbd93,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 3309875606762318884}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ffbd17feff5c43a8a284e2a552dbd93,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7899368535925580739}
+      addedObject: {fileID: 7899368535925580740}
   m_SourcePrefab: {fileID: 100100000, guid: 5ffbd17feff5c43a8a284e2a552dbd93, type: 3}
 --- !u!4 &5534313222155512858 stripped
 Transform:
@@ -4698,7 +4725,7 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 6874296997639294515}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: bd2ba65ef40f041a4967cef4cdc82af8,
     type: 3}
   colliderHandler: {fileID: 9080977025692509791}
   nextObject: {fileID: 8364701872046617509}
@@ -4721,10 +4748,33 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 1068498791226590879}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 6b481a15f6c21439f8e50567c253204e,
     type: 3}
-  colliderHandler: {fileID: 3309875606762318884}
+  colliderHandler: {fileID: 7899368535925580739}
   nextObject: {fileID: 5534313222155512859}
+--- !u!136 &6526845601772842852
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068498791226590880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 17.61128
+  m_Height: 42.02419
+  m_Direction: 1
+  m_Center: {x: -286.64453, y: 1865.6455, z: -134.0779}
 --- !u!114 &6619570657693497365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4744,10 +4794,47 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 4382514526519497941}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 9f870afde9b1d42fca19b7d43dad9187,
+  promptNextObjectSound: {fileID: 8300000, guid: 33a9560776de443ad80a42423cbec2db,
     type: 3}
-  colliderHandler: {fileID: 3309875606762318884}
-  nextObject: {fileID: 5534313222155512859}
+  colliderHandler: {fileID: 8815514283018473595}
+  nextObject: {fileID: 7361855518829916631}
+--- !u!114 &6619570657693497366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382514526519497942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 7361855518829916631}
+--- !u!136 &6619570657693497367
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382514526519497942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 469.7801
+  m_Height: 982.05615
+  m_Direction: 1
+  m_Center: {x: 141.24913, y: 1738.3589, z: -172.1838}
 --- !u!1001 &6728837692260193263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4819,7 +4906,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: dc027ff830a694348884336f35222215,
         type: 3}
       propertyPath: m_Name
-      value: ZuriRightEar
+      value: _ZuriRightEar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4828,11 +4915,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc027ff830a694348884336f35222215,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1147665513907756384}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc027ff830a694348884336f35222215,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2203672955753659802}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dc027ff830a694348884336f35222215,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1147665513907756384}
+      addedObject: {fileID: 6728837692260193267}
   m_SourcePrefab: {fileID: 100100000, guid: dc027ff830a694348884336f35222215, type: 3}
 --- !u!4 &6728837692260193264 stripped
 Transform:
@@ -4852,6 +4943,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6728837692260193263}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &6728837692260193267
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728837692260193266}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 118.18376
+  m_Height: 320.2491
+  m_Direction: 1
+  m_Center: {x: 147.6499, y: 1824.5612, z: 280.21536}
 --- !u!1001 &6874296997639294513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4923,7 +5037,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: e01631118aa7a44d0b880930f44de0b9,
         type: 3}
       propertyPath: m_Name
-      value: ZuriLegs
+      value: _ZuriLegs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4932,11 +5046,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e01631118aa7a44d0b880930f44de0b9,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7353464713093615255}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e01631118aa7a44d0b880930f44de0b9,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6269854599368835180}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e01631118aa7a44d0b880930f44de0b9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7353464713093615255}
+      addedObject: {fileID: 7353464713093615256}
   m_SourcePrefab: {fileID: 100100000, guid: e01631118aa7a44d0b880930f44de0b9, type: 3}
 --- !u!4 &6874296997639294514 stripped
 Transform:
@@ -4984,6 +5102,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 8364701872046617509}
+--- !u!136 &7353464713093615256
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874296997639294516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 184.07095
+  m_Height: 907.54083
+  m_Direction: 1
+  m_Center: {x: 187.87456, y: 756.3644, z: -170.58372}
 --- !u!1001 &7361855518829916629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5055,7 +5196,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: daf4335b640a442f28db26cfa888c67b,
         type: 3}
       propertyPath: m_Name
-      value: Zuri Pupil Left
+      value: _Zuri Pupil Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5064,11 +5205,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: daf4335b640a442f28db26cfa888c67b,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8815514283018473595}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: daf4335b640a442f28db26cfa888c67b,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 319676225824082799}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: daf4335b640a442f28db26cfa888c67b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8815514283018473595}
+      addedObject: {fileID: 8815514283018473596}
   m_SourcePrefab: {fileID: 100100000, guid: daf4335b640a442f28db26cfa888c67b, type: 3}
 --- !u!4 &7361855518829916630 stripped
 Transform:
@@ -5164,7 +5309,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 529fc934327b44a0bbc0afed58499845,
         type: 3}
       propertyPath: m_Name
-      value: ZuriHair
+      value: _ZuriHair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5173,11 +5318,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 529fc934327b44a0bbc0afed58499845,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7868023007687810027}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 529fc934327b44a0bbc0afed58499845,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 3289418625310993082}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 529fc934327b44a0bbc0afed58499845,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7868023007687810027}
+      addedObject: {fileID: 7868023007687810028}
   m_SourcePrefab: {fileID: 100100000, guid: 529fc934327b44a0bbc0afed58499845, type: 3}
 --- !u!4 &7607639701652288507 stripped
 Transform:
@@ -5268,7 +5417,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 21ecf0c0041e54c62862ce0b40a0ae65,
         type: 3}
       propertyPath: m_Name
-      value: ZuriLeftEar
+      value: _ZuriLeftEar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5277,11 +5426,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21ecf0c0041e54c62862ce0b40a0ae65,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2927265539667414519}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21ecf0c0041e54c62862ce0b40a0ae65,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 8297196723367719356}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21ecf0c0041e54c62862ce0b40a0ae65,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2927265539667414519}
+      addedObject: {fileID: 8297196723367719357}
   m_SourcePrefab: {fileID: 100100000, guid: 21ecf0c0041e54c62862ce0b40a0ae65, type: 3}
 --- !u!4 &7747203649522810222 stripped
 Transform:
@@ -5315,6 +5468,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 4382514526519497941}
+--- !u!65 &7868023007687810028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607639701652288509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.30559, y: 305.6044, z: 229.21695}
+  m_Center: {x: 223.9942, y: 2396.044, z: -321.58853}
 --- !u!114 &7899368535925580739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5327,8 +5501,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 8320916423631496673}
+--- !u!65 &7899368535925580740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534313222155512860}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 69.552444, y: 248.07797, z: 466.11642}
+  m_Center: {x: -270.70892, y: 1877.2064, z: -232.55997}
 --- !u!114 &8207043924421354850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5348,9 +5543,9 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 144430349514612038}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 53d0f0211b955498aaa83d0226088776,
     type: 3}
-  colliderHandler: {fileID: 6269854599368835180}
+  colliderHandler: {fileID: 7353464713093615255}
   nextObject: {fileID: 6874296997639294515}
 --- !u!114 &8297196723367719356
 MonoBehaviour:
@@ -5371,10 +5566,33 @@ MonoBehaviour:
     type: 2}
   targetObject: {fileID: 7747203649522810223}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 466e5ade79d3a42d4abd30fb2902d5dc,
     type: 3}
-  colliderHandler: {fileID: 2203672955753659802}
+  colliderHandler: {fileID: 1147665513907756384}
   nextObject: {fileID: 6728837692260193265}
+--- !u!136 &8297196723367719357
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747203649522810224}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 147.9334
+  m_Height: 295.86685
+  m_Direction: 1
+  m_Center: {x: 121.71417, y: 1690.8595, z: -684.1258}
 --- !u!1001 &8320916423631496671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5446,7 +5664,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: fe5e049bc6d5747ea93a8785de964d69,
         type: 3}
       propertyPath: m_Name
-      value: Zuri Nose
+      value: _Zuri Nose
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5455,11 +5673,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe5e049bc6d5747ea93a8785de964d69,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6907973270456410412}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe5e049bc6d5747ea93a8785de964d69,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1043014299112851456}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe5e049bc6d5747ea93a8785de964d69,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6907973270456410412}
+      addedObject: {fileID: 8320916423631496675}
   m_SourcePrefab: {fileID: 100100000, guid: fe5e049bc6d5747ea93a8785de964d69, type: 3}
 --- !u!4 &8320916423631496672 stripped
 Transform:
@@ -5479,6 +5701,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8320916423631496671}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &8320916423631496675
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320916423631496674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 62.75581
+  m_Height: 161.87244
+  m_Direction: 1
+  m_Center: {x: -279.69174, y: 1675.269, z: -186.82533}
 --- !u!1001 &8364701872046617507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5555,7 +5800,7 @@ PrefabInstance:
     - target: {fileID: 8164078558771037576, guid: 29f1e3f2037e14fe8a241acd03f2d0a1,
         type: 3}
       propertyPath: m_Name
-      value: ZuriBubble
+      value: _ZuriBubble
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5569,6 +5814,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4709735960407540273}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 29f1e3f2037e14fe8a241acd03f2d0a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9080977025692509792}
   m_SourcePrefab: {fileID: 100100000, guid: 29f1e3f2037e14fe8a241acd03f2d0a1, type: 3}
 --- !u!4 &8364701872046617508 stripped
 Transform:
@@ -5602,6 +5851,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 6874296997639294515}
+--- !u!136 &8680838053790105802
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144430349514612039}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 151.75943
+  m_Height: 320.89346
+  m_Direction: 1
+  m_Center: {x: 193.4722, y: 1229.5071, z: -162.39343}
 --- !u!114 &8815514283018473595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5616,6 +5888,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 1068498791226590879}
+--- !u!136 &8815514283018473596
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361855518829916632}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 18.28286
+  m_Height: 37.62404
+  m_Direction: 1
+  m_Center: {x: -234.4457, y: 1818.5945, z: -401.22443}
 --- !u!114 &9080977025692509791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5633,9 +5928,32 @@ MonoBehaviour:
     type: 2}
   afterCollisionMaterial: {fileID: 2100000, guid: 0971eff6408004ba085b43d2227c0aee,
     type: 2}
-  targetObject: {fileID: 0}
+  targetObject: {fileID: 8364701872046617509}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: 461667b9c547e4c3582a42023f1575d1,
     type: 3}
   colliderHandler: {fileID: 1832447867}
   nextObject: {fileID: 1832447861}
+--- !u!136 &9080977025692509792
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364701872046617510}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1123.0387
+  m_Height: 3971.4775
+  m_Direction: 1
+  m_Center: {x: 1844.252, y: 1798.5272, z: -101.13398}

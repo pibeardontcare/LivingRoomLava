@@ -2229,8 +2229,8 @@ GameObject:
   m_Component:
   - component: {fileID: 797966783}
   - component: {fileID: 797966785}
-  - component: {fileID: 797966784}
   - component: {fileID: 797966786}
+  - component: {fileID: 797966784}
   m_Layer: 0
   m_Name: LeftEye
   m_TagString: Untagged
