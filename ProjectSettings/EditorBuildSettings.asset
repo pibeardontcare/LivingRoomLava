@@ -5,27 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/DemoScene.unity
-    guid: 319dafa5c80f29f428dc1e0d03f04177
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 89536f46d10104f4e9a843fc8db537b9
   - enabled: 1
     path: Assets/Scenes/3DPaintWill.unity
     guid: 3901a885e3ce14fd490203bdc4e1d88d
-  - enabled: 0
-    path: Assets/Scenes/3DPaint.unity
-    guid: b898b1a41bca1456881c20578bc1c5c6
-  - enabled: 0
-    path: Assets/Scenes/Zuri.unity
-    guid: 70867a4a11bfe42e98e56426f3c26574
   - enabled: 1
     path: Assets/Scenes/3DPaintZuri.unity
     guid: 8cac485a6802544a99e802bc8c993cbe
+  - enabled: 1
+    path: Assets/Scenes/3DPaintBunny.unity
+    guid: 1c95f664cd3874f9ea92cd9bb344b5d2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 32e119b85e7504012880a747fc4f6270,
       type: 2}
