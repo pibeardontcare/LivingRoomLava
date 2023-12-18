@@ -17,6 +17,7 @@ public class PaintbrushCatcher : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(grassEffect, transform.position);
             }
+            Debug.Log("the paintbrush fell");
 
             // Schedule the movement after a 1-second delay
             Invoke("MovePaintbrushToReturnTransform", 1f);

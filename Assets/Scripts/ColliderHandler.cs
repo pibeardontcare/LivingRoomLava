@@ -47,6 +47,7 @@ public class ColliderHandler : MonoBehaviour
         else
         {
             Debug.LogError("Renderer or red material not assigned!");
+            Debug.Log("Object Name: " + gameObject.name);
             Debug.Log("Parent GameObject: " + transform.parent.name);
         }
     }
