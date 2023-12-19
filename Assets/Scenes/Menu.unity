@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f09c2c8419ae24354ad2929d32f7b7bf, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.16536096, g: 0.11159036, b: 0.15109599, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4166,8 +4166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf13ea0384246febd021b14de6d84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverMaterial: {fileID: 2100000, guid: a5a331d3fbde24b7a81d0b0e40e4f1f0, type: 2}
-  originalMaterial: {fileID: 2100000, guid: 397c5fbd760ff467a9a5fd25a4467635, type: 2}
+  hoverMaterial: {fileID: 2100000, guid: 397c5fbd760ff467a9a5fd25a4467635, type: 2}
+  originalMaterial: {fileID: 2100000, guid: a5a331d3fbde24b7a81d0b0e40e4f1f0, type: 2}
 --- !u!114 &7793496516365325186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,8 +4206,8 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7793496516365325184}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+      - m_Target: {fileID: 7793496516365325185}
+        m_TargetAssemblyTypeName: MenuSelect, Assembly-CSharp
         m_MethodName: HoverOver
         m_Mode: 1
         m_Arguments:
@@ -4221,8 +4221,8 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7793496516365325184}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+      - m_Target: {fileID: 7793496516365325185}
+        m_TargetAssemblyTypeName: MenuSelect, Assembly-CSharp
         m_MethodName: HoverExit
         m_Mode: 1
         m_Arguments:
@@ -4564,8 +4564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf13ea0384246febd021b14de6d84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverMaterial: {fileID: 2100000, guid: a5a331d3fbde24b7a81d0b0e40e4f1f0, type: 2}
-  originalMaterial: {fileID: 2100000, guid: 397c5fbd760ff467a9a5fd25a4467635, type: 2}
+  hoverMaterial: {fileID: 2100000, guid: 397c5fbd760ff467a9a5fd25a4467635, type: 2}
+  originalMaterial: {fileID: 2100000, guid: a5a331d3fbde24b7a81d0b0e40e4f1f0, type: 2}
 --- !u!114 &8606391660800533437
 MonoBehaviour:
   m_ObjectHideFlags: 0

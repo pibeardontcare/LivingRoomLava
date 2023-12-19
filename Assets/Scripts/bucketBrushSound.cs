@@ -19,6 +19,7 @@ public class BucketBrushSound : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+            Debug.Log("Collided with: " + collision.gameObject.tag);
         // Check if the colliding object has the tag "paint"
         if (collision.gameObject.CompareTag("paint"))
         {

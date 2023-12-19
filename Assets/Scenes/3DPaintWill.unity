@@ -383,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57632937}
   m_LocalRotation: {x: -0, y: -0, z: -0.99965733, w: 0.026177017}
-  m_LocalPosition: {x: 1.78, y: 0.24, z: -2.885}
+  m_LocalPosition: {x: 3.636, y: 0.344, z: -2.885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3457,7 +3457,6 @@ GameObject:
   - component: {fileID: 1431510528}
   - component: {fileID: 1431510527}
   - component: {fileID: 1431510526}
-  - component: {fileID: 1431510530}
   m_Layer: 0
   m_Name: BrushCollider
   m_TagString: paint
@@ -3551,20 +3550,6 @@ Transform:
   m_Father: {fileID: 57632940}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 87.261, z: 0}
---- !u!114 &1431510530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431510523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
-  otherObject: {fileID: 14849661}
 --- !u!1001 &1467525351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3954,7 +3939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
-  otherObject: {fileID: 1431510523}
+  otherObject: {fileID: 1832447861}
 --- !u!1 &1586068701
 GameObject:
   m_ObjectHideFlags: 0

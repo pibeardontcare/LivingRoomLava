@@ -13,7 +13,7 @@ public class ColliderHandler : MonoBehaviour
     {
         // Disable the collider at the start of the game
         GetComponent<Collider>().enabled = false;
-        Debug.Log("Collider NOT ready!");
+        Debug.Log("Object Name: " + gameObject.name + "Collider NOT ready!");
 
         // Set another object's material to red
         SetMaterialToRed();
@@ -30,7 +30,7 @@ public class ColliderHandler : MonoBehaviour
         // Check if the other object is assigned
         if (otherObject == null)
         {
-            Debug.LogError("Other object not assigned!");
+            Debug.LogError("Object Name: " + gameObject.name + "Other object not assigned!");
             return;
         }
 
@@ -43,10 +43,11 @@ public class ColliderHandler : MonoBehaviour
             // Change the material to red
             otherObjectRenderer.material = redMaterial;
             Debug.Log("Material set to red!");
+            Debug.Log("Object Name: " + gameObject.name + "set to red!");
         }
         else
         {
-            Debug.LogError("Renderer or red material not assigned!");
+            Debug.LogError("Object Name: " + gameObject.name + "Renderer or red material not assigned!");
             Debug.Log("Object Name: " + gameObject.name);
             Debug.Log("Parent GameObject: " + transform.parent.name);
         }

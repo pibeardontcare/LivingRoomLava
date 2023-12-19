@@ -10,8 +10,11 @@ public class PaintbrushCatcher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collided with: " + other.gameObject.tag); 
+
         if (other.CompareTag(paintTag))
         {
+            
             // Play sound effect
             if (grassEffect != null)
             {
