@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class MenuSelect : MonoBehaviour
 {
-    private List<GameObject> balloonObjects = new List<GameObject>();
+    [Header("Object Settings")]
+    [Tooltip("Set the tag for the objects in the Unity editor")]
+    public string balloonTag = "balloon";
     public Material hoverMaterial;  // Assign the material for hover state in the Inspector
     public Material originalMaterial; // Static variable to store the original material
 
+    private List<GameObject> balloonObjects = new List<GameObject>();
+
     void Start()
     {
-        // Find all objects in the scene with the tag "balloon"
-        GameObject[] balloons = GameObject.FindGameObjectsWithTag("balloon");
+        // Find all objects in the scene with the specified tag
+        GameObject[] balloons = GameObject.FindGameObjectsWithTag(balloonTag);
 
         // Store the objects in the list
         balloonObjects.AddRange(balloons);
