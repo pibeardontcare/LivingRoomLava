@@ -6164,7 +6164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245403055}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.111183286, y: 1.14, z: -0.6646185}
+  m_LocalPosition: {x: -0.58, y: 1.14, z: -0.6646185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6683,7 +6683,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e3790e839267d4d648675da4fa08b468, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cd9b97a60ef9a478f93342e57a2a3564, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.635
   m_Pitch: 1
@@ -7986,9 +7986,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f8a31b3c5d3b24c419811a1029993242, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 5e42be3f863bd4e6fbd0ac818f465fce, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.623
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8099,7 +8099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad0fef070e484149b3df1d0eba6bfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: f8a31b3c5d3b24c419811a1029993242, type: 3}
+  audioClip: {fileID: 8300000, guid: 5e42be3f863bd4e6fbd0ac818f465fce, type: 3}
   colliderHandler: {fileID: 4352180166965778141}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
@@ -10497,7 +10497,7 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 5377323798992123064}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9,
+  promptNextObjectSound: {fileID: 8300000, guid: a5525fa44df3c453ab11292be2af041c,
     type: 3}
   colliderHandler: {fileID: 7816049854066530341}
   nextObject: {fileID: 1927035563252267584}
