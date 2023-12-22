@@ -9,8 +9,9 @@ public class TouchPaint : MonoBehaviour
     public GameObject targetObject;
     public AudioClip changeColorSound1;
     public AudioClip promptNextObjectSound;
+    public AudioClip secondSound; // New AudioClip variable for the second sound
 
-    public  MonoBehaviour colliderHandler;
+    public MonoBehaviour colliderHandler;
     public GameObject nextObject;
 
     private Renderer targetRenderer;
@@ -19,6 +20,7 @@ public class TouchPaint : MonoBehaviour
 
     private bool changeColorSound1Played = false;
     private bool promptNextObjectSoundPlayed = false;
+    private bool secondSoundPlayed = false; // New variable to track the second sound
 
     void Start()
     {
@@ -83,12 +85,19 @@ public class TouchPaint : MonoBehaviour
             audioSource.PlayOneShot(promptNextObjectSound);
         }
 
-// Wait until the audio finishes playing
-    while (audioSource.isPlaying)
-    {
-        yield return null;
-    }
-        //yield return new WaitForSeconds(5f);
+        // Wait until the audio finishes playing
+        while (audioSource.isPlaying)
+        {
+            yield return null;
+        }
+
+        // Play the second sound if it exists and has not been played yet
+        if (secondSound != null && !secondSoundPlayed)
+        {
+            audioSource.clip = secondSound;
+            audioSource.PlayOneShot(secondSound);
+            secondSoundPlayed = true;
+        }
 
         EnableColliderOnOtherGameObject();
         Debug.Log("Collider ready!");
