@@ -9708,10 +9708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 5518098272303558540, guid: 4d638957171a04131a8b98fe1c4060f5,
+    type: 3}
+  targetObject: {fileID: 8035065910587767529}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -9758,15 +9760,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 6375719720735775032, guid: bfce5fa7b7ecd44919cb3b2c545e8f7a,
+    type: 3}
+  targetObject: {fileID: 7801908126056385306}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
+  promptNextObjectSound: {fileID: 8300000, guid: fab5b18c4bf834e6bafea0141c7f7147,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: d1ebaa7f76efb4bbe98e21bb7edd8102, type: 3}
+  colliderHandler: {fileID: 2923011815633014730}
+  nextObject: {fileID: 6797766435704696235}
 --- !u!114 &1910627224197802363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9779,8 +9784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 6797766435704696235}
 --- !u!1 &1927035563252267584
 GameObject:
   m_ObjectHideFlags: 0
@@ -9961,15 +9966,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: -1497619902409956188, guid: 45bf4c8768ce64c67a068a69576d3ab9,
+    type: 3}
+  targetObject: {fileID: 6797766435704696235}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
+  promptNextObjectSound: {fileID: 8300000, guid: 2be03d88d02c14d208c69c442a34c617,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 089dd81c3c17f4858833b4e672d87888, type: 3}
+  colliderHandler: {fileID: 7917619347474543014}
+  nextObject: {fileID: 1956554090358625223}
 --- !u!114 &2923011815633014730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9982,8 +9990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 1956554090358625223}
 --- !u!4 &2998749121467551508
 Transform:
   m_ObjectHideFlags: 0
@@ -10013,10 +10021,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 6490415409429432160, guid: 3f24d8b41922445969d73288cf35aeac,
+    type: 3}
+  targetObject: {fileID: 6871271735015353719}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -10201,10 +10211,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 8105355499200876780, guid: 5db2c6a4234e14be0a4027a805dc28fa,
+    type: 3}
+  targetObject: {fileID: 5995554358301660919}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -10550,10 +10562,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 7938025044836904733, guid: 7e7ec916f5cff4df1be785d0177276df,
+    type: 3}
+  targetObject: {fileID: 5347753108860177539}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -10817,10 +10831,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: -8170596374378397396, guid: c5045c94f721d4965834b7014c68a181,
+    type: 3}
+  targetObject: {fileID: 3977805092946123072}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -10943,10 +10959,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: -7556248884015042399, guid: 36c5a9303ce474df48552be57af24f67,
+    type: 3}
+  targetObject: {fileID: 3630072533148751248}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -11178,10 +11196,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 2616040106313764488, guid: b0629f2d5ab5d4645b0461fa08357123,
+    type: 3}
+  targetObject: {fileID: 3318261179856040005}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -11231,10 +11251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 1720122301828994884, guid: cb35ff56f978744318944754ebbbc138,
+    type: 3}
+  targetObject: {fileID: 2699810827793003802}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -11640,11 +11662,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: -5561963927685195846, guid: ae4cf0f3e4e6f4ae1bbcd4a8d35a48e3,
+    type: 3}
+  targetObject: {fileID: 1956554090358625223}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
@@ -11661,7 +11685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 0}
 --- !u!1 &8035065910587767529
 GameObject:
@@ -11791,15 +11815,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: -4401914920231102260, guid: dc2c923c18a0444748ebe1b9078ffbc2,
+    type: 3}
+  targetObject: {fileID: 1141455075646672694}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
+  promptNextObjectSound: {fileID: 8300000, guid: 0442d5f8d88e042eab7a8c5ae2b20ddf,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: e14bb610c235a4f63ae6757a1b80f24f, type: 3}
+  colliderHandler: {fileID: 1910627224197802363}
+  nextObject: {fileID: 7801908126056385306}
 --- !u!114 &8723850826812992855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11812,8 +11839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 7801908126056385306}
 --- !u!33 &8835049005744639428
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11893,10 +11920,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 0}
-  colliderAvailableMaterial: {fileID: 0}
-  afterCollisionMaterial: {fileID: 0}
-  targetObject: {fileID: 0}
-  changeColorSound1: {fileID: 0}
+  colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
+    type: 2}
+  afterCollisionMaterial: {fileID: 4682381101564848392, guid: 33441b9af69ae414d9aa01f68f35c100,
+    type: 3}
+  targetObject: {fileID: 739001886534619452}
+  changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 0}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 0}
