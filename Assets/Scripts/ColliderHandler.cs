@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColliderHandler : MonoBehaviour
 {
-    public Material redMaterial; // Reference to the red material
+    public Material notReadyMaterial; // Reference to the red material
     public GameObject otherObject; // Reference to the other object
 
    
@@ -38,10 +38,10 @@ public class ColliderHandler : MonoBehaviour
         Renderer otherObjectRenderer = otherObject.GetComponent<Renderer>();
 
         // Check if the other object has a Renderer component and the red material is assigned
-        if (otherObjectRenderer != null && redMaterial != null)
+        if (otherObjectRenderer != null && notReadyMaterial != null)
         {
             // Change the material to red
-            otherObjectRenderer.material = redMaterial;
+            otherObjectRenderer.material = notReadyMaterial;
             Debug.Log("Material set to red!");
             Debug.Log("Object Name: " + gameObject.name + "set to red!");
         }

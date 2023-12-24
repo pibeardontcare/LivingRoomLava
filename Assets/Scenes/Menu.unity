@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 7434679640296491483}
   m_Layer: 0
   m_Name: ZuriLegs
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,7 +1470,7 @@ GameObject:
   - component: {fileID: 7478385188605445892}
   m_Layer: 0
   m_Name: BunnyBellyPink
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 7289783216079967237}
   m_Layer: 0
   m_Name: ZuriRight Ear
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1529,7 +1529,7 @@ GameObject:
   - component: {fileID: 7219550861296791136}
   m_Layer: 0
   m_Name: ZuriEyeOutlines
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1664,7 +1664,7 @@ GameObject:
   - component: {fileID: 7105576991888116692}
   m_Layer: 0
   m_Name: BunnyBellyOrange
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1905,7 +1905,7 @@ GameObject:
   - component: {fileID: 8469908295707994974}
   m_Layer: 0
   m_Name: BunnyMouth
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1990,7 +1990,7 @@ GameObject:
   - component: {fileID: 9146911906921737730}
   m_Layer: 0
   m_Name: BunnyBody
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 8935679856293329393}
   m_Layer: 0
   m_Name: BunnyEar2
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2322,7 +2322,7 @@ GameObject:
   - component: {fileID: 5418662038155321909}
   m_Layer: 0
   m_Name: ZuriNose
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2340,7 +2340,7 @@ GameObject:
   - component: {fileID: 5466134684318305667}
   m_Layer: 0
   m_Name: BunnyNose
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 5351045733659698180}
   m_Layer: 0
   m_Name: BunnyEar1
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 6037279399987526279}
   m_Layer: 0
   m_Name: ZuriLeftEar
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2557,7 +2557,7 @@ GameObject:
   - component: {fileID: 5897715555204609040}
   m_Layer: 0
   m_Name: ZuriHair
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2625,7 +2625,7 @@ GameObject:
   - component: {fileID: 6857799480572989810}
   m_Layer: 0
   m_Name: BunnyEar3
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2685,7 +2685,7 @@ GameObject:
   - component: {fileID: 6800912188597581375}
   m_Layer: 0
   m_Name: pupilLEft
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 6538656356233678712}
   m_Layer: 0
   m_Name: BunnyLeftLeg
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3178,7 +3178,7 @@ GameObject:
   - component: {fileID: 3924641169329898200}
   m_Layer: 0
   m_Name: ZuriMouth
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3238,7 +3238,7 @@ GameObject:
   - component: {fileID: 3935918415010480503}
   m_Layer: 0
   m_Name: PupilRight
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3451,7 +3451,7 @@ GameObject:
   - component: {fileID: 4575312812980233389}
   m_Layer: 0
   m_Name: BunnyBodyGreen
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3553,7 +3553,7 @@ GameObject:
   - component: {fileID: 4375665979255346526}
   m_Layer: 0
   m_Name: BunnyLeftEye
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3571,7 +3571,7 @@ GameObject:
   - component: {fileID: 4200239626012203694}
   m_Layer: 0
   m_Name: ZUri Body
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3809,7 +3809,7 @@ GameObject:
   - component: {fileID: 331842172717339449}
   m_Layer: 0
   m_Name: ZuriHead
-  m_TagString: Untagged
+  m_TagString: zuri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3877,7 +3877,7 @@ GameObject:
   - component: {fileID: 272735992334010547}
   m_Layer: 0
   m_Name: BunnyBodyBlue
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4089,7 +4089,7 @@ GameObject:
   - component: {fileID: 1127912151136105267}
   m_Layer: 0
   m_Name: BunnyRightLeg
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4107,7 +4107,7 @@ GameObject:
   - component: {fileID: 1056669785486898159}
   m_Layer: 0
   m_Name: BunnyRightEye
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4912,7 +4912,7 @@ GameObject:
   - component: {fileID: 1899560945801767676}
   m_Layer: 0
   m_Name: BunnyBodyYellow
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4930,7 +4930,7 @@ GameObject:
   - component: {fileID: 1930784210999562951}
   m_Layer: 0
   m_Name: BunnyBodyCenter
-  m_TagString: Untagged
+  m_TagString: devin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

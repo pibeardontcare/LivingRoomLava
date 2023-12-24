@@ -406,8 +406,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57632937}
   m_LocalRotation: {x: -0, y: 0, z: -0.99965733, w: 0.026177017}
-  m_LocalPosition: {x: -0.658, y: 1.129, z: -0.155}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.68605, y: 0.78613, z: -0.16534}
+  m_LocalScale: {x: 0.69948, y: 0.69948, z: 0.69948}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1563959549}
@@ -806,8 +806,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129845294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.112, y: 0.112, z: -0.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.0036, y: 0.07476002, z: -0.20381}
+  m_LocalScale: {x: 0.69948, y: 0.69948, z: 0.69948}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2121219392}
@@ -6685,7 +6685,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cd9b97a60ef9a478f93342e57a2a3564, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.635
+  m_Volume: 0.268
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6796,7 +6796,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d43af10b3b6041d883b418586cf402d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.203
+  m_Volume: 0.073
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6870,7 +6870,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6892,7 +6892,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a2358f61dd7b440afa7370bf82ddfc3b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.251
+  m_Volume: 0.043
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7092,32 +7092,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.27
+      value: -3.2126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.549
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.73
+      value: 1.8527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61777ebf3166745ad8b407f7ecab0ba0,
         type: 3}
@@ -7205,32 +7205,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0022
+      value: 0.001538856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.27
+      value: -3.2126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.549
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.73
+      value: 1.8527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 959ac881ddb1d4895834a008abdd83b8,
         type: 3}
@@ -8497,7 +8497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786981897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 1.46, z: 0.03}
+  m_LocalPosition: {x: 0.38, y: 0.81, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8807,7 +8807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 0}
   otherObject: {fileID: 14849661}
 --- !u!1 &1845415190
 GameObject:
@@ -9639,6 +9639,7 @@ GameObject:
   - component: {fileID: 1910627224197802361}
   - component: {fileID: 1910627224197802363}
   - component: {fileID: 1910627224197802362}
+  - component: {fileID: 1910627224197802364}
   m_Layer: 0
   m_Name: BunnyLeftEye
   m_TagString: Untagged
@@ -9707,17 +9708,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 5518098272303558540, guid: 4d638957171a04131a8b98fe1c4060f5,
     type: 3}
   targetObject: {fileID: 8035065910587767529}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 113cb457ea4a34be9ab135d3b388c763,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 8f3a2af5c54cc461c901f95b9a6d1a37, type: 3}
+  colliderHandler: {fileID: 5759347855329897803}
+  nextObject: {fileID: 3630072533148751248}
 --- !u!114 &1820670940950567052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9730,8 +9732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 3630072533148751248}
 --- !u!4 &1910627224197802361
 Transform:
   m_ObjectHideFlags: 0
@@ -9784,8 +9786,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 6797766435704696235}
+--- !u!65 &1910627224197802364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281337844156101571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 121.15196, y: 110.8389, z: 106.85773}
+  m_Center: {x: -884.46783, y: 1249.0482, z: -455.40234}
 --- !u!1 &1927035563252267584
 GameObject:
   m_ObjectHideFlags: 0
@@ -9897,6 +9920,7 @@ GameObject:
   - component: {fileID: 2923011815633014728}
   - component: {fileID: 2923011815633014730}
   - component: {fileID: 2923011815633014729}
+  - component: {fileID: 2923011815633014731}
   m_Layer: 0
   m_Name: BunnyRightEye
   m_TagString: Untagged
@@ -9990,8 +10014,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 1956554090358625223}
+--- !u!65 &2923011815633014731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583746149045441906}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 74.29202, y: 110.285225, z: 109.84475}
+  m_Center: {x: -861.33905, y: 1250.9001, z: -119.022255}
 --- !u!4 &2998749121467551508
 Transform:
   m_ObjectHideFlags: 0
@@ -10020,17 +10065,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 6490415409429432160, guid: 3f24d8b41922445969d73288cf35aeac,
     type: 3}
   targetObject: {fileID: 6871271735015353719}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 828cd57731e964f21a3cb3df03141f4d,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: f55fddd64223b44a682290052d11b45f, type: 3}
+  colliderHandler: {fileID: 4391311257799044834}
+  nextObject: {fileID: 5347753108860177539}
 --- !u!114 &2998749121467551510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10043,8 +10089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 5347753108860177539}
 --- !u!1 &3241859871534999477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10210,17 +10256,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 8105355499200876780, guid: 5db2c6a4234e14be0a4027a805dc28fa,
     type: 3}
   targetObject: {fileID: 5995554358301660919}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 2f4cb7bc3cb6441df9b3bb74cd0d835d,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 7fd2b521ab38248289398daa0b6d2c91, type: 3}
+  colliderHandler: {fileID: 5384558341058486683}
+  nextObject: {fileID: 3977805092946123072}
 --- !u!114 &3366923458737794608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10233,8 +10280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 3977805092946123072}
 --- !u!1 &3630072533148751248
 GameObject:
   m_ObjectHideFlags: 0
@@ -10336,6 +10383,7 @@ GameObject:
   - component: {fileID: 4352180166965778139}
   - component: {fileID: 4352180166965778141}
   - component: {fileID: 4352180166965778140}
+  - component: {fileID: 4352180166965778142}
   m_Layer: 0
   m_Name: BunnyBody Center
   m_TagString: Untagged
@@ -10531,8 +10579,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 1927035563252267584}
+--- !u!65 &4352180166965778142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3976076355355708513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1077.2518, y: 1168.9967, z: 985.40857}
+  m_Center: {x: -389.90393, y: 957.64667, z: -295.83844}
 --- !u!4 &4391311257799044832
 Transform:
   m_ObjectHideFlags: 0
@@ -10561,17 +10630,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 7938025044836904733, guid: 7e7ec916f5cff4df1be785d0177276df,
     type: 3}
   targetObject: {fileID: 5347753108860177539}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 442705f90646845cf9aba61e9f32406d,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 8a0d2b3b2b1604dad9334ea9d3dd82a2, type: 3}
+  colliderHandler: {fileID: 3366923458737794608}
+  nextObject: {fileID: 5995554358301660919}
 --- !u!114 &4391311257799044834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10584,8 +10654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 5995554358301660919}
 --- !u!4 &4484089773483378306
 Transform:
   m_ObjectHideFlags: 0
@@ -10594,8 +10664,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4668049742526984987}
   m_LocalRotation: {x: -0, y: -0.981897, z: -0, w: 0.18941583}
-  m_LocalPosition: {x: -4.77, y: 2.17, z: 0.83}
-  m_LocalScale: {x: 0.0013, y: 0.0012884045, z: 0.0012884045}
+  m_LocalPosition: {x: -2.161, y: 1.24, z: 0.24}
+  m_LocalScale: {x: 0.0007, y: 0.0006937562, z: 0.0006937562}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4352180166965778139}
@@ -10830,17 +10900,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: -8170596374378397396, guid: c5045c94f721d4965834b7014c68a181,
     type: 3}
   targetObject: {fileID: 3977805092946123072}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 999b7824fc26c4427b99738b6aba7c0d,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 11a3b0d65313546d39b8912ff500f508, type: 3}
+  colliderHandler: {fileID: 1820670940950567052}
+  nextObject: {fileID: 8035065910587767529}
 --- !u!114 &5384558341058486683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10853,8 +10924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 8035065910587767529}
 --- !u!23 &5456634744218380624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10958,17 +11029,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: -7556248884015042399, guid: 36c5a9303ce474df48552be57af24f67,
     type: 3}
   targetObject: {fileID: 3630072533148751248}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: e328e54dedec84ff7a0346b73c79f362,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: e62e2c5bbae26448aa01a9d2fc7fa94d, type: 3}
+  colliderHandler: {fileID: 6398154620586857000}
+  nextObject: {fileID: 3318261179856040005}
 --- !u!114 &5759347855329897803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10981,8 +11053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 3318261179856040005}
 --- !u!23 &5796337964943677349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11051,6 +11123,7 @@ GameObject:
   - component: {fileID: 6501928116401522134}
   - component: {fileID: 6501928116401522136}
   - component: {fileID: 6501928116401522135}
+  - component: {fileID: 6501928116401522137}
   m_Layer: 0
   m_Name: BunnyEar2
   m_TagString: Untagged
@@ -11195,17 +11268,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 2616040106313764488, guid: b0629f2d5ab5d4645b0461fa08357123,
     type: 3}
   targetObject: {fileID: 3318261179856040005}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 153607319eb5b4602bfd651dda07f196,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 1b065149d01b84509bcaa5039a0783dd, type: 3}
+  colliderHandler: {fileID: 1832447867}
+  nextObject: {fileID: 1832447861}
 --- !u!114 &6398154620586857000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11218,8 +11292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 1832447861}
 --- !u!1 &6411556061223423427
 GameObject:
   m_ObjectHideFlags: 0
@@ -11250,17 +11324,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 1720122301828994884, guid: cb35ff56f978744318944754ebbbc138,
     type: 3}
   targetObject: {fileID: 2699810827793003802}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: d2ad4a152778847d98325fafeb597bd8,
+    type: 3}
   secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  colliderHandler: {fileID: 8973260630206083937}
+  nextObject: {fileID: 739001886534619452}
 --- !u!114 &6411556061223423429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11273,8 +11348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 739001886534619452}
 --- !u!33 &6464428488282645831
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11335,8 +11410,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 1141455075646672694}
+--- !u!65 &6501928116401522137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868381083213274988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 51.70928, y: 118.097534, z: 101.87907}
+  m_Center: {x: -482.35632, y: 1573.5094, z: -436.24194}
 --- !u!4 &6611716200567465505
 Transform:
   m_ObjectHideFlags: 0
@@ -11471,6 +11567,7 @@ GameObject:
   - component: {fileID: 7816049854066530339}
   - component: {fileID: 7816049854066530341}
   - component: {fileID: 7816049854066530340}
+  - component: {fileID: 7816049854066530342}
   m_Layer: 0
   m_Name: BunnyEar1
   m_TagString: Untagged
@@ -11590,8 +11687,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 3241859871534999477}
+--- !u!65 &7816049854066530342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436568071886684825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 103.312515, y: 210.98242, z: 119.43522}
+  m_Center: {x: -482.31943, y: 1620.2444, z: -321.77304}
 --- !u!23 &7855909768171511769
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11669,10 +11787,11 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 1956554090358625223}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
-  secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: 1aa580160aa0c48e48b2c47512335d2d,
+    type: 3}
+  secondSound: {fileID: 8300000, guid: 95a62e329c9274bfb86cf87af9bd85e5, type: 3}
+  colliderHandler: {fileID: 6411556061223423429}
+  nextObject: {fileID: 2699810827793003802}
 --- !u!114 &7917619347474543014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11685,8 +11804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 2699810827793003802}
 --- !u!1 &8035065910587767529
 GameObject:
   m_ObjectHideFlags: 0
@@ -11731,6 +11850,7 @@ GameObject:
   - component: {fileID: 8723850826812992853}
   - component: {fileID: 8723850826812992855}
   - component: {fileID: 8723850826812992854}
+  - component: {fileID: 8723850826812992856}
   m_Layer: 0
   m_Name: BunnyEar3
   m_TagString: Untagged
@@ -11839,8 +11959,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 7801908126056385306}
+--- !u!65 &8723850826812992856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240048790994679791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 56.98181, y: 163.12912, z: 77.394554}
+  m_Center: {x: -478.23218, y: 1576.2485, z: -524.0066}
 --- !u!33 &8835049005744639428
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11919,17 +12060,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbb599491037442589d75cc025946b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notReadyMaterial: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   colliderAvailableMaterial: {fileID: 2100000, guid: 3c286617dfd0549e8b3632de482521ea,
     type: 2}
   afterCollisionMaterial: {fileID: 4682381101564848392, guid: 33441b9af69ae414d9aa01f68f35c100,
     type: 3}
   targetObject: {fileID: 739001886534619452}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 0}
+  promptNextObjectSound: {fileID: 8300000, guid: d2ad4a152778847d98325fafeb597bd8,
+    type: 3}
   secondSound: {fileID: 0}
-  colliderHandler: {fileID: 0}
-  nextObject: {fileID: 0}
+  colliderHandler: {fileID: 2998749121467551510}
+  nextObject: {fileID: 6871271735015353719}
 --- !u!114 &8973260630206083937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11942,8 +12084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9f198947d8b4db5b5f73f556417004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMaterial: {fileID: 0}
-  otherObject: {fileID: 0}
+  notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
+  otherObject: {fileID: 6871271735015353719}
 --- !u!23 &9077724823767823525
 MeshRenderer:
   m_ObjectHideFlags: 0

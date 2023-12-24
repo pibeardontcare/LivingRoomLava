@@ -40,11 +40,13 @@ public class IntroAudio : MonoBehaviour
 
     IEnumerator WaitForAudioFinish()
     {
+         Debug.Log("Waiting for audio finish...");
         while (audioSource.isPlaying)
         {
             yield return null;
         }
 
+         Debug.Log("audio ovar!");
         // Audio has finished playing, enable the collider on the other game object
         EnableColliderOnOtherGameObject();
         Debug.Log("Collider ready!");
@@ -52,6 +54,7 @@ public class IntroAudio : MonoBehaviour
 
     void EnableColliderOnOtherGameObject()
     {
+         Debug.Log("Enabling collider...");
         if (colliderHandler != null)
         {
             // Enable the collider 
@@ -67,5 +70,9 @@ public class IntroAudio : MonoBehaviour
         // Switch to the material after the collision for the next object
         Debug.Log("Material switched on next object to: " + colliderAvailableMaterial.name);
         nextObjectRenderer.material = colliderAvailableMaterial;
+        Debug.Log("Switching material on the next object...");
+    Debug.Log("Material switched on next object to: " + colliderAvailableMaterial.name);
+         // Print the name and status of the next object to the console
+        Debug.Log("Next Object Name: " + nextObjectRenderer.gameObject.name);
     }
 }
