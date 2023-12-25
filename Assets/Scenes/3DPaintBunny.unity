@@ -9658,6 +9658,7 @@ GameObject:
   - component: {fileID: 1820670940950567050}
   - component: {fileID: 1820670940950567052}
   - component: {fileID: 1820670940950567051}
+  - component: {fileID: 1820670940950567053}
   m_Layer: 0
   m_Name: BunnyBodyGreen
   m_TagString: Untagged
@@ -9734,6 +9735,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 3630072533148751248}
+--- !u!65 &1820670940950567053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301402026752361008}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 168.47609, y: 321.59106, z: 256.5578}
+  m_Center: {x: -895.8587, y: 729.9032, z: -209.24475}
 --- !u!4 &1910627224197802361
 Transform:
   m_ObjectHideFlags: 0
@@ -9902,6 +9924,7 @@ GameObject:
   - component: {fileID: 2998749121467551508}
   - component: {fileID: 2998749121467551510}
   - component: {fileID: 2998749121467551509}
+  - component: {fileID: 2998749121467551511}
   m_Layer: 0
   m_Name: BunnyRightLeg
   m_TagString: Untagged
@@ -10091,6 +10114,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 5347753108860177539}
+--- !u!65 &2998749121467551511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510302541504763310}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 46.840508, y: 346.80225, z: 67.65962}
+  m_Center: {x: -512.4783, y: 210.49132, z: -282.36716}
 --- !u!1 &3241859871534999477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10219,6 +10263,7 @@ GameObject:
   - component: {fileID: 5817238431118893950}
   - component: {fileID: 8677826065885141556}
   - component: {fileID: 5280592563669483168}
+  - component: {fileID: 8677826065885141557}
   m_Layer: 0
   m_Name: _BunnyBody
   m_TagString: Untagged
@@ -10237,6 +10282,7 @@ GameObject:
   - component: {fileID: 2734361863298921620}
   - component: {fileID: 3366923458737794608}
   - component: {fileID: 3366923458737794607}
+  - component: {fileID: 3366923458737794609}
   m_Layer: 0
   m_Name: BunnyBodyBlue
   m_TagString: Untagged
@@ -10282,6 +10328,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 3977805092946123072}
+--- !u!65 &3366923458737794609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366923458737794606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 121.50079, y: 299.65814, z: 297.81177}
+  m_Center: {x: -917.2685, y: 788.23376, z: -183.32884}
 --- !u!1 &3630072533148751248
 GameObject:
   m_ObjectHideFlags: 0
@@ -10420,6 +10487,7 @@ GameObject:
   - component: {fileID: 4391311257799044832}
   - component: {fileID: 4391311257799044834}
   - component: {fileID: 4391311257799044833}
+  - component: {fileID: 4391311257799044835}
   m_Layer: 0
   m_Name: BunnyBodyYellow
   m_TagString: Untagged
@@ -10609,15 +10677,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4015736414904349786}
-  m_LocalRotation: {x: 0, y: -0.84592634, z: -0, w: 0.5332998}
-  m_LocalPosition: {x: -4713.763, y: -1695.4998, z: 287.97}
-  m_LocalScale: {x: 1, y: 1.001673, z: 0.9943878}
+  m_LocalRotation: {x: -0, y: -0.8459281, z: -0, w: 0.5332971}
+  m_LocalPosition: {x: -4714, y: -1698.4698, z: 288.06207}
+  m_LocalScale: {x: 1, y: 1.0016731, z: 0.9943878}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3783347356091817912}
   m_Father: {fileID: 4484089773483378306}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -115.543, z: 0}
 --- !u!114 &4391311257799044833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10656,6 +10724,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 5995554358301660919}
+--- !u!65 &4391311257799044835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015736414904349786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 143.48158, y: 281.29047, z: 260.4634}
+  m_Center: {x: -906.26666, y: 858.4343, z: -115.05225}
 --- !u!4 &4484089773483378306
 Transform:
   m_ObjectHideFlags: 0
@@ -10711,7 +10800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5384558341058486681}
   m_LocalRotation: {x: 0, y: -0.84592634, z: -0, w: 0.5332998}
-  m_LocalPosition: {x: -4713.763, y: -1695.4998, z: 287.97}
+  m_LocalPosition: {x: -4711, y: -1695.4998, z: 282}
   m_LocalScale: {x: 1, y: 1.001673, z: 0.9943878}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10845,6 +10934,7 @@ GameObject:
   - component: {fileID: 3783347356091817912}
   - component: {fileID: 2041829635685492466}
   - component: {fileID: 3275158292644823654}
+  - component: {fileID: 5347753108860177540}
   m_Layer: 0
   m_Name: _BunnyBodyYellow
   m_TagString: Untagged
@@ -10852,6 +10942,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5347753108860177540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347753108860177539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 143.48158, y: 281.29047, z: 260.4634}
+  m_Center: {x: -906.26666, y: 858.4343, z: -115.05225}
 --- !u!1 &5377323798992123064
 GameObject:
   m_ObjectHideFlags: 0
@@ -10881,6 +10992,7 @@ GameObject:
   - component: {fileID: 4751891226345093923}
   - component: {fileID: 5384558341058486683}
   - component: {fileID: 5384558341058486682}
+  - component: {fileID: 5384558341058486684}
   m_Layer: 0
   m_Name: BunnyBellyPink
   m_TagString: Untagged
@@ -10926,6 +11038,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 8035065910587767529}
+--- !u!65 &5384558341058486684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5384558341058486681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100.63256, y: 265.01495, z: 222.48203}
+  m_Center: {x: -922.45844, y: 805.5737, z: -196.51021}
 --- !u!23 &5456634744218380624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11010,6 +11143,7 @@ GameObject:
   - component: {fileID: 4946783012020353011}
   - component: {fileID: 5759347855329897803}
   - component: {fileID: 5759347855329897802}
+  - component: {fileID: 5759347855329897804}
   m_Layer: 0
   m_Name: BunnyBellyOrange
   m_TagString: Untagged
@@ -11055,6 +11189,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 3318261179856040005}
+--- !u!65 &5759347855329897804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759347855329897801}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 142.22284, y: 363.83838, z: 233.25156}
+  m_Center: {x: -905.17896, y: 754.6255, z: -295.27954}
 --- !u!23 &5796337964943677349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11305,6 +11460,7 @@ GameObject:
   - component: {fileID: 6030809080980428665}
   - component: {fileID: 6411556061223423429}
   - component: {fileID: 6411556061223423428}
+  - component: {fileID: 6411556061223423430}
   m_Layer: 0
   m_Name: BunnyMouth
   m_TagString: Untagged
@@ -11350,6 +11506,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 739001886534619452}
+--- !u!65 &6411556061223423430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411556061223423427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 156.49171, y: 61.76346, z: 703.6673}
+  m_Center: {x: -892.99615, y: 1093.1943, z: -291.3988}
 --- !u!33 &6464428488282645831
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11549,6 +11726,7 @@ GameObject:
   - component: {fileID: 7917619347474543012}
   - component: {fileID: 7917619347474543014}
   - component: {fileID: 7917619347474543013}
+  - component: {fileID: 7917619347474543015}
   m_Layer: 0
   m_Name: BunnyNose
   m_TagString: Untagged
@@ -11806,6 +11984,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 2699810827793003802}
+--- !u!65 &7917619347474543015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397963332688980766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 86.55299, y: 99.21749, z: 84.5894}
+  m_Center: {x: -915.6069, y: 1226.84, z: -286.04666}
 --- !u!1 &8035065910587767529
 GameObject:
   m_ObjectHideFlags: 0
@@ -11892,6 +12091,7 @@ GameObject:
   - component: {fileID: 8973260630206083935}
   - component: {fileID: 8973260630206083937}
   - component: {fileID: 8973260630206083936}
+  - component: {fileID: 8973260630206083938}
   m_Layer: 0
   m_Name: BunnyLeftLeg
   m_TagString: Untagged
@@ -11907,6 +12107,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3318261179856040005}
   m_Mesh: {fileID: -2432090755550338912, guid: b0629f2d5ab5d4645b0461fa08357123, type: 3}
+--- !u!136 &8677826065885141557
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318261179856040005}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 506.24384
+  m_Height: 1173.639
+  m_Direction: 1
+  m_Center: {x: -325.30475, y: 957.0477, z: -304.49622}
 --- !u!4 &8723850826812992853
 Transform:
   m_ObjectHideFlags: 0
@@ -12086,6 +12309,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notReadyMaterial: {fileID: 2100000, guid: c3328d82182524ed9848703191a8223b, type: 2}
   otherObject: {fileID: 6871271735015353719}
+--- !u!65 &8973260630206083938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632483135128218085}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 44.762074, y: 346.80225, z: 56.7252}
+  m_Center: {x: -529.67804, y: 210.49132, z: -467.07968}
 --- !u!23 &9077724823767823525
 MeshRenderer:
   m_ObjectHideFlags: 0
