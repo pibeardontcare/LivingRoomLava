@@ -22,6 +22,8 @@ public class TouchPaint : MonoBehaviour
     private bool promptNextObjectSoundPlayed = false;
     private bool secondSoundPlayed = false; // New variable to track the second sound
 
+    private bool isSoundPlaying = false;
+
     void Start()
     {
         targetRenderer = targetObject.GetComponent<Renderer>();
@@ -72,8 +74,22 @@ public class TouchPaint : MonoBehaviour
     {
         if (audioSource != null && changeColorSound1 != null)
         {
-            audioSource.PlayOneShot(changeColorSound1);
+            StartCoroutine(PlaySoundAndWait(changeColorSound1));
         }
+    }
+
+    IEnumerator PlaySoundAndWait(AudioClip sound)
+    {
+        isSoundPlaying = true;
+        audioSource.PlayOneShot(sound);
+
+        // Wait until the audio finishes playing
+        while (audioSource.isPlaying)
+        {
+            yield return null;
+        }
+
+        isSoundPlaying = false;
     }
 
     IEnumerator PlaypromptNextObjectSoundAndEnableCollider()
@@ -82,11 +98,11 @@ public class TouchPaint : MonoBehaviour
 
         if (audioSource != null && promptNextObjectSound != null)
         {
-            audioSource.PlayOneShot(promptNextObjectSound);
+            StartCoroutine(PlaySoundAndWait(promptNextObjectSound));
         }
 
-        // Wait until the audio finishes playing
-        while (audioSource.isPlaying)
+        // Wait until all sounds finish playing
+        while (isSoundPlaying)
         {
             yield return null;
         }
@@ -95,7 +111,7 @@ public class TouchPaint : MonoBehaviour
         if (secondSound != null && !secondSoundPlayed)
         {
             audioSource.clip = secondSound;
-            audioSource.PlayOneShot(secondSound);
+            StartCoroutine(PlaySoundAndWait(secondSound));
             secondSoundPlayed = true;
         }
 
