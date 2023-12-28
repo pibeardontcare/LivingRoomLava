@@ -9825,7 +9825,7 @@ MonoBehaviour:
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 8300000, guid: 113cb457ea4a34be9ab135d3b388c763,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 8f3a2af5c54cc461c901f95b9a6d1a37, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 5759347855329897803}
   nextObject: {fileID: 3630072533148751248}
 --- !u!114 &1820670940950567052
@@ -9898,9 +9898,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 7801908126056385306}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: fab5b18c4bf834e6bafea0141c7f7147,
+  promptNextObjectSound: {fileID: 8300000, guid: e74409b9870004aa9a524951b5b371b5,
     type: 3}
-  secondSound: {fileID: 8300000, guid: d1ebaa7f76efb4bbe98e21bb7edd8102, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 2923011815633014730}
   nextObject: {fileID: 6797766435704696235}
 --- !u!114 &1910627224197802363
@@ -10127,9 +10127,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 6797766435704696235}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 2be03d88d02c14d208c69c442a34c617,
+  promptNextObjectSound: {fileID: 8300000, guid: a13df24254a504293a6c0b7616402749,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 089dd81c3c17f4858833b4e672d87888, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 7917619347474543014}
   nextObject: {fileID: 1956554090358625223}
 --- !u!114 &2923011815633014730
@@ -10202,9 +10202,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 6871271735015353719}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 828cd57731e964f21a3cb3df03141f4d,
+  promptNextObjectSound: {fileID: 8300000, guid: ce899f3349bf64da084082f94dc36094,
     type: 3}
-  secondSound: {fileID: 8300000, guid: f55fddd64223b44a682290052d11b45f, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 4391311257799044834}
   nextObject: {fileID: 5347753108860177539}
 --- !u!114 &2998749121467551510
@@ -10416,9 +10416,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 5995554358301660919}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 2f4cb7bc3cb6441df9b3bb74cd0d835d,
+  promptNextObjectSound: {fileID: 8300000, guid: 1f46e7982c6074b4e800999290df94ed,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 7fd2b521ab38248289398daa0b6d2c91, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 5384558341058486683}
   nextObject: {fileID: 3977805092946123072}
 --- !u!114 &3366923458737794608
@@ -10812,9 +10812,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 5347753108860177539}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 442705f90646845cf9aba61e9f32406d,
+  promptNextObjectSound: {fileID: 8300000, guid: 568f55a33b0d44c7fa4aacae9b99f316,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 8a0d2b3b2b1604dad9334ea9d3dd82a2, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 3366923458737794608}
   nextObject: {fileID: 5995554358301660919}
 --- !u!114 &4391311257799044834
@@ -11128,7 +11128,7 @@ MonoBehaviour:
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 8300000, guid: 999b7824fc26c4427b99738b6aba7c0d,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 11a3b0d65313546d39b8912ff500f508, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 1820670940950567052}
   nextObject: {fileID: 8035065910587767529}
 --- !u!114 &5384558341058486683
@@ -11279,7 +11279,7 @@ MonoBehaviour:
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
   promptNextObjectSound: {fileID: 8300000, guid: e328e54dedec84ff7a0346b73c79f362,
     type: 3}
-  secondSound: {fileID: 8300000, guid: e62e2c5bbae26448aa01a9d2fc7fa94d, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 6398154620586857000}
   nextObject: {fileID: 3318261179856040005}
 --- !u!114 &5759347855329897803
@@ -11537,9 +11537,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 3318261179856040005}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 153607319eb5b4602bfd651dda07f196,
+  promptNextObjectSound: {fileID: 8300000, guid: 8af3fddf037cd45eeaadb9213cacc5db,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 1b065149d01b84509bcaa5039a0783dd, type: 3}
+  secondSound: {fileID: 8300000, guid: 1207b49075d004958820da673100f222, type: 3}
   colliderHandler: {fileID: 1832447867}
   nextObject: {fileID: 1832447861}
 --- !u!114 &6398154620586857000
@@ -11594,7 +11594,7 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 2699810827793003802}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: d2ad4a152778847d98325fafeb597bd8,
+  promptNextObjectSound: {fileID: 8300000, guid: 82ea7b515fedb4c549ee51e4e506c5ea,
     type: 3}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 8973260630206083937}
@@ -11677,9 +11677,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 3241859871534999477}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: b9554e76c1c3b453c868cb9c3bf1066a,
+  promptNextObjectSound: {fileID: 8300000, guid: b69d86e61ec8b442d9c933de243074f1,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 48da52c9cdd3d45d7afd73ab3cf716cd, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 8723850826812992855}
   nextObject: {fileID: 1141455075646672694}
 --- !u!114 &6501928116401522136
@@ -11955,9 +11955,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 1927035563252267584}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 2f2fe38601b1a4d98beda5c08116924a,
+  promptNextObjectSound: {fileID: 8300000, guid: 8424b2426099649ab96b27cadbaf9513,
     type: 3}
-  secondSound: {fileID: 8300000, guid: d575232dddabc47d58a7d7f76e7ea390, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 6501928116401522136}
   nextObject: {fileID: 3241859871534999477}
 --- !u!114 &7816049854066530341
@@ -12072,9 +12072,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 1956554090358625223}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 1aa580160aa0c48e48b2c47512335d2d,
+  promptNextObjectSound: {fileID: 8300000, guid: 6840c7ee5461d4cb0993e8040852d3a7,
     type: 3}
-  secondSound: {fileID: 8300000, guid: 95a62e329c9274bfb86cf87af9bd85e5, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 6411556061223423429}
   nextObject: {fileID: 2699810827793003802}
 --- !u!114 &7917619347474543014
@@ -12272,9 +12272,9 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 1141455075646672694}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: 0442d5f8d88e042eab7a8c5ae2b20ddf,
+  promptNextObjectSound: {fileID: 8300000, guid: 3138b6522493a43648efe884152229b1,
     type: 3}
-  secondSound: {fileID: 8300000, guid: e14bb610c235a4f63ae6757a1b80f24f, type: 3}
+  secondSound: {fileID: 0}
   colliderHandler: {fileID: 1910627224197802363}
   nextObject: {fileID: 7801908126056385306}
 --- !u!114 &8723850826812992855
@@ -12397,7 +12397,7 @@ MonoBehaviour:
     type: 3}
   targetObject: {fileID: 739001886534619452}
   changeColorSound1: {fileID: 8300000, guid: 20287c727f3e6446c80f17897a4e48e9, type: 3}
-  promptNextObjectSound: {fileID: 8300000, guid: d2ad4a152778847d98325fafeb597bd8,
+  promptNextObjectSound: {fileID: 8300000, guid: c1fb7e6bc6e234e6abf89d874fe69609,
     type: 3}
   secondSound: {fileID: 0}
   colliderHandler: {fileID: 2998749121467551510}
