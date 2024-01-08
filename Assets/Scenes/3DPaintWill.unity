@@ -1568,7 +1568,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 132f234f9df5645b3ac6f7e9d23946e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.93
+      value: -2.858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 132f234f9df5645b3ac6f7e9d23946e3,
         type: 3}
@@ -1578,7 +1578,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 132f234f9df5645b3ac6f7e9d23946e3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.02
+      value: -5.986
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 132f234f9df5645b3ac6f7e9d23946e3,
         type: 3}
@@ -1621,7 +1621,11 @@ PrefabInstance:
       value: Doughnut (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1465092636841520722, guid: 132f234f9df5645b3ac6f7e9d23946e3, type: 3}
+    - {fileID: -6673216161785964264, guid: 132f234f9df5645b3ac6f7e9d23946e3, type: 3}
+    - {fileID: 1146033373660831676, guid: 132f234f9df5645b3ac6f7e9d23946e3, type: 3}
+    - {fileID: 65702495048144492, guid: 132f234f9df5645b3ac6f7e9d23946e3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132f234f9df5645b3ac6f7e9d23946e3, type: 3}
