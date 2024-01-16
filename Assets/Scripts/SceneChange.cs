@@ -7,7 +7,10 @@ public class SceneChange : MonoBehaviour
 {
     private Dictionary<GameObject, Material> originalMaterialsDict = new Dictionary<GameObject, Material>();
     public Material otherMaterial;  // Assign the material for hover state in the Inspector
+    public AudioClip hoverSound;  // Assign the hover sound in the Inspector
 
+    private AudioSource audioSource;
+    
     [SerializeField]
     private string sceneName = "3DPaint";
 
@@ -20,10 +23,20 @@ public class SceneChange : MonoBehaviour
         {
             originalMaterialsDict[childRenderer.gameObject] = childRenderer.sharedMaterial;
         }
+
+        // Add an AudioSource component to this GameObject
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void HoverOver()
     {
+        // Play the hover sound
+        if (hoverSound != null)
+        {
+            audioSource.clip = hoverSound;
+            audioSource.Play();
+        }
+
         // Change materials to the hover material for all child objects
         foreach (var kvp in originalMaterialsDict)
         {
